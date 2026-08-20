@@ -1,0 +1,36 @@
+name: Pack firmware zips
+
+on:
+  workflow_dispatch:
+    inputs:
+      source_repo:
+        description: '固件下载源仓库 (owner/repo)'
+        required: false
+        default: 'hrk666666/firmware-archives-public'
+      dest_repo:
+        description: 'zip 上传目标仓库 (owner/repo)'
+        required: false
+        default: 'hrk666666/firmware-archives-public'
+
+permissions:
+  contents: write
+
+jobs:
+  pack:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install zip
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq zip
+
+      - name: Pack firmware by device and upload
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO_SRC: ${{ inputs.source_repo }}
+          REPO_DST: ${{ inputs.dest_repo }}
+        run: |
+          chmod +x .github/workflows/pack_zips.sh
+          .github/workflows/pack_zips.sh
