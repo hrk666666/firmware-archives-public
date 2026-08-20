@@ -19,10 +19,15 @@ gh release list -R "$REPO_SRC" --limit 200 --json tagName -q '.[].tagName' > /tm
 echo "    tags: $(wc -l < /tmp/tags.txt)"
 
 # 按设备分组（tag 格式: firmware-设备代号-版本-hash，设备代号内无 '-'）
+# 跳过分发用的 firmware-zips-* release，避免把 zip 也当固件源
+if [[ -n "${FILTER_TAGS:-}" ]]; then
+  echo "    tag 过滤: $FILTER_TAGS"
+fi
 declare -A groups
 while read -r tag; do
+  [[ "$tag" == firmware-zips-* ]] && continue
   dev=$(echo "$tag" | sed -E 's/^firmware-([^-]+)-.*/\1/')
-  groups["$dev"]="${groups[$dev]} $tag"
+  groups["$dev"]="${groups[$dev]:-} $tag"
 done < /tmp/tags.txt
 echo "    设备数: ${#groups[@]}"
 
