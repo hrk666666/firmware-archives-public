@@ -1,0 +1,31 @@
+name: Sync Firmware Releases
+
+on:
+  schedule:
+    # 每天 UTC 02:00（北京时间 10:00）自动检查上游新固件
+    - cron: '0 2 * * *'
+  workflow_dispatch: # 手动触发：Actions 页面点 "Run workflow"
+  push:
+    branches: [main, master]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: firmware-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 同步上游固件 Releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+          UPSTREAM: AstralSightStudios/MiWearFirmwareArchives
+        run: |
+          bash .github/workflows/sync.sh
