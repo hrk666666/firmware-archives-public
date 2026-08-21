@@ -67,11 +67,13 @@
 | `miwear.watch.o66tc` | 小米手环 10 陶瓷版 |
 | `miwear.watch.o66lj` | 小米手环 10 耀影金特别版 |
 | `miwear.watch.p67cn` | 小米手环 10 Pro |
-| `miwear.watch.p67tc` | 小米手环 10 Pro 陶瓷版 * |
-| `miwear.watch.p67gln` | 小米手环 10 Pro NFC（海外版） * |
+| `miwear.watch.p67tc` | 小米手环 10 Pro 陶瓷版（官方欢迎语：小米手环10 Pro 陶瓷版） |
+| `miwear.watch.p67gln` | 小米手环 10 Pro NFC 版（官方欢迎语：小米手环10 Pro NFC版） |
 | `miwear.watch.n69cn` | Redmi 手环 3 |
 | `mijia.watch.m69` | Redmi 手环 2 |
 | `mijia.watch.band01` | Redmi 手环（初代） * |
+| `lchz.watch.m67` | 小米手环 8 Pro（官方欢迎语：小米手环 8 Pro） |
+| `lchz.watch.m67ys` | 小米手环 8 Pro 原神定制版（官方欢迎语：小米手环8 Pro 原神定制版） |
 
 ### 手表（小米 Watch / REDMI Watch）
 
@@ -79,11 +81,11 @@
 |---|---|
 | `mijia.watch.n62` | 小米手表 S3 |
 | `mijia.watch.n62lte` | 小米手表 S3 eSIM 版 |
-| `mijia.watch.n62car` | 小米手表 S3 SU7 限定版 |
-| `mijia.watch.n62cg` | 小米手表 S3 SU7 限定版（同 n62car） |
+| `mijia.watch.n62car` | 小米手表 S3 SU7 限定版（官方欢迎语：Xiaomi Watch S3 eSIM，硬件为 eSIM 版） |
+| `mijia.watch.n62cg` | 小米手表 S3 SU7 限定版（同 n62car，官方欢迎语同为 Xiaomi Watch S3 eSIM） |
 | `mijia.watch.o62` | 小米手表 S4 |
 | `mijia.watch.o62lte` | 小米手表 S4 eSIM 版 |
-| `mijia.watch.o62m` | 小米手表 S4 15 周年版（XRING INSIDE） |
+| `mijia.watch.o62m` | 小米手表 S4 15 周年版（XRING INSIDE，官方欢迎语：Xiaomi Watch S4 eSIM，硬件为 eSIM 版） |
 | `miwear.watch.o63` | 小米手表 S4（41mm） |
 | `mijia.watch.n62s` | 小米手表 S4 Sport |
 | `miwear.watch.p62` | 小米手表 S5（46mm） |
@@ -98,15 +100,14 @@
 
 | 设备代号 | 推测 / 说明 |
 |---|---|
-| `lchz.watch.m67` | 小米手环 8 Pro |
-| `lchz.watch.m67ys` | 小米手环 8 Pro（原神限定版） |
+| `midr.watch.ds` | 小米手表 Color（官方更新说明标题：小米手表Color） |
 | `lchz.watch.m65s` | 未知，lchz 系列（Redmi Watch 4 Active 一带）* |
-| `midr.watch.ds` / `k62` / `k63` / `k65` / `m62a` / `m62s` / `sports` | midr 系列，暂未查到公开对照 * |
+| `midr.watch.k62` / `k63` / `k65` / `m62a` / `m62s` / `sports` | midr 系列，暂未查到公开对照 * |
 | `mijia.watch.l61` | 未知 * |
 | `mijia.watch.v1` | 未知 * |
 | `mj1205.motion.ecg` | 推测为米家系心电/血压类设备 * |
 
-> `*` 标注为推测或未证实，欢迎提交 PR 补充准确对照。
+> `*` 标注为推测或未证实；其余已确认项均与上游官方固件 Release 版本介绍中的开机欢迎语（「欢迎使用 XXX」）交叉核对，欢迎提交 PR 补充准确对照。
 
 ---
 
