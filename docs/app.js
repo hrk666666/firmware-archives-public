@@ -45,9 +45,25 @@
     return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())} ${p(d.getHours())}:${p(d.getMinutes())}`;
   }
 
-  function imgPath(code) {
-    return `assets/devices/${code}.webp`;
+  const IMG_EXTS = ["webp", "png", "jpg"];
+  function imgSrc(code, ext) {
+    return `assets/devices/${code}.${ext}`;
   }
+  function imgPath(code) {
+    return imgSrc(code, IMG_EXTS[0]);
+  }
+  // 全局回退：webp → png → jpg → 占位符（供内联 onerror 调用）
+  window.imgFallback = function (el) {
+    const code = el && el.dataset && el.dataset.code;
+    if (!code) { el.outerHTML = '<span class="no-img">⌚</span>'; return; }
+    const cur = (el.src.split(".").pop() || "").toLowerCase();
+    const idx = IMG_EXTS.indexOf(cur);
+    if (idx >= 0 && idx < IMG_EXTS.length - 1) {
+      el.src = imgSrc(code, IMG_EXTS[idx + 1]);
+    } else {
+      el.outerHTML = '<span class="no-img">⌚</span>';
+    }
+  };
 
   function escapeHtml(s) {
     return String(s).replace(/[&<>"']/g, (c) => ({
@@ -137,8 +153,8 @@
       card.innerHTML = `
         ${dev.confirmed ? "" : '<span class="await-badge">待确认</span>'}
         <div class="card-img">
-          <img src="${imgPath(dev.code)}" alt="${escapeHtml(dev.name)}" loading="lazy"
-               onerror="this.outerHTML='<span class=&quot;no-img&quot;>⌚</span>'">
+          <img src="${imgPath(dev.code)}" data-code="${escapeHtml(dev.code)}" alt="${escapeHtml(dev.name)}" loading="lazy"
+               onerror="imgFallback(this)">
         </div>
         <div class="card-name">${escapeHtml(dev.name)}</div>
         <div class="card-code">${escapeHtml(dev.code)}</div>
@@ -172,8 +188,8 @@
     drawerBody.innerHTML = `
       <div class="dw-hero">
         <div class="img">
-          <img src="${imgPath(dev.code)}" alt="${escapeHtml(dev.name)}" loading="lazy"
-               onerror="this.outerHTML='<span class=&quot;no-img&quot;>⌚</span>'">
+          <img src="${imgPath(dev.code)}" data-code="${escapeHtml(dev.code)}" alt="${escapeHtml(dev.name)}" loading="lazy"
+               onerror="imgFallback(this)">
         </div>
         <div>
           <div class="dw-title">${escapeHtml(dev.name)}</div>

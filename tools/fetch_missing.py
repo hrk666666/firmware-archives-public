@@ -59,7 +59,7 @@ FETCH = {
 }
 
 
-def fetch(url, timeout=25):
+def fetch(url, timeout=12):
     req = urllib.request.Request(url, headers=UA)
     with urllib.request.urlopen(req, timeout=timeout) as resp:
         return resp.read()
@@ -134,7 +134,7 @@ def main():
                 page = fetch(f"https://www.mi.com/tw/product/{slug}/").decode("utf-8", errors="ignore")
                 imgs = [i for i in IMG_RE.findall(page) if not any(m in i.lower() for m in BAD_MARKERS)]
                 imgs = list(dict.fromkeys(imgs))
-                for u in imgs[:15]:
+                for u in imgs[:8]:
                     try:
                         data = fetch(u)
                         wh = size_of(data)
@@ -152,7 +152,7 @@ def main():
                     break
             except Exception as e:
                 print(f"[x] {code} slug={slug}: {str(e)[:50]}")
-            time.sleep(0.4)
+            time.sleep(0.2)
         if got:
             u, data = got
             ext = ext_of(data) or "png"
@@ -164,7 +164,7 @@ def main():
         else:
             fail.append(code)
             print(f"[!] {code}: 所有 slug 均失败")
-        time.sleep(0.5)
+        time.sleep(0.3)
 
     print(f"\n===== 结果: 复用 {copied} / 抓取成功 {len(ok)} / 失败 {len(fail)} =====")
     for c, info in ok:
