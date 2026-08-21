@@ -1,0 +1,2338 @@
+{
+ "generated_at": "2026-08-21T21:00:03+0800",
+ "source_repo": "hrk666666/firmware-archives-public",
+ "device_count": 46,
+ "release_count": 83,
+ "asset_count": 208,
+ "devices": [
+  {
+   "code": "mijia.watch.m69",
+   "name": "Redmi 手环 2",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v1.1.81",
+     "full": [
+      {
+       "file": "mijia.watch.m69_v1.1.81_full_9a8b8b45.bin",
+       "size": 1355836,
+       "hash": "9a8b8b45",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.m69-v1.1.81-ab9751e1/mijia.watch.m69_v1.1.81_full_9a8b8b45.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.n69cn",
+   "name": "Redmi 手环 3",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v1.3.150",
+     "full": [
+      {
+       "file": "miwear.watch.n69cn_v1.3.150_full_7108d5b1.bin",
+       "size": 1841224,
+       "hash": "7108d5b1",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n69cn-v1.3.150-a74eeaea/miwear.watch.n69cn_v1.3.150_full_7108d5b1.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.o66cn",
+   "name": "小米手环 10",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.1.28",
+     "full": [
+      {
+       "file": "miwear.watch.o66cn_v3.1.28_full_03ac3e2b.bin",
+       "size": 54396577,
+       "hash": "03ac3e2b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.28-fd7e95cf/miwear.watch.o66cn_v3.1.28_full_03ac3e2b.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.26",
+       "file": "miwear.watch.o66cn_v3.1.28_from_v3.1.26_incremental_8c27335b.bin",
+       "size": 4545278,
+       "hash": "8c27335b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.28-fd7e95cf/miwear.watch.o66cn_v3.1.28_from_v3.1.26_incremental_8c27335b.bin"
+      },
+      {
+       "from": "v3.1.23",
+       "file": "miwear.watch.o66cn_v3.1.28_from_v3.1.23_incremental_30f2b921.bin",
+       "size": 4545278,
+       "hash": "30f2b921",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.28-fd7e95cf/miwear.watch.o66cn_v3.1.28_from_v3.1.23_incremental_30f2b921.bin"
+      },
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.o66cn_v3.1.28_from_v3.1.16_incremental_6f53bce9.bin",
+       "size": 21329888,
+       "hash": "6f53bce9",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.28-fd7e95cf/miwear.watch.o66cn_v3.1.28_from_v3.1.16_incremental_6f53bce9.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.26",
+     "full": [
+      {
+       "file": "miwear.watch.o66cn_v3.1.26_full_d4e61778.bin",
+       "size": 54398028,
+       "hash": "d4e61778",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.26-96e07763/miwear.watch.o66cn_v3.1.26_full_d4e61778.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.23",
+       "file": "miwear.watch.o66cn_v3.1.26_from_v3.1.23_incremental_900435de.bin",
+       "size": 4547500,
+       "hash": "900435de",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.26-96e07763/miwear.watch.o66cn_v3.1.26_from_v3.1.23_incremental_900435de.bin"
+      },
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.o66cn_v3.1.26_from_v3.1.16_incremental_a96e9884.bin",
+       "size": 21332110,
+       "hash": "a96e9884",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.26-96e07763/miwear.watch.o66cn_v3.1.26_from_v3.1.16_incremental_a96e9884.bin"
+      },
+      {
+       "from": "v3.1.12",
+       "file": "miwear.watch.o66cn_v3.1.26_from_v3.1.12_incremental_5f091583.bin",
+       "size": 21332110,
+       "hash": "5f091583",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.26-96e07763/miwear.watch.o66cn_v3.1.26_from_v3.1.12_incremental_5f091583.bin"
+      },
+      {
+       "from": "v3.1.11",
+       "file": "miwear.watch.o66cn_v3.1.26_from_v3.1.11_incremental_fe8de3d5.bin",
+       "size": 21676720,
+       "hash": "fe8de3d5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.26-96e07763/miwear.watch.o66cn_v3.1.26_from_v3.1.11_incremental_fe8de3d5.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.23",
+     "full": [
+      {
+       "file": "miwear.watch.o66cn_v3.1.23_full_1a1bc068.bin",
+       "size": 54389730,
+       "hash": "1a1bc068",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.23-45483b24/miwear.watch.o66cn_v3.1.23_full_1a1bc068.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.o66cn_v3.1.23_from_v3.1.16_incremental_30103042.bin",
+       "size": 21322379,
+       "hash": "30103042",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.23-45483b24/miwear.watch.o66cn_v3.1.23_from_v3.1.16_incremental_30103042.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.16",
+     "full": [
+      {
+       "file": "miwear.watch.o66cn_v3.1.16_full_435fd32b.bin",
+       "size": 54317859,
+       "hash": "435fd32b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.16-4d3fd107/miwear.watch.o66cn_v3.1.16_full_435fd32b.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.12",
+       "file": "miwear.watch.o66cn_v3.1.16_from_v3.1.12_incremental_1eed1876.bin",
+       "size": 4509828,
+       "hash": "1eed1876",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.16-4d3fd107/miwear.watch.o66cn_v3.1.16_from_v3.1.12_incremental_1eed1876.bin"
+      },
+      {
+       "from": "v3.1.11",
+       "file": "miwear.watch.o66cn_v3.1.16_from_v3.1.11_incremental_be753f74.bin",
+       "size": 4854437,
+       "hash": "be753f74",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.16-4d3fd107/miwear.watch.o66cn_v3.1.16_from_v3.1.11_incremental_be753f74.bin"
+      },
+      {
+       "from": "v1.2.180",
+       "file": "miwear.watch.o66cn_v3.1.16_from_v1.2.180_incremental_20ad7a26.bin",
+       "size": 21750752,
+       "hash": "20ad7a26",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.16-4d3fd107/miwear.watch.o66cn_v3.1.16_from_v1.2.180_incremental_20ad7a26.bin"
+      },
+      {
+       "from": "v1.1.155",
+       "file": "miwear.watch.o66cn_v3.1.16_from_v1.1.155_incremental_561e8929.bin",
+       "size": 29155545,
+       "hash": "561e8929",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.16-4d3fd107/miwear.watch.o66cn_v3.1.16_from_v1.1.155_incremental_561e8929.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.o66nfc",
+   "name": "小米手环 10 NFC",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.1.28",
+     "full": [
+      {
+       "file": "miwear.watch.o66nfc_v3.1.28_full_03ac3e2b.bin",
+       "size": 54396577,
+       "hash": "03ac3e2b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.28-80601c3e/miwear.watch.o66nfc_v3.1.28_full_03ac3e2b.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.26",
+       "file": "miwear.watch.o66nfc_v3.1.28_from_v3.1.26_incremental_8c27335b.bin",
+       "size": 4545278,
+       "hash": "8c27335b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.28-80601c3e/miwear.watch.o66nfc_v3.1.28_from_v3.1.26_incremental_8c27335b.bin"
+      },
+      {
+       "from": "v3.1.23",
+       "file": "miwear.watch.o66nfc_v3.1.28_from_v3.1.23_incremental_30f2b921.bin",
+       "size": 4545278,
+       "hash": "30f2b921",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.28-80601c3e/miwear.watch.o66nfc_v3.1.28_from_v3.1.23_incremental_30f2b921.bin"
+      },
+      {
+       "from": "v3.1.11",
+       "file": "miwear.watch.o66nfc_v3.1.28_from_v3.1.11_incremental_b8f355e8.bin",
+       "size": 21674498,
+       "hash": "b8f355e8",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.28-80601c3e/miwear.watch.o66nfc_v3.1.28_from_v3.1.11_incremental_b8f355e8.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.26",
+     "full": [
+      {
+       "file": "miwear.watch.o66nfc_v3.1.26_full_d4e61778.bin",
+       "size": 54398028,
+       "hash": "d4e61778",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.26-0b3b7c37/miwear.watch.o66nfc_v3.1.26_full_d4e61778.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.23",
+       "file": "miwear.watch.o66nfc_v3.1.26_from_v3.1.23_incremental_900435de.bin",
+       "size": 4547500,
+       "hash": "900435de",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.26-0b3b7c37/miwear.watch.o66nfc_v3.1.26_from_v3.1.23_incremental_900435de.bin"
+      },
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.o66nfc_v3.1.26_from_v3.1.16_incremental_a96e9884.bin",
+       "size": 21332110,
+       "hash": "a96e9884",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.26-0b3b7c37/miwear.watch.o66nfc_v3.1.26_from_v3.1.16_incremental_a96e9884.bin"
+      },
+      {
+       "from": "v3.1.12",
+       "file": "miwear.watch.o66nfc_v3.1.26_from_v3.1.12_incremental_5f091583.bin",
+       "size": 21332110,
+       "hash": "5f091583",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.26-0b3b7c37/miwear.watch.o66nfc_v3.1.26_from_v3.1.12_incremental_5f091583.bin"
+      },
+      {
+       "from": "v1.2.180",
+       "file": "miwear.watch.o66nfc_v3.1.26_from_v1.2.180_incremental_5198fdd8.bin",
+       "size": 22260255,
+       "hash": "5198fdd8",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.26-0b3b7c37/miwear.watch.o66nfc_v3.1.26_from_v1.2.180_incremental_5198fdd8.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.23",
+     "full": [
+      {
+       "file": "miwear.watch.o66nfc_v3.1.23_full_1a1bc068.bin",
+       "size": 54389730,
+       "hash": "1a1bc068",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.23-8774c1ca/miwear.watch.o66nfc_v3.1.23_full_1a1bc068.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.11",
+       "file": "miwear.watch.o66nfc_v3.1.23_from_v3.1.11_incremental_f85d47fc.bin",
+       "size": 21666987,
+       "hash": "f85d47fc",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.23-8774c1ca/miwear.watch.o66nfc_v3.1.23_from_v3.1.11_incremental_f85d47fc.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.16",
+     "full": [
+      {
+       "file": "miwear.watch.o66nfc_v3.1.16_full_435fd32b.bin",
+       "size": 54317859,
+       "hash": "435fd32b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.16-11068792/miwear.watch.o66nfc_v3.1.16_full_435fd32b.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.12",
+       "file": "miwear.watch.o66nfc_v3.1.16_from_v3.1.12_incremental_1eed1876.bin",
+       "size": 4509828,
+       "hash": "1eed1876",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.16-11068792/miwear.watch.o66nfc_v3.1.16_from_v3.1.12_incremental_1eed1876.bin"
+      },
+      {
+       "from": "v3.1.11",
+       "file": "miwear.watch.o66nfc_v3.1.16_from_v3.1.11_incremental_be753f74.bin",
+       "size": 4854437,
+       "hash": "be753f74",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.16-11068792/miwear.watch.o66nfc_v3.1.16_from_v3.1.11_incremental_be753f74.bin"
+      },
+      {
+       "from": "v1.2.180",
+       "file": "miwear.watch.o66nfc_v3.1.16_from_v1.2.180_incremental_20ad7a26.bin",
+       "size": 21750752,
+       "hash": "20ad7a26",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.16-11068792/miwear.watch.o66nfc_v3.1.16_from_v1.2.180_incremental_20ad7a26.bin"
+      },
+      {
+       "from": "v1.1.155",
+       "file": "miwear.watch.o66nfc_v3.1.16_from_v1.1.155_incremental_561e8929.bin",
+       "size": 29155545,
+       "hash": "561e8929",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66nfc-v3.1.16-11068792/miwear.watch.o66nfc_v3.1.16_from_v1.1.155_incremental_561e8929.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.p67cn",
+   "name": "小米手环 10 Pro",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.101.043",
+     "full": [
+      {
+       "file": "miwear.watch.p67cn_v3.101.043_full_a4ce8564.bin",
+       "size": 90739541,
+       "hash": "a4ce8564",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.043-c07896c1/miwear.watch.p67cn_v3.101.043_full_a4ce8564.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.101.036",
+       "file": "miwear.watch.p67cn_v3.101.043_from_v3.101.036_incremental_c8151bdf.bin",
+       "size": 8898063,
+       "hash": "c8151bdf",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.043-c07896c1/miwear.watch.p67cn_v3.101.043_from_v3.101.036_incremental_c8151bdf.bin"
+      },
+      {
+       "from": "v3.101.030",
+       "file": "miwear.watch.p67cn_v3.101.043_from_v3.101.030_incremental_369d23a4.bin",
+       "size": 8920843,
+       "hash": "369d23a4",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.043-c07896c1/miwear.watch.p67cn_v3.101.043_from_v3.101.030_incremental_369d23a4.bin"
+      },
+      {
+       "from": "v3.101.028",
+       "file": "miwear.watch.p67cn_v3.101.043_from_v3.101.028_incremental_6fd9cf51.bin",
+       "size": 8921652,
+       "hash": "6fd9cf51",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.043-c07896c1/miwear.watch.p67cn_v3.101.043_from_v3.101.028_incremental_6fd9cf51.bin"
+      },
+      {
+       "from": "v3.100.170",
+       "file": "miwear.watch.p67cn_v3.101.043_from_v3.100.170_incremental_42ee0350.bin",
+       "size": 16082118,
+       "hash": "42ee0350",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.043-c07896c1/miwear.watch.p67cn_v3.101.043_from_v3.100.170_incremental_42ee0350.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.101.036",
+     "full": [
+      {
+       "file": "miwear.watch.p67cn_v3.101.036_full_17a1ea48.bin",
+       "size": 90342166,
+       "hash": "17a1ea48",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.036-79e00a4f/miwear.watch.p67cn_v3.101.036_full_17a1ea48.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.101.030",
+       "file": "miwear.watch.p67cn_v3.101.036_from_v3.101.030_incremental_b859d5f5.bin",
+       "size": 1473078,
+       "hash": "b859d5f5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.036-79e00a4f/miwear.watch.p67cn_v3.101.036_from_v3.101.030_incremental_b859d5f5.bin"
+      },
+      {
+       "from": "v3.101.028",
+       "file": "miwear.watch.p67cn_v3.101.036_from_v3.101.028_incremental_181cd3f9.bin",
+       "size": 1519548,
+       "hash": "181cd3f9",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.036-79e00a4f/miwear.watch.p67cn_v3.101.036_from_v3.101.028_incremental_181cd3f9.bin"
+      },
+      {
+       "from": "v3.101.021",
+       "file": "miwear.watch.p67cn_v3.101.036_from_v3.101.021_incremental_73e772c0.bin",
+       "size": 1833134,
+       "hash": "73e772c0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.036-79e00a4f/miwear.watch.p67cn_v3.101.036_from_v3.101.021_incremental_73e772c0.bin"
+      },
+      {
+       "from": "v3.100.170",
+       "file": "miwear.watch.p67cn_v3.101.036_from_v3.100.170_incremental_fe78fb68.bin",
+       "size": 10440701,
+       "hash": "fe78fb68",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.036-79e00a4f/miwear.watch.p67cn_v3.101.036_from_v3.100.170_incremental_fe78fb68.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.101.028",
+     "full": [
+      {
+       "file": "miwear.watch.p67cn_v3.101.028_full_6534235d.bin",
+       "size": 90342346,
+       "hash": "6534235d",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.028-9c98875c/miwear.watch.p67cn_v3.101.028_full_6534235d.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.101.021",
+     "full": [
+      {
+       "file": "miwear.watch.p67cn_v3.101.021_full_5b17ada0.bin",
+       "size": 90294663,
+       "hash": "5b17ada0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.021-6082c05a/miwear.watch.p67cn_v3.101.021_full_5b17ada0.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.100.170",
+       "file": "miwear.watch.p67cn_v3.101.021_from_v3.100.170_incremental_f221c4db.bin",
+       "size": 10226294,
+       "hash": "f221c4db",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67cn-v3.101.021-6082c05a/miwear.watch.p67cn_v3.101.021_from_v3.100.170_incremental_f221c4db.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.p67gln",
+   "name": "小米手环 10 Pro NFC 版",
+   "category": "band",
+   "confirmed": true,
+   "note": "官方欢迎语：小米手环10 Pro NFC版",
+   "releases": [
+    {
+     "version": "v3.201.016",
+     "full": [
+      {
+       "file": "miwear.watch.p67gln_v3.201.016_full_a5a99272.bin",
+       "size": 70152210,
+       "hash": "a5a99272",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67gln-v3.201.016-24c14545/miwear.watch.p67gln_v3.201.016_full_a5a99272.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.p67tc",
+   "name": "小米手环 10 Pro 陶瓷版",
+   "category": "band",
+   "confirmed": true,
+   "note": "官方欢迎语：小米手环10 Pro 陶瓷版",
+   "releases": [
+    {
+     "version": "v3.101.043",
+     "full": [
+      {
+       "file": "miwear.watch.p67tc_v3.101.043_full_a4ce8564.bin",
+       "size": 90739541,
+       "hash": "a4ce8564",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67tc-v3.101.043-feeb89d7/miwear.watch.p67tc_v3.101.043_full_a4ce8564.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.101.036",
+       "file": "miwear.watch.p67tc_v3.101.043_from_v3.101.036_incremental_c8151bdf.bin",
+       "size": 8898063,
+       "hash": "c8151bdf",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67tc-v3.101.043-feeb89d7/miwear.watch.p67tc_v3.101.043_from_v3.101.036_incremental_c8151bdf.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.101.036",
+     "full": [
+      {
+       "file": "miwear.watch.p67tc_v3.101.036_full_17a1ea48.bin",
+       "size": 90342166,
+       "hash": "17a1ea48",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67tc-v3.101.036-73df7116/miwear.watch.p67tc_v3.101.036_full_17a1ea48.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.101.030",
+       "file": "miwear.watch.p67tc_v3.101.036_from_v3.101.030_incremental_b859d5f5.bin",
+       "size": 1473078,
+       "hash": "b859d5f5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67tc-v3.101.036-73df7116/miwear.watch.p67tc_v3.101.036_from_v3.101.030_incremental_b859d5f5.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.101.028",
+     "full": [
+      {
+       "file": "miwear.watch.p67tc_v3.101.028_full_a1d6e3e0.bin",
+       "size": 90341009,
+       "hash": "a1d6e3e0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67tc-v3.101.028-23bacffb/miwear.watch.p67tc_v3.101.028_full_a1d6e3e0.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.101.021",
+       "file": "miwear.watch.p67tc_v3.101.028_from_v3.101.021_incremental_d2400938.bin",
+       "size": 1733127,
+       "hash": "d2400938",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67tc-v3.101.028-23bacffb/miwear.watch.p67tc_v3.101.028_from_v3.101.021_incremental_d2400938.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.101.021",
+     "full": [
+      {
+       "file": "miwear.watch.p67tc_v3.101.021_full_5b17ada0.bin",
+       "size": 90294663,
+       "hash": "5b17ada0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p67tc-v3.101.021-ea8324c0/miwear.watch.p67tc_v3.101.021_full_5b17ada0.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.o66lj",
+   "name": "小米手环 10 耀影金特别版",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.1.26",
+     "full": [
+      {
+       "file": "miwear.watch.o66lj_v3.1.26_full_d4e61778.bin",
+       "size": 54398028,
+       "hash": "d4e61778",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66lj-v3.1.26-aa6e2281/miwear.watch.o66lj_v3.1.26_full_d4e61778.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.1.23",
+     "full": [
+      {
+       "file": "miwear.watch.o66lj_v3.1.23_full_1a1bc068.bin",
+       "size": 54389730,
+       "hash": "1a1bc068",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66lj-v3.1.23-f252b132/miwear.watch.o66lj_v3.1.23_full_1a1bc068.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.1.16",
+     "full": [
+      {
+       "file": "miwear.watch.o66lj_v3.1.16_full_435fd32b.bin",
+       "size": 54317859,
+       "hash": "435fd32b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66lj-v3.1.16-52f01240/miwear.watch.o66lj_v3.1.16_full_435fd32b.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.11",
+       "file": "miwear.watch.o66lj_v3.1.16_from_v3.1.11_incremental_be753f74.bin",
+       "size": 4854437,
+       "hash": "be753f74",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66lj-v3.1.16-52f01240/miwear.watch.o66lj_v3.1.16_from_v3.1.11_incremental_be753f74.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.o66tc",
+   "name": "小米手环 10 陶瓷版",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.1.28",
+     "full": [
+      {
+       "file": "miwear.watch.o66tc_v3.1.28_full_03ac3e2b.bin",
+       "size": 54396577,
+       "hash": "03ac3e2b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.28-de5aeaa5/miwear.watch.o66tc_v3.1.28_full_03ac3e2b.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.26",
+       "file": "miwear.watch.o66tc_v3.1.28_from_v3.1.26_incremental_8c27335b.bin",
+       "size": 4545278,
+       "hash": "8c27335b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.28-de5aeaa5/miwear.watch.o66tc_v3.1.28_from_v3.1.26_incremental_8c27335b.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.26",
+     "full": [
+      {
+       "file": "miwear.watch.o66tc_v3.1.26_full_d4e61778.bin",
+       "size": 54398028,
+       "hash": "d4e61778",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.26-bb454658/miwear.watch.o66tc_v3.1.26_full_d4e61778.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.23",
+       "file": "miwear.watch.o66tc_v3.1.26_from_v3.1.23_incremental_900435de.bin",
+       "size": 4547500,
+       "hash": "900435de",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.26-bb454658/miwear.watch.o66tc_v3.1.26_from_v3.1.23_incremental_900435de.bin"
+      },
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.o66tc_v3.1.26_from_v3.1.16_incremental_a96e9884.bin",
+       "size": 21332110,
+       "hash": "a96e9884",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.26-bb454658/miwear.watch.o66tc_v3.1.26_from_v3.1.16_incremental_a96e9884.bin"
+      },
+      {
+       "from": "v3.1.12",
+       "file": "miwear.watch.o66tc_v3.1.26_from_v3.1.12_incremental_5f091583.bin",
+       "size": 21332110,
+       "hash": "5f091583",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.26-bb454658/miwear.watch.o66tc_v3.1.26_from_v3.1.12_incremental_5f091583.bin"
+      },
+      {
+       "from": "v3.1.11",
+       "file": "miwear.watch.o66tc_v3.1.26_from_v3.1.11_incremental_fe8de3d5.bin",
+       "size": 21676720,
+       "hash": "fe8de3d5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.26-bb454658/miwear.watch.o66tc_v3.1.26_from_v3.1.11_incremental_fe8de3d5.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.23",
+     "full": [
+      {
+       "file": "miwear.watch.o66tc_v3.1.23_full_1a1bc068.bin",
+       "size": 54389730,
+       "hash": "1a1bc068",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.23-2f14228e/miwear.watch.o66tc_v3.1.23_full_1a1bc068.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.1.16",
+     "full": [
+      {
+       "file": "miwear.watch.o66tc_v3.1.16_full_435fd32b.bin",
+       "size": 54317859,
+       "hash": "435fd32b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.16-e995569f/miwear.watch.o66tc_v3.1.16_full_435fd32b.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.12",
+       "file": "miwear.watch.o66tc_v3.1.16_from_v3.1.12_incremental_1eed1876.bin",
+       "size": 4509828,
+       "hash": "1eed1876",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.16-e995569f/miwear.watch.o66tc_v3.1.16_from_v3.1.12_incremental_1eed1876.bin"
+      },
+      {
+       "from": "v3.1.11",
+       "file": "miwear.watch.o66tc_v3.1.16_from_v3.1.11_incremental_be753f74.bin",
+       "size": 4854437,
+       "hash": "be753f74",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.16-e995569f/miwear.watch.o66tc_v3.1.16_from_v3.1.11_incremental_be753f74.bin"
+      },
+      {
+       "from": "v1.1.155",
+       "file": "miwear.watch.o66tc_v3.1.16_from_v1.1.155_incremental_561e8929.bin",
+       "size": 29155545,
+       "hash": "561e8929",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.16-e995569f/miwear.watch.o66tc_v3.1.16_from_v1.1.155_incremental_561e8929.bin"
+      },
+      {
+       "from": "v1.0.115",
+       "file": "miwear.watch.o66tc_v3.1.16_from_v1.0.115_incremental_967f200a.bin",
+       "size": 29229876,
+       "hash": "967f200a",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.16-e995569f/miwear.watch.o66tc_v3.1.16_from_v1.0.115_incremental_967f200a.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "hqbd3.watch.l67",
+   "name": "小米手环 7 Pro",
+   "category": "band",
+   "confirmed": true,
+   "note": "类手表形态，官方欢迎语确认",
+   "releases": [
+    {
+     "version": "v1.4.12",
+     "full": [
+      {
+       "file": "hqbd3.watch.l67_v1.4.12_full_2f97140f.bin",
+       "size": 46247267,
+       "hash": "2f97140f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-hqbd3.watch.l67-v1.4.12-866aa439/hqbd3.watch.l67_v1.4.12_full_2f97140f.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.m66",
+   "name": "小米手环 8",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v1.8.124",
+     "full": [
+      {
+       "file": "miwear.watch.m66_v1.8.124_full_987e8f5f.bin",
+       "size": 40163769,
+       "hash": "987e8f5f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66-v1.8.124-cb0dadc2/miwear.watch.m66_v1.8.124_full_987e8f5f.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v1.7.230",
+       "file": "miwear.watch.m66_v1.8.124_from_v1.7.230_incremental_a38ad151.bin",
+       "size": 9063069,
+       "hash": "a38ad151",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66-v1.8.124-cb0dadc2/miwear.watch.m66_v1.8.124_from_v1.7.230_incremental_a38ad151.bin"
+      },
+      {
+       "from": "v1.6.222",
+       "file": "miwear.watch.m66_v1.8.124_from_v1.6.222_incremental_6a8ccdf0.bin",
+       "size": 9135685,
+       "hash": "6a8ccdf0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66-v1.8.124-cb0dadc2/miwear.watch.m66_v1.8.124_from_v1.6.222_incremental_6a8ccdf0.bin"
+      },
+      {
+       "from": "v1.1.122",
+       "file": "miwear.watch.m66_v1.8.124_from_v1.1.122_incremental_9b371c8c.bin",
+       "size": 21618721,
+       "hash": "9b371c8c",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66-v1.8.124-cb0dadc2/miwear.watch.m66_v1.8.124_from_v1.1.122_incremental_9b371c8c.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.m66nfc",
+   "name": "小米手环 8 NFC",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v1.8.124",
+     "full": [
+      {
+       "file": "miwear.watch.m66nfc_v1.8.124_full_987e8f5f.bin",
+       "size": 40163769,
+       "hash": "987e8f5f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66nfc-v1.8.124-f114f12e/miwear.watch.m66nfc_v1.8.124_full_987e8f5f.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v1.7.230",
+       "file": "miwear.watch.m66nfc_v1.8.124_from_v1.7.230_incremental_a38ad151.bin",
+       "size": 9063069,
+       "hash": "a38ad151",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66nfc-v1.8.124-f114f12e/miwear.watch.m66nfc_v1.8.124_from_v1.7.230_incremental_a38ad151.bin"
+      },
+      {
+       "from": "v1.6.222",
+       "file": "miwear.watch.m66nfc_v1.8.124_from_v1.6.222_incremental_6a8ccdf0.bin",
+       "size": 9135685,
+       "hash": "6a8ccdf0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66nfc-v1.8.124-f114f12e/miwear.watch.m66nfc_v1.8.124_from_v1.6.222_incremental_6a8ccdf0.bin"
+      },
+      {
+       "from": "v1.2.138",
+       "file": "miwear.watch.m66nfc_v1.8.124_from_v1.2.138_incremental_30401f84.bin",
+       "size": 21679319,
+       "hash": "30401f84",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66nfc-v1.8.124-f114f12e/miwear.watch.m66nfc_v1.8.124_from_v1.2.138_incremental_30401f84.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "lchz.watch.m67",
+   "name": "小米手环 8 Pro",
+   "category": "band",
+   "confirmed": true,
+   "note": "官方欢迎语：小米手环 8 Pro",
+   "releases": [
+    {
+     "version": "v1.6.113",
+     "full": [
+      {
+       "file": "lchz.watch.m67_v1.6.113_full_1c488f30.bin",
+       "size": 35102191,
+       "hash": "1c488f30",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m67-v1.6.113-bc27d6cb/lchz.watch.m67_v1.6.113_full_1c488f30.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v1.4.110",
+       "file": "lchz.watch.m67_v1.6.113_from_v1.4.110_incremental_09dc8c55.bin",
+       "size": 7601617,
+       "hash": "09dc8c55",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m67-v1.6.113-bc27d6cb/lchz.watch.m67_v1.6.113_from_v1.4.110_incremental_09dc8c55.bin"
+      },
+      {
+       "from": "v1.4.103",
+       "file": "lchz.watch.m67_v1.6.113_from_v1.4.103_incremental_e59e92d1.bin",
+       "size": 11390104,
+       "hash": "e59e92d1",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m67-v1.6.113-bc27d6cb/lchz.watch.m67_v1.6.113_from_v1.4.103_incremental_e59e92d1.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "lchz.watch.m67ys",
+   "name": "小米手环 8 Pro 原神定制版",
+   "category": "band",
+   "confirmed": true,
+   "note": "官方欢迎语：小米手环8 Pro 原神定制版",
+   "releases": [
+    {
+     "version": "v1.0.18",
+     "full": [
+      {
+       "file": "lchz.watch.m67ys_v1.0.18_full_c7224eea.bin",
+       "size": 44831205,
+       "hash": "c7224eea",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m67ys-v1.0.18-3b7978af/lchz.watch.m67ys_v1.0.18_full_c7224eea.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v1.0.15",
+       "file": "lchz.watch.m67ys_v1.0.18_from_v1.0.15_incremental_618afb7b.bin",
+       "size": 7600796,
+       "hash": "618afb7b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m67ys-v1.0.18-3b7978af/lchz.watch.m67ys_v1.0.18_from_v1.0.15_incremental_618afb7b.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.n66cn",
+   "name": "小米手环 9",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.1.32",
+     "full": [
+      {
+       "file": "miwear.watch.n66cn_v3.1.32_full_489f2050.bin",
+       "size": 44018868,
+       "hash": "489f2050",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_full_489f2050.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.17",
+       "file": "miwear.watch.n66cn_v3.1.32_from_v3.1.17_incremental_3d59d982.bin",
+       "size": 13360059,
+       "hash": "3d59d982",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_from_v3.1.17_incremental_3d59d982.bin"
+      },
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.n66cn_v3.1.32_from_v3.1.16_incremental_e45da9ae.bin",
+       "size": 13360059,
+       "hash": "e45da9ae",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_from_v3.1.16_incremental_e45da9ae.bin"
+      },
+      {
+       "from": "v1.3.210",
+       "file": "miwear.watch.n66cn_v3.1.32_from_v1.3.210_incremental_c9e5ae78.bin",
+       "size": 13360059,
+       "hash": "c9e5ae78",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_from_v1.3.210_incremental_c9e5ae78.bin"
+      },
+      {
+       "from": "v1.3.206",
+       "file": "miwear.watch.n66cn_v3.1.32_from_v1.3.206_incremental_54e7f43f.bin",
+       "size": 13360059,
+       "hash": "54e7f43f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_from_v1.3.206_incremental_54e7f43f.bin"
+      },
+      {
+       "from": "v1.2.190",
+       "file": "miwear.watch.n66cn_v3.1.32_from_v1.2.190_incremental_ed0e9806.bin",
+       "size": 14169319,
+       "hash": "ed0e9806",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_from_v1.2.190_incremental_ed0e9806.bin"
+      },
+      {
+       "from": "v1.2.187",
+       "file": "miwear.watch.n66cn_v3.1.32_from_v1.2.187_incremental_37a44441.bin",
+       "size": 14169319,
+       "hash": "37a44441",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_from_v1.2.187_incremental_37a44441.bin"
+      },
+      {
+       "from": "v1.2.183",
+       "file": "miwear.watch.n66cn_v3.1.32_from_v1.2.183_incremental_2f7fed6c.bin",
+       "size": 14717411,
+       "hash": "2f7fed6c",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_from_v1.2.183_incremental_2f7fed6c.bin"
+      },
+      {
+       "from": "v1.1.162",
+       "file": "miwear.watch.n66cn_v3.1.32_from_v1.1.162_incremental_314ce302.bin",
+       "size": 14717411,
+       "hash": "314ce302",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.32-8f14b979/miwear.watch.n66cn_v3.1.32_from_v1.1.162_incremental_314ce302.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.17",
+     "full": [
+      {
+       "file": "miwear.watch.n66cn_v3.1.17_full_38d1681e.bin",
+       "size": 44004114,
+       "hash": "38d1681e",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.17-f83d72b8/miwear.watch.n66cn_v3.1.17_full_38d1681e.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.n66cn_v3.1.17_from_v3.1.16_incremental_3a63ccb4.bin",
+       "size": 4086452,
+       "hash": "3a63ccb4",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.17-f83d72b8/miwear.watch.n66cn_v3.1.17_from_v3.1.16_incremental_3a63ccb4.bin"
+      },
+      {
+       "from": "v1.3.210",
+       "file": "miwear.watch.n66cn_v3.1.17_from_v1.3.210_incremental_87ecc232.bin",
+       "size": 13350828,
+       "hash": "87ecc232",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.17-f83d72b8/miwear.watch.n66cn_v3.1.17_from_v1.3.210_incremental_87ecc232.bin"
+      },
+      {
+       "from": "v1.2.193",
+       "file": "miwear.watch.n66cn_v3.1.17_from_v1.2.193_incremental_0a9ed980.bin",
+       "size": 14159913,
+       "hash": "0a9ed980",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.17-f83d72b8/miwear.watch.n66cn_v3.1.17_from_v1.2.193_incremental_0a9ed980.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.n66nfc",
+   "name": "小米手环 9 NFC",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.1.32",
+     "full": [
+      {
+       "file": "miwear.watch.n66nfc_v3.1.32_full_489f2050.bin",
+       "size": 44018868,
+       "hash": "489f2050",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.32-80c9d7af/miwear.watch.n66nfc_v3.1.32_full_489f2050.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.17",
+       "file": "miwear.watch.n66nfc_v3.1.32_from_v3.1.17_incremental_3d59d982.bin",
+       "size": 13360059,
+       "hash": "3d59d982",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.32-80c9d7af/miwear.watch.n66nfc_v3.1.32_from_v3.1.17_incremental_3d59d982.bin"
+      },
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.n66nfc_v3.1.32_from_v3.1.16_incremental_e45da9ae.bin",
+       "size": 13360059,
+       "hash": "e45da9ae",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.32-80c9d7af/miwear.watch.n66nfc_v3.1.32_from_v3.1.16_incremental_e45da9ae.bin"
+      },
+      {
+       "from": "v1.3.210",
+       "file": "miwear.watch.n66nfc_v3.1.32_from_v1.3.210_incremental_c9e5ae78.bin",
+       "size": 13360059,
+       "hash": "c9e5ae78",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.32-80c9d7af/miwear.watch.n66nfc_v3.1.32_from_v1.3.210_incremental_c9e5ae78.bin"
+      },
+      {
+       "from": "v1.3.206",
+       "file": "miwear.watch.n66nfc_v3.1.32_from_v1.3.206_incremental_54e7f43f.bin",
+       "size": 13360059,
+       "hash": "54e7f43f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.32-80c9d7af/miwear.watch.n66nfc_v3.1.32_from_v1.3.206_incremental_54e7f43f.bin"
+      },
+      {
+       "from": "v1.1.171",
+       "file": "miwear.watch.n66nfc_v3.1.32_from_v1.1.171_incremental_5fa454f5.bin",
+       "size": 14717411,
+       "hash": "5fa454f5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.32-80c9d7af/miwear.watch.n66nfc_v3.1.32_from_v1.1.171_incremental_5fa454f5.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.17",
+     "full": [
+      {
+       "file": "miwear.watch.n66nfc_v3.1.17_full_38d1681e.bin",
+       "size": 44004114,
+       "hash": "38d1681e",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.17-3c912aec/miwear.watch.n66nfc_v3.1.17_full_38d1681e.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.n66nfc_v3.1.17_from_v3.1.16_incremental_3a63ccb4.bin",
+       "size": 4086452,
+       "hash": "3a63ccb4",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.17-3c912aec/miwear.watch.n66nfc_v3.1.17_from_v3.1.16_incremental_3a63ccb4.bin"
+      },
+      {
+       "from": "v1.3.210",
+       "file": "miwear.watch.n66nfc_v3.1.17_from_v1.3.210_incremental_87ecc232.bin",
+       "size": 13350828,
+       "hash": "87ecc232",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.17-3c912aec/miwear.watch.n66nfc_v3.1.17_from_v1.3.210_incremental_87ecc232.bin"
+      },
+      {
+       "from": "v1.3.206",
+       "file": "miwear.watch.n66nfc_v3.1.17_from_v1.3.206_incremental_235ad630.bin",
+       "size": 13350828,
+       "hash": "235ad630",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.17-3c912aec/miwear.watch.n66nfc_v3.1.17_from_v1.3.206_incremental_235ad630.bin"
+      },
+      {
+       "from": "v1.2.187",
+       "file": "miwear.watch.n66nfc_v3.1.17_from_v1.2.187_incremental_3eb35f20.bin",
+       "size": 14160090,
+       "hash": "3eb35f20",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.17-3c912aec/miwear.watch.n66nfc_v3.1.17_from_v1.2.187_incremental_3eb35f20.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.n67cn",
+   "name": "小米手环 9 Pro",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.1.187",
+     "full": [
+      {
+       "file": "miwear.watch.n67cn_v3.1.187_full_6d33afe2.bin",
+       "size": 50328021,
+       "hash": "6d33afe2",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.187-4e4231b0/miwear.watch.n67cn_v3.1.187_full_6d33afe2.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.1.175",
+     "full": [
+      {
+       "file": "miwear.watch.n67cn_v3.1.175_full_a8274e4c.bin",
+       "size": 50302103,
+       "hash": "a8274e4c",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_full_a8274e4c.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.171",
+       "file": "miwear.watch.n67cn_v3.1.175_from_v3.1.171_incremental_cf9c4af0.bin",
+       "size": 7032232,
+       "hash": "cf9c4af0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_from_v3.1.171_incremental_cf9c4af0.bin"
+      },
+      {
+       "from": "v3.1.162",
+       "file": "miwear.watch.n67cn_v3.1.175_from_v3.1.162_incremental_548730b2.bin",
+       "size": 8738080,
+       "hash": "548730b2",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_from_v3.1.162_incremental_548730b2.bin"
+      },
+      {
+       "from": "v1.3.153",
+       "file": "miwear.watch.n67cn_v3.1.175_from_v1.3.153_incremental_f2367c8a.bin",
+       "size": 11888411,
+       "hash": "f2367c8a",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_from_v1.3.153_incremental_f2367c8a.bin"
+      },
+      {
+       "from": "v1.2.137",
+       "file": "miwear.watch.n67cn_v3.1.175_from_v1.2.137_incremental_c4ea28fe.bin",
+       "size": 14293996,
+       "hash": "c4ea28fe",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_from_v1.2.137_incremental_c4ea28fe.bin"
+      },
+      {
+       "from": "v1.2.133",
+       "file": "miwear.watch.n67cn_v3.1.175_from_v1.2.133_incremental_e3e90c2a.bin",
+       "size": 14297774,
+       "hash": "e3e90c2a",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_from_v1.2.133_incremental_e3e90c2a.bin"
+      },
+      {
+       "from": "v1.1.120",
+       "file": "miwear.watch.n67cn_v3.1.175_from_v1.1.120_incremental_edec06bc.bin",
+       "size": 23478693,
+       "hash": "edec06bc",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_from_v1.1.120_incremental_edec06bc.bin"
+      },
+      {
+       "from": "v1.1.103",
+       "file": "miwear.watch.n67cn_v3.1.175_from_v1.1.103_incremental_2ff9beb1.bin",
+       "size": 23478693,
+       "hash": "2ff9beb1",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_from_v1.1.103_incremental_2ff9beb1.bin"
+      },
+      {
+       "from": "v1.1.100",
+       "file": "miwear.watch.n67cn_v3.1.175_from_v1.1.100_incremental_d02d219d.bin",
+       "size": 23972351,
+       "hash": "d02d219d",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.175-de407e08/miwear.watch.n67cn_v3.1.175_from_v1.1.100_incremental_d02d219d.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.171",
+     "full": [
+      {
+       "file": "miwear.watch.n67cn_v3.1.171_full_01591845.bin",
+       "size": 50301988,
+       "hash": "01591845",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.171-13f7a366/miwear.watch.n67cn_v3.1.171_full_01591845.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.n66tc",
+   "name": "小米手环 9 陶瓷特别版",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.1.32",
+     "full": [
+      {
+       "file": "miwear.watch.n66tc_v3.1.32_full_489f2050.bin",
+       "size": 44018868,
+       "hash": "489f2050",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.32-2260cfff/miwear.watch.n66tc_v3.1.32_full_489f2050.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.17",
+       "file": "miwear.watch.n66tc_v3.1.32_from_v3.1.17_incremental_3d59d982.bin",
+       "size": 13360059,
+       "hash": "3d59d982",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.32-2260cfff/miwear.watch.n66tc_v3.1.32_from_v3.1.17_incremental_3d59d982.bin"
+      },
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.n66tc_v3.1.32_from_v3.1.16_incremental_e45da9ae.bin",
+       "size": 13360059,
+       "hash": "e45da9ae",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.32-2260cfff/miwear.watch.n66tc_v3.1.32_from_v3.1.16_incremental_e45da9ae.bin"
+      },
+      {
+       "from": "v1.3.210",
+       "file": "miwear.watch.n66tc_v3.1.32_from_v1.3.210_incremental_c9e5ae78.bin",
+       "size": 13360059,
+       "hash": "c9e5ae78",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.32-2260cfff/miwear.watch.n66tc_v3.1.32_from_v1.3.210_incremental_c9e5ae78.bin"
+      },
+      {
+       "from": "v1.2.193",
+       "file": "miwear.watch.n66tc_v3.1.32_from_v1.2.193_incremental_199fd7f8.bin",
+       "size": 14169142,
+       "hash": "199fd7f8",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.32-2260cfff/miwear.watch.n66tc_v3.1.32_from_v1.2.193_incremental_199fd7f8.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.17",
+     "full": [
+      {
+       "file": "miwear.watch.n66tc_v3.1.17_full_38d1681e.bin",
+       "size": 44004114,
+       "hash": "38d1681e",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.17-496afad0/miwear.watch.n66tc_v3.1.17_full_38d1681e.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.n66tc_v3.1.17_from_v3.1.16_incremental_3a63ccb4.bin",
+       "size": 4086452,
+       "hash": "3a63ccb4",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.17-496afad0/miwear.watch.n66tc_v3.1.17_from_v3.1.16_incremental_3a63ccb4.bin"
+      },
+      {
+       "from": "v1.3.206",
+       "file": "miwear.watch.n66tc_v3.1.17_from_v1.3.206_incremental_235ad630.bin",
+       "size": 13350828,
+       "hash": "235ad630",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.17-496afad0/miwear.watch.n66tc_v3.1.17_from_v1.3.206_incremental_235ad630.bin"
+      },
+      {
+       "from": "v1.2.193",
+       "file": "miwear.watch.n66tc_v3.1.17_from_v1.2.193_incremental_0a9ed980.bin",
+       "size": 14159913,
+       "hash": "0a9ed980",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.17-496afad0/miwear.watch.n66tc_v3.1.17_from_v1.2.193_incremental_0a9ed980.bin"
+      },
+      {
+       "from": "v1.2.187",
+       "file": "miwear.watch.n66tc_v3.1.17_from_v1.2.187_incremental_3eb35f20.bin",
+       "size": 14160090,
+       "hash": "3eb35f20",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66tc-v3.1.17-496afad0/miwear.watch.n66tc_v3.1.17_from_v1.2.187_incremental_3eb35f20.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.n66gl",
+   "name": "小米手环 9（海外版）",
+   "category": "band",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v2.3.98",
+     "full": [
+      {
+       "file": "miwear.watch.n66gl_v2.3.98_full_08dc7929.bin",
+       "size": 43410024,
+       "hash": "08dc7929",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66gl-v2.3.98-c294afb6/miwear.watch.n66gl_v2.3.98_full_08dc7929.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "lchz.watch.n65",
+   "name": "REDMI Watch 4",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v1.6.161",
+     "full": [
+      {
+       "file": "lchz.watch.n65_v1.6.161_full_9fd4c846.bin",
+       "size": 52606287,
+       "hash": "9fd4c846",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.n65-v1.6.161-009912ec/lchz.watch.n65_v1.6.161_full_9fd4c846.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.o65",
+   "name": "REDMI Watch 5",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.100.102",
+     "full": [
+      {
+       "file": "miwear.watch.o65_v3.100.102_full_ba16af3e.bin",
+       "size": 104373426,
+       "hash": "ba16af3e",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.102-80af66f2/miwear.watch.o65_v3.100.102_full_ba16af3e.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.100.096",
+     "full": [
+      {
+       "file": "miwear.watch.o65_v3.100.096_full_04471489.bin",
+       "size": 104370416,
+       "hash": "04471489",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.096-27aa6a68/miwear.watch.o65_v3.100.096_full_04471489.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.100.038",
+     "full": [
+      {
+       "file": "miwear.watch.o65_v3.100.038_full_b1ade336.bin",
+       "size": 101857654,
+       "hash": "b1ade336",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.038-325839d0/miwear.watch.o65_v3.100.038_full_b1ade336.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v1.2.226",
+       "file": "miwear.watch.o65_v3.100.038_from_v1.2.226_incremental_7676b7be.bin",
+       "size": 24262557,
+       "hash": "7676b7be",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.038-325839d0/miwear.watch.o65_v3.100.038_from_v1.2.226_incremental_7676b7be.bin"
+      },
+      {
+       "from": "v1.2.225",
+       "file": "miwear.watch.o65_v3.100.038_from_v1.2.225_incremental_af0f6bfd.bin",
+       "size": 24262557,
+       "hash": "af0f6bfd",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.038-325839d0/miwear.watch.o65_v3.100.038_from_v1.2.225_incremental_af0f6bfd.bin"
+      },
+      {
+       "from": "v1.2.220",
+       "file": "miwear.watch.o65_v3.100.038_from_v1.2.220_incremental_160287d1.bin",
+       "size": 24262557,
+       "hash": "160287d1",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.038-325839d0/miwear.watch.o65_v3.100.038_from_v1.2.220_incremental_160287d1.bin"
+      },
+      {
+       "from": "v1.2.205",
+       "file": "miwear.watch.o65_v3.100.038_from_v1.2.205_incremental_930c10fd.bin",
+       "size": 28106137,
+       "hash": "930c10fd",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.038-325839d0/miwear.watch.o65_v3.100.038_from_v1.2.205_incremental_930c10fd.bin"
+      },
+      {
+       "from": "v1.1.182",
+       "file": "miwear.watch.o65_v3.100.038_from_v1.1.182_incremental_2d5251e2.bin",
+       "size": 34999254,
+       "hash": "2d5251e2",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.038-325839d0/miwear.watch.o65_v3.100.038_from_v1.1.182_incremental_2d5251e2.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.o65m",
+   "name": "REDMI Watch 5 eSIM",
+   "category": "watch",
+   "confirmed": true,
+   "note": "XRING INSIDE",
+   "releases": [
+    {
+     "version": "v3.110.078",
+     "full": [
+      {
+       "file": "miwear.watch.o65m_v3.110.078_full_5ad78156.bin",
+       "size": 182584343,
+       "hash": "5ad78156",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.078-7f9ec178/miwear.watch.o65m_v3.110.078_full_5ad78156.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.110.075",
+       "file": "miwear.watch.o65m_v3.110.078_from_v3.110.075_incremental_d9612302.bin",
+       "size": 1897827,
+       "hash": "d9612302",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.078-7f9ec178/miwear.watch.o65m_v3.110.078_from_v3.110.075_incremental_d9612302.bin"
+      },
+      {
+       "from": "v3.110.029",
+       "file": "miwear.watch.o65m_v3.110.078_from_v3.110.029_incremental_06064728.bin",
+       "size": 5325749,
+       "hash": "06064728",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.078-7f9ec178/miwear.watch.o65m_v3.110.078_from_v3.110.029_incremental_06064728.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.110.075",
+     "full": [
+      {
+       "file": "miwear.watch.o65m_v3.110.075_full_e71295c4.bin",
+       "size": 182580577,
+       "hash": "e71295c4",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.075-b157c90e/miwear.watch.o65m_v3.110.075_full_e71295c4.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.110.029",
+     "full": [
+      {
+       "file": "miwear.watch.o65m_v3.110.029_full_d8cd831c.bin",
+       "size": 180090348,
+       "hash": "d8cd831c",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.029-9bcad5ff/miwear.watch.o65m_v3.110.029_full_d8cd831c.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.110.012",
+       "file": "miwear.watch.o65m_v3.110.029_from_v3.110.012_incremental_fa1ef1af.bin",
+       "size": 4268018,
+       "hash": "fa1ef1af",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.029-9bcad5ff/miwear.watch.o65m_v3.110.029_from_v3.110.012_incremental_fa1ef1af.bin"
+      },
+      {
+       "from": "v1.2.196",
+       "file": "miwear.watch.o65m_v3.110.029_from_v1.2.196_incremental_ad0b89b7.bin",
+       "size": 12667793,
+       "hash": "ad0b89b7",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.029-9bcad5ff/miwear.watch.o65m_v3.110.029_from_v1.2.196_incremental_ad0b89b7.bin"
+      },
+      {
+       "from": "v1.2.174",
+       "file": "miwear.watch.o65m_v3.110.029_from_v1.2.174_incremental_73815247.bin",
+       "size": 13503706,
+       "hash": "73815247",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.029-9bcad5ff/miwear.watch.o65m_v3.110.029_from_v1.2.174_incremental_73815247.bin"
+      },
+      {
+       "from": "v1.1.163",
+       "file": "miwear.watch.o65m_v3.110.029_from_v1.1.163_incremental_f5e05493.bin",
+       "size": 16902814,
+       "hash": "f5e05493",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.029-9bcad5ff/miwear.watch.o65m_v3.110.029_from_v1.1.163_incremental_f5e05493.bin"
+      },
+      {
+       "from": "v1.1.157",
+       "file": "miwear.watch.o65m_v3.110.029_from_v1.1.157_incremental_3f275bb1.bin",
+       "size": 16990422,
+       "hash": "3f275bb1",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65m-v3.110.029-9bcad5ff/miwear.watch.o65m_v3.110.029_from_v1.1.157_incremental_3f275bb1.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.p65",
+   "name": "REDMI Watch 6",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.100.031",
+     "full": [
+      {
+       "file": "miwear.watch.p65_v3.100.031_full_29136140.bin",
+       "size": 120043876,
+       "hash": "29136140",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.100.031-8b23c927/miwear.watch.p65_v3.100.031_full_29136140.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.100.023",
+       "file": "miwear.watch.p65_v3.100.031_from_v3.100.023_incremental_86178b7a.bin",
+       "size": 1103613,
+       "hash": "86178b7a",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.100.031-8b23c927/miwear.watch.p65_v3.100.031_from_v3.100.023_incremental_86178b7a.bin"
+      },
+      {
+       "from": "v3.1.225",
+       "file": "miwear.watch.p65_v3.100.031_from_v3.1.225_incremental_1e862d88.bin",
+       "size": 39872017,
+       "hash": "1e862d88",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.100.031-8b23c927/miwear.watch.p65_v3.100.031_from_v3.1.225_incremental_1e862d88.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.100.023",
+     "full": [
+      {
+       "file": "miwear.watch.p65_v3.100.023_full_bcbffc95.bin",
+       "size": 121136934,
+       "hash": "bcbffc95",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.100.023-c44ca3c9/miwear.watch.p65_v3.100.023_full_bcbffc95.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.1.225",
+     "full": [
+      {
+       "file": "miwear.watch.p65_v3.1.225_full_cec69aca.bin",
+       "size": 111872475,
+       "hash": "cec69aca",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.225-71c2f10e/miwear.watch.p65_v3.1.225_full_cec69aca.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.221",
+       "file": "miwear.watch.p65_v3.1.225_from_v3.1.221_incremental_e96a45b8.bin",
+       "size": 1322690,
+       "hash": "e96a45b8",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.225-71c2f10e/miwear.watch.p65_v3.1.225_from_v3.1.221_incremental_e96a45b8.bin"
+      },
+      {
+       "from": "v3.1.209",
+       "file": "miwear.watch.p65_v3.1.225_from_v3.1.209_incremental_0e24ca50.bin",
+       "size": 1446045,
+       "hash": "0e24ca50",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.225-71c2f10e/miwear.watch.p65_v3.1.225_from_v3.1.209_incremental_0e24ca50.bin"
+      },
+      {
+       "from": "v3.1.205",
+       "file": "miwear.watch.p65_v3.1.225_from_v3.1.205_incremental_8e375258.bin",
+       "size": 1437360,
+       "hash": "8e375258",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.225-71c2f10e/miwear.watch.p65_v3.1.225_from_v3.1.205_incremental_8e375258.bin"
+      },
+      {
+       "from": "v3.1.191",
+       "file": "miwear.watch.p65_v3.1.225_from_v3.1.191_incremental_f8789442.bin",
+       "size": 1653881,
+       "hash": "f8789442",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.225-71c2f10e/miwear.watch.p65_v3.1.225_from_v3.1.191_incremental_f8789442.bin"
+      },
+      {
+       "from": "v3.1.182",
+       "file": "miwear.watch.p65_v3.1.225_from_v3.1.182_incremental_c399a905.bin",
+       "size": 1694405,
+       "hash": "c399a905",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.225-71c2f10e/miwear.watch.p65_v3.1.225_from_v3.1.182_incremental_c399a905.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.221",
+     "full": [
+      {
+       "file": "miwear.watch.p65_v3.1.221_full_b54044c3.bin",
+       "size": 111873543,
+       "hash": "b54044c3",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.221-355d89d3/miwear.watch.p65_v3.1.221_full_b54044c3.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.209",
+       "file": "miwear.watch.p65_v3.1.221_from_v3.1.209_incremental_0c867c62.bin",
+       "size": 1432352,
+       "hash": "0c867c62",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.221-355d89d3/miwear.watch.p65_v3.1.221_from_v3.1.209_incremental_0c867c62.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.1.209",
+     "full": [
+      {
+       "file": "miwear.watch.p65_v3.1.209_full_a46d53d6.bin",
+       "size": 111869884,
+       "hash": "a46d53d6",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.1.209-866785ba/miwear.watch.p65_v3.1.209_full_a46d53d6.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "midr.watch.ds",
+   "name": "小米手表 Color",
+   "category": "watch",
+   "confirmed": true,
+   "note": "官方更新说明标题：小米手表Color",
+   "releases": [
+    {
+     "version": "v1.7.320",
+     "full": [
+      {
+       "file": "midr.watch.ds_v1.7.320_full_440d5743.bin",
+       "size": 17753815,
+       "hash": "440d5743",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-midr.watch.ds-v1.7.320-5b6418fc/midr.watch.ds_v1.7.320_full_440d5743.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.n62",
+   "name": "小米手表 S3",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v4.8.0",
+     "full": [
+      {
+       "file": "mijia.watch.n62_v4.8.0_full_26b986cf.bin",
+       "size": 133878185,
+       "hash": "26b986cf",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n62-v4.8.0-e2b6a430/mijia.watch.n62_v4.8.0_full_26b986cf.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.n62cg",
+   "name": "小米手表 S3 SU7 限定版",
+   "category": "watch",
+   "confirmed": true,
+   "note": "同 n62car，官方欢迎语同为 Xiaomi Watch S3 eSIM",
+   "releases": [
+    {
+     "version": "v5.4.0",
+     "full": [
+      {
+       "file": "mijia.watch.n62cg_v5.4.0_full_49a84696.bin",
+       "size": 150835258,
+       "hash": "49a84696",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n62cg-v5.4.0-5db870f7/mijia.watch.n62cg_v5.4.0_full_49a84696.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.n62car",
+   "name": "小米手表 S3 SU7 限定版",
+   "category": "watch",
+   "confirmed": true,
+   "note": "官方欢迎语：Xiaomi Watch S3 eSIM（硬件为 eSIM 版）",
+   "releases": [
+    {
+     "version": "v5.3.0",
+     "full": [
+      {
+       "file": "mijia.watch.n62car_v5.3.0_full_a0cd41f4.bin",
+       "size": 150820225,
+       "hash": "a0cd41f4",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n62car-v5.3.0-65c2f47a/mijia.watch.n62car_v5.3.0_full_a0cd41f4.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.n62lte",
+   "name": "小米手表 S3 eSIM 版",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v4.7.0",
+     "full": [
+      {
+       "file": "mijia.watch.n62lte_v4.7.0_full_87c451e6.bin",
+       "size": 149931067,
+       "hash": "87c451e6",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n62lte-v4.7.0-9d394a83/mijia.watch.n62lte_v4.7.0_full_87c451e6.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.o62",
+   "name": "小米手表 S4",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.201.79",
+     "full": [
+      {
+       "file": "mijia.watch.o62_v3.201.79_full_f86aa1eb.bin",
+       "size": 197966092,
+       "hash": "f86aa1eb",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62-v3.201.79-88e9c536/mijia.watch.o62_v3.201.79_full_f86aa1eb.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.101.47",
+       "file": "mijia.watch.o62_v3.201.79_from_v3.101.47_incremental_9f4bd0b7.bin",
+       "size": 9521598,
+       "hash": "9f4bd0b7",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62-v3.201.79-88e9c536/mijia.watch.o62_v3.201.79_from_v3.101.47_incremental_9f4bd0b7.bin"
+      },
+      {
+       "from": "v3.12.1",
+       "file": "mijia.watch.o62_v3.201.79_from_v3.12.1_incremental_caf04717.bin",
+       "size": 30468933,
+       "hash": "caf04717",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62-v3.201.79-88e9c536/mijia.watch.o62_v3.201.79_from_v3.12.1_incremental_caf04717.bin"
+      },
+      {
+       "from": "v3.6.12",
+       "file": "mijia.watch.o62_v3.201.79_from_v3.6.12_incremental_a641477f.bin",
+       "size": 73749422,
+       "hash": "a641477f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62-v3.201.79-88e9c536/mijia.watch.o62_v3.201.79_from_v3.6.12_incremental_a641477f.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.101.47",
+     "full": [
+      {
+       "file": "mijia.watch.o62_v3.101.47_full_b0ac4b75.bin",
+       "size": 191143002,
+       "hash": "b0ac4b75",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62-v3.101.47-51697781/mijia.watch.o62_v3.101.47_full_b0ac4b75.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.o62m",
+   "name": "小米手表 S4 15 周年版",
+   "category": "watch",
+   "confirmed": true,
+   "note": "XRING INSIDE，官方欢迎语：Xiaomi Watch S4 eSIM",
+   "releases": [
+    {
+     "version": "v3.1.115",
+     "full": [
+      {
+       "file": "mijia.watch.o62m_v3.1.115_full_02222e2c.bin",
+       "size": 213521162,
+       "hash": "02222e2c",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62m-v3.1.115-8b1b0682/mijia.watch.o62m_v3.1.115_full_02222e2c.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.31",
+       "file": "mijia.watch.o62m_v3.1.115_from_v3.1.31_incremental_91fbf2a8.bin",
+       "size": 10350792,
+       "hash": "91fbf2a8",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62m-v3.1.115-8b1b0682/mijia.watch.o62m_v3.1.115_from_v3.1.31_incremental_91fbf2a8.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.n62s",
+   "name": "小米手表 S4 Sport",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.111.032",
+     "full": [
+      {
+       "file": "mijia.watch.n62s_v3.111.032_full_a9933b68.bin",
+       "size": 171446968,
+       "hash": "a9933b68",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n62s-v3.111.032-76c1801b/mijia.watch.n62s_v3.111.032_full_a9933b68.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.110.138",
+       "file": "mijia.watch.n62s_v3.111.032_from_v3.110.138_incremental_d5ad9218.bin",
+       "size": 6558430,
+       "hash": "d5ad9218",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n62s-v3.111.032-76c1801b/mijia.watch.n62s_v3.111.032_from_v3.110.138_incremental_d5ad9218.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.o62lte",
+   "name": "小米手表 S4 eSIM 版",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.202.79",
+     "full": [
+      {
+       "file": "mijia.watch.o62lte_v3.202.79_full_45a9a987.bin",
+       "size": 199385001,
+       "hash": "45a9a987",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62lte-v3.202.79-48baa0eb/mijia.watch.o62lte_v3.202.79_full_45a9a987.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.102.47",
+       "file": "mijia.watch.o62lte_v3.202.79_from_v3.102.47_incremental_b4e373ef.bin",
+       "size": 9589777,
+       "hash": "b4e373ef",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62lte-v3.202.79-48baa0eb/mijia.watch.o62lte_v3.202.79_from_v3.102.47_incremental_b4e373ef.bin"
+      },
+      {
+       "from": "v3.15.35",
+       "file": "mijia.watch.o62lte_v3.202.79_from_v3.15.35_incremental_9266f66a.bin",
+       "size": 14628144,
+       "hash": "9266f66a",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62lte-v3.202.79-48baa0eb/mijia.watch.o62lte_v3.202.79_from_v3.15.35_incremental_9266f66a.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.102.47",
+     "full": [
+      {
+       "file": "mijia.watch.o62lte_v3.102.47_full_7d80f0da.bin",
+       "size": 192562119,
+       "hash": "7d80f0da",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62lte-v3.102.47-a018ab1f/mijia.watch.o62lte_v3.102.47_full_7d80f0da.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.102.27",
+       "file": "mijia.watch.o62lte_v3.102.47_from_v3.102.27_incremental_7df54a07.bin",
+       "size": 3003289,
+       "hash": "7df54a07",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.o62lte-v3.102.47-a018ab1f/mijia.watch.o62lte_v3.102.47_from_v3.102.27_incremental_7df54a07.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.o63",
+   "name": "小米手表 S4（41mm）",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.100.032",
+     "full": [
+      {
+       "file": "miwear.watch.o63_v3.100.032_full_0d9cb699.bin",
+       "size": 221459463,
+       "hash": "0d9cb699",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o63-v3.100.032-6e387e1f/miwear.watch.o63_v3.100.032_full_0d9cb699.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.100.006",
+       "file": "miwear.watch.o63_v3.100.032_from_v3.100.006_incremental_999a0c65.bin",
+       "size": 9612431,
+       "hash": "999a0c65",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o63-v3.100.032-6e387e1f/miwear.watch.o63_v3.100.032_from_v3.100.006_incremental_999a0c65.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.100.006",
+     "full": [
+      {
+       "file": "miwear.watch.o63_v3.100.006_full_acc1e8b0.bin",
+       "size": 214594049,
+       "hash": "acc1e8b0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o63-v3.100.006-28765c28/miwear.watch.o63_v3.100.006_full_acc1e8b0.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.p62lte",
+   "name": "小米手表 S5 eSIM（46mm）",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.112.035",
+     "full": [
+      {
+       "file": "miwear.watch.p62lte_v3.112.035_full_adbe74f0.bin",
+       "size": 288449081,
+       "hash": "adbe74f0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62lte-v3.112.035-6c600cab/miwear.watch.p62lte_v3.112.035_full_adbe74f0.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.111.044",
+       "file": "miwear.watch.p62lte_v3.112.035_from_v3.111.044_incremental_475ea83e.bin",
+       "size": 46047595,
+       "hash": "475ea83e",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62lte-v3.112.035-6c600cab/miwear.watch.p62lte_v3.112.035_from_v3.111.044_incremental_475ea83e.bin"
+      },
+      {
+       "from": "v3.111.036",
+       "file": "miwear.watch.p62lte_v3.112.035_from_v3.111.036_incremental_0fe16b1f.bin",
+       "size": 46765411,
+       "hash": "0fe16b1f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62lte-v3.112.035-6c600cab/miwear.watch.p62lte_v3.112.035_from_v3.111.036_incremental_0fe16b1f.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.111.044",
+     "full": [
+      {
+       "file": "miwear.watch.p62lte_v3.111.044_full_4bc5da4b.bin",
+       "size": 279304488,
+       "hash": "4bc5da4b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62lte-v3.111.044-40b0102e/miwear.watch.p62lte_v3.111.044_full_4bc5da4b.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v3.111.038",
+     "full": [
+      {
+       "file": "miwear.watch.p62lte_v3.111.038_full_fd052fd1.bin",
+       "size": 279285789,
+       "hash": "fd052fd1",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62lte-v3.111.038-e149e54a/miwear.watch.p62lte_v3.111.038_full_fd052fd1.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.p62",
+   "name": "小米手表 S5（46mm）",
+   "category": "watch",
+   "confirmed": true,
+   "note": "",
+   "releases": [
+    {
+     "version": "v3.102.035",
+     "full": [
+      {
+       "file": "miwear.watch.p62_v3.102.035_full_37669458.bin",
+       "size": 285746184,
+       "hash": "37669458",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62-v3.102.035-87912b61/miwear.watch.p62_v3.102.035_full_37669458.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.101.044",
+       "file": "miwear.watch.p62_v3.102.035_from_v3.101.044_incremental_f6fd0f13.bin",
+       "size": 40214927,
+       "hash": "f6fd0f13",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62-v3.102.035-87912b61/miwear.watch.p62_v3.102.035_from_v3.101.044_incremental_f6fd0f13.bin"
+      },
+      {
+       "from": "v3.100.162",
+       "file": "miwear.watch.p62_v3.102.035_from_v3.100.162_incremental_4d481aea.bin",
+       "size": 75420805,
+       "hash": "4d481aea",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62-v3.102.035-87912b61/miwear.watch.p62_v3.102.035_from_v3.100.162_incremental_4d481aea.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.101.044",
+     "full": [
+      {
+       "file": "miwear.watch.p62_v3.101.044_full_1547eec7.bin",
+       "size": 276422965,
+       "hash": "1547eec7",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62-v3.101.044-47615f87/miwear.watch.p62_v3.101.044_full_1547eec7.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.101.038",
+       "file": "miwear.watch.p62_v3.101.044_from_v3.101.038_incremental_4cd276db.bin",
+       "size": 21759213,
+       "hash": "4cd276db",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62-v3.101.044-47615f87/miwear.watch.p62_v3.101.044_from_v3.101.038_incremental_4cd276db.bin"
+      }
+     ]
+    },
+    {
+     "version": "v3.101.038",
+     "full": [
+      {
+       "file": "miwear.watch.p62_v3.101.038_full_3e1bc020.bin",
+       "size": 276400485,
+       "hash": "3e1bc020",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62-v3.101.038-61e5738f/miwear.watch.p62_v3.101.038_full_3e1bc020.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.band01",
+   "name": "Redmi 手环（初代）",
+   "category": "band",
+   "confirmed": false,
+   "note": "待确认",
+   "releases": [
+    {
+     "version": "v2.8.2",
+     "full": [
+      {
+       "file": "mijia.watch.band01_v2.8.2_full_ee71710b.bin",
+       "size": 589764,
+       "hash": "ee71710b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.band01-v2.8.2-77ebc046/mijia.watch.band01_v2.8.2_full_ee71710b.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.v1",
+   "name": "未知设备",
+   "category": "other",
+   "confirmed": false,
+   "note": "暂未查到公开对照",
+   "releases": [
+    {
+     "version": "v1.1.59",
+     "full": [
+      {
+       "file": "mijia.watch.v1_v1.1.59_full_0b6102ee.bin",
+       "size": 1979124,
+       "hash": "0b6102ee",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.v1-v1.1.59-e4cde0f8/mijia.watch.v1_v1.1.59_full_0b6102ee.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.l61",
+   "name": "未知设备",
+   "category": "other",
+   "confirmed": false,
+   "note": "暂未查到公开对照",
+   "releases": [
+    {
+     "version": "v1.4.1",
+     "full": [
+      {
+       "file": "mijia.watch.l61_v1.4.1_full_4bec4b95.bin",
+       "size": 69633046,
+       "hash": "4bec4b95",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.l61-v1.4.1-0f49d8ce/mijia.watch.l61_v1.4.1_full_4bec4b95.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "midr.watch.sports",
+   "name": "未知设备（midr 系列）",
+   "category": "other",
+   "confirmed": false,
+   "note": "暂未查到公开对照",
+   "releases": [
+    {
+     "version": "v1.5.132",
+     "full": [
+      {
+       "file": "midr.watch.sports_v1.5.132_full_bc486b62.bin",
+       "size": 25586668,
+       "hash": "bc486b62",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-midr.watch.sports-v1.5.132-e0825527/midr.watch.sports_v1.5.132_full_bc486b62.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "midr.watch.m62s",
+   "name": "未知设备（midr 系列）",
+   "category": "other",
+   "confirmed": false,
+   "note": "暂未查到公开对照",
+   "releases": [
+    {
+     "version": "v1.4.368",
+     "full": [
+      {
+       "file": "midr.watch.m62s_v1.4.368_full_9af729e0.bin",
+       "size": 376359598,
+       "hash": "9af729e0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-midr.watch.m62s-v1.4.368-73b48931/midr.watch.m62s_v1.4.368_full_9af729e0.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "midr.watch.m62a",
+   "name": "未知设备（midr 系列）",
+   "category": "other",
+   "confirmed": false,
+   "note": "暂未查到公开对照",
+   "releases": [
+    {
+     "version": "v1.4.368",
+     "full": [
+      {
+       "file": "midr.watch.m62a_v1.4.368_full_b41fed31.bin",
+       "size": 376513910,
+       "hash": "b41fed31",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-midr.watch.m62a-v1.4.368-f004a427/midr.watch.m62a_v1.4.368_full_b41fed31.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "midr.watch.k65",
+   "name": "未知设备（midr 系列）",
+   "category": "other",
+   "confirmed": false,
+   "note": "暂未查到公开对照",
+   "releases": [
+    {
+     "version": "v1.2.253",
+     "full": [
+      {
+       "file": "midr.watch.k65_v1.2.253_full_53916145.bin",
+       "size": 19146256,
+       "hash": "53916145",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-midr.watch.k65-v1.2.253-86837015/midr.watch.k65_v1.2.253_full_53916145.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "midr.watch.k63",
+   "name": "未知设备（midr 系列）",
+   "category": "other",
+   "confirmed": false,
+   "note": "暂未查到公开对照",
+   "releases": [
+    {
+     "version": "v1.5.328",
+     "full": [
+      {
+       "file": "midr.watch.k63_v1.5.328_full_b547a682.bin",
+       "size": 153894080,
+       "hash": "b547a682",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-midr.watch.k63-v1.5.328-22dd722b/midr.watch.k63_v1.5.328_full_b547a682.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "midr.watch.k62",
+   "name": "未知设备（midr 系列）",
+   "category": "other",
+   "confirmed": false,
+   "note": "暂未查到公开对照",
+   "releases": [
+    {
+     "version": "v1.5.332",
+     "full": [
+      {
+       "file": "midr.watch.k62_v1.5.332_full_daf05dc2.bin",
+       "size": 154022097,
+       "hash": "daf05dc2",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-midr.watch.k62-v1.5.332-6633d96a/midr.watch.k62_v1.5.332_full_daf05dc2.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "lchz.watch.m65s",
+   "name": "未知设备（推测 REDMI Watch 4 Active 一带）",
+   "category": "other",
+   "confirmed": false,
+   "note": "lchz 系列",
+   "releases": [
+    {
+     "version": "v1.2.73",
+     "full": [
+      {
+       "file": "lchz.watch.m65s_v1.2.73_full_5e7dafe0.bin",
+       "size": 24751304,
+       "hash": "5e7dafe0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m65s-v1.2.73-77214baf/lchz.watch.m65s_v1.2.73_full_5e7dafe0.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mj1205.motion.ecg",
+   "name": "米家系心电/血压类设备（推测）",
+   "category": "other",
+   "confirmed": false,
+   "note": "推测为米家系心电/血压类设备",
+   "releases": [
+    {
+     "version": "v0.2.9",
+     "full": [
+      {
+       "file": "mj1205.motion.ecg_v0.2.9_full_340b1daa.bin",
+       "size": 139604,
+       "hash": "340b1daa",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mj1205.motion.ecg-v0.2.9-e4df8206/mj1205.motion.ecg_v0.2.9_full_340b1daa.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  }
+ ]
+}
