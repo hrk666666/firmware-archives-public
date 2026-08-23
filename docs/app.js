@@ -7,7 +7,6 @@
   'use strict';
 
   var THEME_KEY = 'fw-archive-theme';
-  var REPO = 'hrk666666/firmware-archives-public';
   var CAT_LABEL = { band: '手环', watch: '手表', other: '其他' };
   var filters = { status: 'all', category: 'all', query: '' };
   var state = { data: null, status: 'loading', errorMsg: '' };
@@ -40,31 +39,6 @@
     if (isNaN(d.getTime())) return iso;
     var p = function (n) { return (n < 10 ? '0' : '') + n; };
     return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) + ' ' + p(d.getHours()) + ':' + p(d.getMinutes());
-  }
-
-  function copyText(text) {
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      return navigator.clipboard.writeText(text);
-    }
-    return new Promise(function (resolve, reject) {
-      var ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try { document.execCommand('copy'); resolve(); }
-      catch (e) { reject(e); }
-      document.body.removeChild(ta);
-    });
-  }
-
-  function toast(msg) {
-    var el = $('toast');
-    el.textContent = msg;
-    el.classList.add('show');
-    clearTimeout(toast._t);
-    toast._t = setTimeout(function () { el.classList.remove('show'); }, 1800);
   }
 
   /* ---------- 主题 ---------- */
@@ -109,12 +83,14 @@
 
   function imgMarkup(code, alt) {
     // 回退链: webp -> png -> jpg -> 隐藏（露出占位图标）
+    // onload 加 loaded（CSS 不透明背景遮住底层 SVG）；onerror 链走完隐藏 img
     return (
       '<img src="' + imgPath(code, 'webp') + '" alt="' + esc(alt) + '" loading="lazy"' +
       ' data-exts="webp,png,jpg" data-fb="0"' +
+      ' onload="this.classList.add(\'loaded\')"' +
       ' onerror="var fb=+this.dataset.fb+1;this.dataset.fb=fb;' +
       'var ext=this.dataset.exts.split(\',\')[fb];' +
-      'if(ext){this.src=this.src.replace(/\\.[a-z]+$/,\'\'.+ext)}else{this.style.display=\'none\'}">'
+      'if(ext){this.src=this.src.replace(/\\.[a-z]+$/,\'.\'+ext)}else{this.style.display=\'none\';this.classList.add(\'no-img\')}">'
     );
   }
 
@@ -439,8 +415,6 @@
             '</div>' +
             '<div class="rel-files">' +
             r.files.map(function (f) {
-              var tag = f.url.split('/releases/download/')[1];
-              var relTag = tag ? tag.split('/')[0] : '';
               return (
                 '<div class="file-row">' +
                 '<div class="file-meta">' +
@@ -449,8 +423,6 @@
                 '<span class="file-size">' + fmtSize(f.size) + '</span>' +
                 '</div>' +
                 '<div class="file-actions">' +
-                '<button class="mini-btn" data-copy="gh" data-tag="' + esc(relTag) + '" data-file="' + esc(f.file) + '" type="button">' + icon('content_copy') + ' gh</button>' +
-                '<button class="mini-btn" data-copy="curl" data-url="' + esc(f.url) + '" type="button">' + icon('content_copy') + ' curl</button>' +
                 '<a class="mini-btn primary" href="' + esc(f.url) + '" target="_blank" rel="noopener">' + icon('download') + ' 下载</a>' +
                 '</div>' +
                 '</div>'
@@ -464,21 +436,6 @@
     $('drawerBody').querySelectorAll('.rel-head').forEach(function (h) {
       h.addEventListener('click', function () {
         h.closest('.rel').classList.toggle('open');
-      });
-    });
-
-    $('drawerBody').querySelectorAll('.mini-btn[data-copy]').forEach(function (btn) {
-      btn.addEventListener('click', function () {
-        var cmd;
-        if (btn.dataset.copy === 'gh') {
-          cmd = 'gh release download ' + btn.dataset.tag + ' --repo ' + REPO + ' --pattern "' + btn.dataset.file + '"';
-        } else {
-          cmd = 'curl -LO "' + btn.dataset.url + '"';
-        }
-        copyText(cmd).then(
-          function () { toast('命令已复制到剪贴板'); },
-          function () { toast('复制失败，请手动选择复制'); }
-        );
       });
     });
 

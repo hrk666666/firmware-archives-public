@@ -311,10 +311,10 @@ img, svg {
    设备卡、徽标、按钮、骨架屏、状态区、折叠区
    ============================================================ */
 
-/* 表面卡（原玻璃，现纯 MD3 surface，零 backdrop-filter） */
+/* 表面卡（MD3 elevated card：surface 底 + elevation-1，无边框） */
 .glass {
-  background: var(--md-surface-container);
-  border: 1px solid var(--md-outline-variant);
+  background: var(--md-surface);
+  border: none;
   box-shadow: var(--elevation-1);
 }
 
@@ -324,8 +324,7 @@ img, svg {
   top: 0;
   z-index: 40;
   background: var(--md-surface);
-  border-bottom: 1px solid var(--md-outline-variant);
-  box-shadow: none;
+  box-shadow: var(--elevation-1);
 }
 .appbar__inner {
   display: flex;
@@ -436,7 +435,7 @@ img, svg {
   }
 }
 
-/* ---------- 筛选芯片（选中态橘色点缀） ---------- */
+/* ---------- 筛选芯片（M3 filter chip：corner 8，选中态橘色点缀） ---------- */
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -449,7 +448,7 @@ img, svg {
   gap: 6px;
   height: 32px;
   padding: 0 16px;
-  border-radius: var(--shape-full);
+  border-radius: var(--shape-small);
   border: 1px solid var(--md-outline-variant);
   background: transparent;
   color: var(--md-on-surface-variant);
@@ -543,7 +542,7 @@ img, svg {
   flex-direction: column;
   gap: 12px;
   padding: 18px 20px;
-  border-radius: var(--shape-large);
+  border-radius: var(--shape-medium);
 }
 .stat__icon {
   width: 36px;
@@ -580,7 +579,7 @@ img, svg {
   flex-direction: column;
   gap: 14px;
   padding: 20px;
-  border-radius: var(--shape-large);
+  border-radius: var(--shape-medium);
   transition: transform var(--motion-fast), box-shadow var(--motion-fast), border-color var(--motion-fast);
 }
 .device-card:hover {
@@ -591,7 +590,7 @@ img, svg {
   transform: scale(0.99);
 }
 .device-card.is-new {
-  border-color: color-mix(in srgb, var(--md-primary) 45%, transparent);
+  border: 1px solid color-mix(in srgb, var(--md-primary) 45%, transparent);
 }
 
 .device-card__head {
@@ -614,7 +613,7 @@ img, svg {
 .device-card__img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .device-card__img .icon {
@@ -686,14 +685,15 @@ img, svg {
   flex-wrap: wrap;
 }
 
-/* ---------- 状态徽标 ---------- */
+/* ---------- 状态徽标（M3 assist chip 风格：corner 8 + 边框） ---------- */
 .badge {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  height: 24px;
-  padding: 0 10px;
-  border-radius: var(--shape-full);
+  height: 28px;
+  padding: 0 12px;
+  border-radius: var(--shape-small);
+  border: 1px solid var(--md-outline-variant);
   font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.2px;
@@ -704,22 +704,27 @@ img, svg {
 .badge--ok {
   background: var(--md-primary-container);
   color: var(--md-on-primary-container);
+  border-color: transparent;
 }
 .badge--warn {
   background: var(--md-tertiary-container);
   color: var(--md-on-tertiary-container);
+  border-color: transparent;
 }
 .badge--beta {
   background: var(--md-secondary-container);
   color: var(--md-on-secondary-container);
+  border-color: transparent;
 }
 .badge--unknown {
   background: var(--md-error-container);
   color: var(--md-on-error-container);
+  border-color: transparent;
 }
 .badge--new {
   background: var(--md-primary);
   color: var(--md-on-primary);
+  border-color: transparent;
 }
 .badge--info {
   background: var(--md-primary-container);
@@ -773,7 +778,7 @@ img, svg {
   flex-direction: column;
   gap: 14px;
   padding: 20px;
-  border-radius: var(--shape-large);
+  border-radius: var(--shape-medium);
   background: var(--md-surface-container-low);
   border: 1px solid var(--md-outline-variant);
 }
@@ -820,7 +825,7 @@ img, svg {
   align-items: center;
   gap: 12px;
   padding: 56px 24px;
-  border-radius: var(--shape-large);
+  border-radius: var(--shape-medium);
   text-align: center;
   color: var(--md-on-surface-variant);
 }
@@ -943,11 +948,12 @@ img, svg {
 .collapse {
   margin-top: 36px;
   border: 1px solid var(--md-outline-variant);
-  border-radius: var(--shape-large);
+  border-radius: var(--shape-medium);
   background: var(--md-surface-container-low);
   overflow: hidden;
 }
 .collapse__head {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
@@ -959,10 +965,22 @@ img, svg {
   font: inherit;
   color: var(--md-on-surface);
   text-align: left;
-  transition: background-color var(--motion-fast);
+  overflow: hidden;
 }
-.collapse__head:hover {
-  background: var(--md-surface-container);
+.collapse__head::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity var(--motion-fast);
+  pointer-events: none;
+}
+.collapse__head:hover::after {
+  opacity: var(--state-hover);
+}
+.collapse__head:active::after {
+  opacity: var(--state-pressed);
 }
 .collapse__title {
   display: flex;
@@ -1014,7 +1032,7 @@ img, svg {
   max-width: 1200px;
   margin: 48px auto 24px;
   padding: 16px 20px;
-  border-radius: var(--shape-large);
+  border-radius: var(--shape-medium);
   background: var(--md-surface-container-low);
   border: 1px solid var(--md-outline-variant);
 }
@@ -1159,7 +1177,7 @@ img, svg {
 .dw-hero .dw-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .dw-title {
@@ -1216,6 +1234,7 @@ img, svg {
   background: var(--md-surface-container-low);
 }
 .rel-head {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1223,9 +1242,22 @@ img, svg {
   padding: 12px 14px;
   cursor: pointer;
   user-select: none;
+  overflow: hidden;
 }
-.rel-head:hover {
-  background: var(--md-surface-container);
+.rel-head::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity var(--motion-fast);
+  pointer-events: none;
+}
+.rel-head:hover::after {
+  opacity: var(--state-hover);
+}
+.rel-head:active::after {
+  opacity: var(--state-pressed);
 }
 .rel-ver {
   font-family: var(--font-en);
@@ -1315,23 +1347,38 @@ img, svg {
   flex: none;
 }
 .mini-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 4px;
   border: 1px solid var(--md-outline);
   background: transparent;
   color: var(--md-on-surface);
-  border-radius: 999px;
+  border-radius: var(--shape-full);
   padding: 5px 10px;
   font-size: 12px;
   font-weight: 500;
   cursor: pointer;
   font-family: inherit;
   white-space: nowrap;
+  overflow: hidden;
+  text-decoration: none;
   transition: background-color var(--motion-fast), border-color var(--motion-fast);
 }
-.mini-btn:hover {
-  background: var(--md-surface-container);
+.mini-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: currentColor;
+  opacity: 0;
+  transition: opacity var(--motion-fast);
+  pointer-events: none;
+}
+.mini-btn:hover::after {
+  opacity: var(--state-hover);
+}
+.mini-btn:active::after {
+  opacity: var(--state-pressed);
 }
 .mini-btn.primary {
   background: var(--md-primary);
@@ -1347,27 +1394,7 @@ img, svg {
   height: 14px;
 }
 
-/* toast */
-.toast {
-  position: fixed;
-  left: 50%;
-  bottom: 28px;
-  transform: translateX(-50%) translateY(16px);
-  background: var(--md-inverse-surface);
-  color: var(--md-inverse-on-surface);
-  padding: 10px 18px;
-  border-radius: 999px;
-  font-size: 13px;
-  z-index: 60;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  box-shadow: var(--elevation-3);
-}
-.toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
+/* toast 已移除（复制功能删除，无提示需求） */
 
 /* 分类标签 */
 .cat-tag {
@@ -1398,4 +1425,6 @@ img, svg {
 .dw-img img {
   position: relative;
   z-index: 1;
+  /* 不透明背景：透明背景图不再透出下层 SVG；inherit 跟随容器色（is-new 时随 primary-container） */
+  background: inherit;
 }
