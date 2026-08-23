@@ -1,110 +1,109 @@
-<!DOCTYPE html>
-<html lang="zh-CN" data-theme="auto">
+<!doctype html>
+<html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>小米穿戴固件档案馆 · Firmware Archive</title>
-<meta name="description" content="小米手环 / 小米手表 / Redmi 手环与手表官方固件归档与下载。全量包与增量包，支持搜索、筛选与刷机引导。">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23FF6900'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>固</text></svg>">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小米穿戴固件档案馆 · Firmware Archive</title>
+  <meta name="description" content="小米手环 / 小米手表 / Redmi 手环与手表官方固件归档与下载。全量包与增量包，支持搜索、筛选与刷机引导。数据每日自动同步。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath fill='%2300696b' d='M501-540Zm-30 380H110q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32Q97.25-220 110-220h361q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5ZM180-280q-24 0-42-18t-18-42v-400q0-24 18-42t42-18h630q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H180v400h291q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H180Zm640 60v-400H621v400h199Zm-214 60q-18 0-31.5-13.5T561-205v-430q0-18 13.5-31.5T606-680h229q18 0 31.5 13.5T880-635v430q0 18-13.5 31.5T835-160H606Zm115-360q12 0 21-9t9-21q0-12-9-21t-21.48-9Q709-580 700-571t-9 21.48q0 11.52 9 20.52t21 9Zm0 100Z'/%3E%3C/svg%3E">
+
+  <script>
+    (function () {
+      var t = localStorage.getItem('fw-archive-theme');
+      if (t === 'light' || t === 'dark') {
+        document.documentElement.setAttribute('data-theme', t);
+      }
+    })();
+  </script>
+
+  <link rel="stylesheet" href="fonts/misans/MiSans-Regular.min.css">
+  <link rel="stylesheet" href="fonts/misans/MiSans-Medium.min.css">
+  <link rel="stylesheet" href="fonts/misans/MiSans-Bold.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
 
-<!-- 背景光斑层（为毛玻璃提供背后内容） -->
-<div class="bg-orb" aria-hidden="true"></div>
+  <!-- 背景层 -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__mesh"></div>
+    <div class="bg__blob bg__blob--1"></div>
+    <div class="bg__blob bg__blob--2"></div>
+    <div class="bg__blob bg__blob--3"></div>
+    <div class="bg__noise"></div>
+  </div>
 
-<!-- 顶部毛玻璃导航 -->
-<header class="appbar" id="appbar">
-  <div class="appbar-inner">
-    <div class="brand">
-      <div class="brand-mark">固</div>
-      <div class="brand-text">
-        <h1>小米穿戴固件档案馆</h1>
-        <p>Firmware Archive · 官方固件镜像</p>
+  <!-- 顶部应用栏 -->
+  <header class="appbar glass">
+    <div class="appbar__inner">
+      <div class="brand">
+        <span class="brand-icon" aria-hidden="true">
+          <svg class="icon"><use href="assets/icons.svg#i-devices"></use></svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-title">小米穿戴固件档案馆</span>
+          <span class="brand-sub">Firmware Archive · 官方固件镜像</span>
+        </span>
+      </div>
+      <div class="appbar__actions">
+        <span class="sync-chip" id="syncChip" hidden>
+          <svg class="icon"><use href="assets/icons.svg#i-schedule"></use></svg>
+          <span id="syncChipText">同步于</span>
+        </span>
+        <button class="icon-button" id="themeToggle" type="button" aria-label="切换深色模式"></button>
+        <button class="icon-button" id="refreshBtn" type="button" aria-label="刷新数据" title="刷新数据">
+          <svg class="icon"><use href="assets/icons.svg#i-refresh"></use></svg>
+        </button>
       </div>
     </div>
-    <div class="appbar-actions">
-      <div class="search-wrap" id="searchWrap">
-        <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
-        <input type="search" id="searchInput" placeholder="搜索设备：手环 10 Pro / p67cn…" autocomplete="off" aria-label="搜索设备">
-        <kbd class="search-kbd">/</kbd>
-      </div>
-      <button class="icon-btn" id="themeToggle" aria-label="切换主题" title="切换深浅色">
-        <svg class="icon-sun" viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-4.5c.8 0 1.45.65 1.45 1.45v.6a1.45 1.45 0 0 1-2.9 0v-.6c0-.8.65-1.45 1.45-1.45zm0 18c-.8 0-1.45-.65-1.45-1.45v-.6a1.45 1.45 0 0 1 2.9 0v.6c0 .8-.65 1.45-1.45 1.45zM4.5 12c0 .8-.65 1.45-1.45 1.45h-.6a1.45 1.45 0 0 1 0-2.9h.6c.8 0 1.45.65 1.45 1.45zm16.5 0c0 .8-.65 1.45-1.45 1.45h-.6a1.45 1.45 0 0 1 0-2.9h.6c.8 0 1.45.65 1.45 1.45zM6.7 6.7c.56-.56 1.47-.56 2.03 0l.42.42a1.45 1.45 0 1 1-2.05 2.05l-.4-.42a1.44 1.44 0 0 1 0-2.05zm8.57 8.57c.56-.56 1.47-.56 2.03 0l.42.42a1.45 1.45 0 1 1-2.05 2.05l-.4-.42a1.44 1.44 0 0 1 0-2.05zm3.1-8.57a1.44 1.44 0 0 1 0 2.05l-.42.42A1.45 1.45 0 1 1 15.9 6.7l.42-.42c.56-.56 1.47-.56 2.03 0zM6.7 17.3a1.44 1.44 0 0 1 2.05 0l.42.42a1.45 1.45 0 1 1-2.05 2.05l-.42-.42a1.44 1.44 0 0 1 0-2.05z"/></svg>
-        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20.7 15.2A8.5 8.5 0 0 1 8.8 3.3a8.5 8.5 0 1 0 11.9 11.9z"/></svg>
+  </header>
+
+  <main id="main" class="page">
+    <section class="hero">
+      <h1 class="hero__title">小米穿戴固件状态与下载</h1>
+      <p class="hero__sub">手环 / 手表 / Redmi 穿戴设备官方固件归档。全量包与增量包，数据每日自动同步，新登记的未知设备置顶展示。</p>
+    </section>
+
+    <section class="stats" id="stats" aria-label="数据统计"></section>
+
+    <div class="toolbar">
+      <div class="chips" id="statusChips" role="group" aria-label="按状态筛选"></div>
+      <label class="search">
+        <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#i-search"></use></svg>
+        <input id="searchInput" type="search" placeholder="搜索设备名称 / 代号 / 固件版本" autocomplete="off">
+      </label>
+    </div>
+    <div class="chips chips--category" id="categoryChips" role="group" aria-label="按类型筛选"></div>
+
+    <div id="content" class="content"></div>
+  </main>
+
+  <footer class="footer glass">
+    <p class="footer__line" id="footerLine"></p>
+    <p class="footer__line">数据源 data.json · 由 GitHub Actions 每日自动同步 · 固件仅归档官方发布版本</p>
+  </footer>
+
+  <!-- 详情抽屉 -->
+  <button class="drawer-scrim" id="scrim" type="button" aria-label="关闭详情" hidden></button>
+  <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+    <div class="drawer__head">
+      <span class="drawer__title" id="drawerTitle">
+        <svg class="icon"><use href="assets/icons.svg#i-devices"></use></svg>
+        <span>设备详情</span>
+      </span>
+      <button class="icon-button" id="drawerClose" type="button" aria-label="关闭">
+        <svg class="icon"><use href="assets/icons.svg#i-close"></use></svg>
       </button>
     </div>
-  </div>
-  <!-- 筛选 chips -->
-  <div class="chip-bar" id="chipBar">
-    <button class="chip active" data-cat="all">全部 <span class="chip-count" id="cntAll">–</span></button>
-    <button class="chip" data-cat="band">⌚ 手环 <span class="chip-count" id="cntBand">–</span></button>
-    <button class="chip" data-cat="watch">🕐 手表 <span class="chip-count" id="cntWatch">–</span></button>
-    <button class="chip" data-cat="other">❔ 待确认 <span class="chip-count" id="cntOther">–</span></button>
-    <span class="chip-bar-spacer"></span>
-    <span class="update-time" id="updateTime"></span>
-  </div>
-</header>
+    <div class="drawer__body" id="drawerBody"></div>
+  </aside>
 
-<main class="content" id="content">
-  <!-- 统计条 -->
-  <section class="stats" id="stats">
-    <div class="stat"><span class="stat-num" id="statDevices">–</span><span class="stat-label">设备</span></div>
-    <div class="stat"><span class="stat-num" id="statReleases">–</span><span class="stat-label">固件版本</span></div>
-    <div class="stat"><span class="stat-num" id="statAssets">–</span><span class="stat-label">安装包</span></div>
-    <div class="stat"><span class="stat-num" id="statSize">–</span><span class="stat-label">归档体积</span></div>
-  </section>
+  <div class="toast" id="toast" role="status"></div>
 
-  <!-- 设备卡片网格 -->
-  <section class="grid" id="grid" aria-live="polite"></section>
+  <noscript>
+    <p style="padding:24px;text-align:center">本页面需要启用 JavaScript 才能展示数据。</p>
+  </noscript>
 
-  <!-- 空状态 -->
-  <div class="empty" id="empty" hidden>
-    <div class="empty-icon">🔍</div>
-    <p>没有找到匹配的设备</p>
-    <button class="btn" id="emptyReset">清除筛选</button>
-  </div>
-
-  <!-- 加载 -->
-  <div class="loading" id="loading">
-    <div class="spinner"></div>
-    <p>正在加载固件数据…</p>
-  </div>
-</main>
-
-<footer class="footer">
-  <p>本页为社区固件镜像归档 · 固件版权归原厂商所有，图片仅作识别展示</p>
-  <div class="links">
-    <a href="https://github.com/hrk666666/firmware-archives-public" target="_blank" rel="noopener">GitHub 仓库</a>
-    <a href="https://www.bandbbs.cn/categories/37/" target="_blank" rel="noopener">米坛社区 · 小米手环系列</a>
-    <a href="https://www.bandbbs.cn/categories/240/" target="_blank" rel="noopener">米坛社区 · HyperOS 穿戴系列</a>
-  </div>
-  <div class="disclaimer">
-    <strong>⚠️ 免责声明（背锅说明）</strong><br>
-    本站为个人整理的<strong>非官方</strong>固件镜像归档站，与小米科技有限责任公司、深圳如一探索科技有限公司等任何设备制造商、品牌方均<strong>无任何从属、代理或合作关系</strong>，未获得任何官方赞助、授权或认可。本站发布的内容不代表相关品牌方立场。<br>
-    固件文件版权归<strong>原厂商及权利人</strong>所有，仅用于技术研究、学习交流与个人备份；设备图片仅作识别展示之用，相关商标及标识归各自权利人所有。请于下载后 <strong>24 小时内删除</strong>，并支持正版、通过官方渠道升级。刷机有风险，操作需谨慎，因刷机造成的一切后果由使用者自行承担，本站作者不承担任何责任。<br>
-    数据来源：GitHub Releases（firmware-archives-public）与米坛社区公开信息。
-  </div>
-  <p class="author">作者：<span class="me">hrk_</span> · 数据更新于 <span class="mono" id="footerTime">–</span> · 字体：Noto Sans SC / JetBrains Mono</p>
-</footer>
-
-<!-- 设备详情抽屉 -->
-<div class="scrim" id="scrim" hidden></div>
-<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
-  <div class="drawer-head">
-    <button class="icon-btn" id="drawerClose" aria-label="关闭">
-      <svg viewBox="0 0 24 24"><path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7l-1.4-1.4L9.2 12 2.9 5.7l1.4-1.4 6.3 6.3 6.3-6.3 1.4 1.4z"/></svg>
-    </button>
-  </div>
-  <div class="drawer-body" id="drawerBody"></div>
-</aside>
-
-<!-- Toast -->
-<div class="toast" id="toast" role="status" hidden></div>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
