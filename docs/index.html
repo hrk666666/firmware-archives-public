@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>小米穿戴固件档案馆 · Firmware Archive</title>
-  <meta name="description" content="小米手环 / 小米手表 / Redmi 手环与手表官方固件归档与下载。全量包与增量包，支持搜索、筛选与刷机引导。数据每日自动同步。">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath fill='%2300696b' d='M501-540Zm-30 380H110q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32Q97.25-220 110-220h361q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5ZM180-280q-24 0-42-18t-18-42v-400q0-24 18-42t42-18h630q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H180v400h291q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H180Zm640 60v-400H621v400h199Zm-214 60q-18 0-31.5-13.5T561-205v-430q0-18 13.5-31.5T606-680h229q18 0 31.5 13.5T880-635v430q0 18-13.5 31.5T835-160H606Zm115-360q12 0 21-9t9-21q0-12-9-21t-21.48-9Q709-580 700-571t-9 21.48q0 11.52 9 20.52t21 9Zm0 100Z'/%3E%3C/svg%3E">
+  <meta name="description" content="小米手环 / 小米手表 / Redmi 手环与手表官方固件归档与下载。全量包与增量包，支持搜索、筛选与刷机引导。数据每日自动同步，新设备自动归类待确认。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -960 960 960'%3E%3Cpath fill='%23b25000' d='M501-540Zm-30 380H110q-12.75 0-21.37-8.68-8.63-8.67-8.63-21.5 0-12.82 8.63-21.32Q97.25-220 110-220h361q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5ZM180-280q-24 0-42-18t-18-42v-400q0-24 18-42t42-18h630q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5H180v400h291q12.75 0 21.38 8.68 8.62 8.67 8.62 21.5 0 12.82-8.62 21.32-8.63 8.5-21.38 8.5Zm640 60v-400H621v400h199Zm-214 60q-18 0-31.5-13.5T561-205v-430q0-18 13.5-31.5T606-680h229q18 0 31.5 13.5T880-635v430q0 18-13.5 31.5T835-160H606Zm115-360q12 0 21-9t9-21q0-12-9-21t-21.48-9Q709-580 700-571t-9 21.48q0 11.52 9 20.52t21 9Zm0 100Z'/%3E%3C/svg%3E">
 
   <script>
     (function () {
@@ -24,17 +24,8 @@
 <body>
   <a class="skip-link" href="#main">跳到主要内容</a>
 
-  <!-- 背景层 -->
-  <div class="bg" aria-hidden="true">
-    <div class="bg__mesh"></div>
-    <div class="bg__blob bg__blob--1"></div>
-    <div class="bg__blob bg__blob--2"></div>
-    <div class="bg__blob bg__blob--3"></div>
-    <div class="bg__noise"></div>
-  </div>
-
   <!-- 顶部应用栏 -->
-  <header class="appbar glass">
+  <header class="appbar">
     <div class="appbar__inner">
       <div class="brand">
         <span class="brand-icon" aria-hidden="true">
@@ -61,7 +52,7 @@
   <main id="main" class="page">
     <section class="hero">
       <h1 class="hero__title">小米穿戴固件状态与下载</h1>
-      <p class="hero__sub">手环 / 手表 / Redmi 穿戴设备官方固件归档。全量包与增量包，数据每日自动同步，新登记的未知设备置顶展示。</p>
+      <p class="hero__sub">手环 / 手表 / Redmi 穿戴设备官方固件归档。全量包与增量包，数据每日自动同步，新设备自动归类到「其他设备」待确认。</p>
     </section>
 
     <section class="stats" id="stats" aria-label="数据统计"></section>
@@ -78,7 +69,7 @@
     <div id="content" class="content"></div>
   </main>
 
-  <footer class="footer glass">
+  <footer class="footer">
     <p class="footer__line" id="footerLine"></p>
     <p class="footer__line">数据源 data.json · 由 GitHub Actions 每日自动同步 · 固件仅归档官方发布版本</p>
   </footer>

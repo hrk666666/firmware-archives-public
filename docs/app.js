@@ -231,20 +231,40 @@
       .join('');
   }
 
-  function renderNewSection(devices, container) {
-    if (!devices.length) { container.innerHTML = ''; return; }
-    container.innerHTML =
-      '<section class="section reveal">' +
-      '<div class="section__head">' +
-      '<div>' +
-      '<h2 class="section__title">新设备</h2>' +
-      '<p class="section__sub">新登记、尚未确认的未知设备，已置顶展示，请优先核对型号。</p>' +
-      '</div>' +
-      '<span class="section__count">' + devices.length + ' 台</span>' +
-      '</div>' +
-      '<div class="device-grid" id="newGrid"></div>' +
-      '</section>';
-    renderGrid(devices, container.querySelector('#newGrid'), 0);
+  /* ---------- 渲染：其他设备折叠区（待确认，默认收起，懒渲染） ---------- */
+
+  function renderCollapseHtml(devices) {
+    return (
+      '<section class="collapse" id="otherCollapse">' +
+      '<button class="collapse__head" id="collapseHead" type="button" aria-expanded="false" aria-controls="collapseBody">' +
+      '<span class="collapse__title">' + icon('fiber_new') + '<span>其他设备 · 待确认</span></span>' +
+      '<span class="collapse__sub">新登记、尚未确认的未知设备</span>' +
+      '<span class="collapse__count">' + devices.length + '</span>' +
+      '<span class="collapse__chevron">' + icon('keyboard_arrow_down') + '</span>' +
+      '</button>' +
+      '<div class="collapse__body" id="collapseBody"></div>' +
+      '</section>'
+    );
+  }
+
+  function wireCollapse() {
+    var head = $('collapseHead');
+    var box = $('otherCollapse');
+    var body = $('collapseBody');
+    if (!head || !box) return;
+    head.addEventListener('click', function () {
+      var open = head.getAttribute('aria-expanded') === 'true';
+      head.setAttribute('aria-expanded', String(!open));
+      box.classList.toggle('open', !open);
+      if (!open && !body.dataset.rendered) {
+        var devices = state.data.devices.filter(function (x) { return !x.confirmed; });
+        body.innerHTML = '<div class="device-grid">' +
+          devices.map(function (d, i) { return deviceCard(d, Math.min(i * 25, 200)); }).join('') +
+          '</div>';
+        body.dataset.rendered = '1';
+        initReveal(body);
+      }
+    });
   }
 
   /* ---------- 渲染：主列表 ---------- */
@@ -289,22 +309,19 @@
     renderFooter(d);
     renderSyncChip(d);
 
-    var showNew = filters.status === 'all' && filters.category === 'all' && !filters.query;
-    var newDevices = d.devices.filter(function (x) { return !x.confirmed; });
-    var list = filterDevices();
-    var hasFilter = filters.status !== 'all' || filters.category !== 'all' || !!filters.query;
-    if (showNew && newDevices.length) {
-      list = list.filter(function (x) { return x.confirmed; });
-    }
+    // 默认视图：已确认设备网格 + 底部「其他设备」折叠区（待确认设备不置顶）
+    var isDefault = filters.status === 'all' && filters.category === 'all' && !filters.query;
+    var unconfirmed = d.devices.filter(function (x) { return !x.confirmed; });
+    var list = isDefault ? d.devices.filter(function (x) { return x.confirmed; }) : filterDevices();
 
-    var html = '';
-    if (showNew && newDevices.length) html += '<section class="section" id="newSection"></section>';
-    html +=
+    var html =
       '<section class="section" id="listSection">' +
       '<div class="section__head">' +
       '<div>' +
-      '<h2 class="section__title">' + (hasFilter ? '筛选结果' : '全部设备') + '</h2>' +
-      '<p class="section__sub">' + (hasFilter ? '已按当前条件筛选。' : (newDevices.length ? '新设备已在上方置顶展示，此处为其余设备。' : '按数据登记顺序展示。')) + '</p>' +
+      '<h2 class="section__title">' + (isDefault ? '全部设备' : '筛选结果') + '</h2>' +
+      '<p class="section__sub">' + (isDefault
+        ? (unconfirmed.length ? '已确认设备在此展示；待确认的未知设备在下方折叠区。' : '按数据登记顺序展示。')
+        : '已按当前条件筛选。') + '</p>' +
       '</div>' +
       '<span class="section__count">' + list.length + ' 台</span>' +
       '</div>' +
@@ -312,14 +329,11 @@
       '</section>';
     content.innerHTML = html;
 
-    if (showNew && newDevices.length) {
-      renderNewSection(newDevices, $('newSection'));
-    }
     var grid = $('deviceGrid');
     if (list.length) {
-      renderGrid(list, grid, showNew && newDevices.length ? 40 : 0);
+      renderGrid(list, grid, 0);
     } else {
-      grid.innerHTML = emptyState(hasFilter);
+      grid.innerHTML = emptyState(isDefault ? false : true);
       var clearBtn = $('clearFilterBtn');
       if (clearBtn) clearBtn.addEventListener('click', function () {
         filters.status = 'all';
@@ -329,6 +343,12 @@
         syncChips();
         renderAll();
       });
+    }
+
+    // 底部折叠区（仅默认视图显示）
+    if (isDefault && unconfirmed.length) {
+      $('listSection').insertAdjacentHTML('afterend', renderCollapseHtml(unconfirmed));
+      wireCollapse();
     }
     initReveal(content);
   }
@@ -410,9 +430,9 @@
       '<div class="dw-section-title">' + icon('history') + ' 固件版本（' + rels.length + '）</div>' +
       (rels.length === 0
         ? '<p style="color:var(--md-on-surface-variant);font-size:13px">暂无固件记录</p>'
-        : rels.map(function (r, ri) {
+        : rels.map(function (r) {
           return (
-            '<div class="rel' + (ri === 0 ? ' open' : '') + '">' +
+            '<div class="rel">' +
             '<div class="rel-head">' +
             '<span class="rel-ver">' + esc(r.version) + '</span>' +
             '<span class="rel-count">' + r.files.length + ' 个文件 ' + icon('keyboard_arrow_down') + '</span>' +
@@ -425,12 +445,13 @@
                 '<div class="file-row">' +
                 '<div class="file-meta">' +
                 '<span class="file-type ' + f.kind + '">' + (f.kind === 'full' ? 'FULL' : 'DELTA') + '</span>' +
-                '<div class="file-name">' + esc(f.file) + '</div>' +
+                '<span class="file-name" title="' + esc(f.file) + '">' + esc(f.file) + '</span>' +
+                '<span class="file-size">' + fmtSize(f.size) + '</span>' +
                 '</div>' +
                 '<div class="file-actions">' +
                 '<button class="mini-btn" data-copy="gh" data-tag="' + esc(relTag) + '" data-file="' + esc(f.file) + '" type="button">' + icon('content_copy') + ' gh</button>' +
                 '<button class="mini-btn" data-copy="curl" data-url="' + esc(f.url) + '" type="button">' + icon('content_copy') + ' curl</button>' +
-                '<a class="mini-btn primary" href="' + esc(f.url) + '" target="_blank" rel="noopener">' + icon('download') + ' 下载 ' + fmtSize(f.size) + '</a>' +
+                '<a class="mini-btn primary" href="' + esc(f.url) + '" target="_blank" rel="noopener">' + icon('download') + ' 下载</a>' +
                 '</div>' +
                 '</div>'
               );
