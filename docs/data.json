@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T03:29:58+0000",
+ "generated_at": "2026-08-24T20:04:51+0800",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 47,
  "release_count": 84,
@@ -1682,6 +1682,27 @@
    ]
   },
   {
+   "code": "mijia.watch.l61",
+   "name": "小米手表 S1 Pro",
+   "category": "watch",
+   "confirmed": true,
+   "note": "OronBox 设备目录确认：l61 = Xiaomi Watch S1 Pro",
+   "releases": [
+    {
+     "version": "v1.4.1",
+     "full": [
+      {
+       "file": "mijia.watch.l61_v1.4.1_full_4bec4b95.bin",
+       "size": 69633046,
+       "hash": "4bec4b95",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.l61-v1.4.1-0f49d8ce/mijia.watch.l61_v1.4.1_full_4bec4b95.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
    "code": "mijia.watch.n62",
    "name": "小米手表 S3",
    "category": "watch",
@@ -2125,27 +2146,6 @@
    ]
   },
   {
-   "code": "lchz.watch.m65ac",
-   "name": "lchz.watch.m65ac",
-   "category": "other",
-   "confirmed": false,
-   "note": "未知设备（未在对照表）",
-   "releases": [
-    {
-     "version": "v1.0.82",
-     "full": [
-      {
-       "file": "lchz.watch.m65ac_v1.0.82_full_f041e417.bin",
-       "size": 2754664,
-       "hash": "f041e417",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m65ac-v1.0.82-6903bd98/lchz.watch.m65ac_v1.0.82_full_f041e417.bin"
-      }
-     ],
-     "incrementals": []
-    }
-   ]
-  },
-  {
    "code": "mijia.watch.v1",
    "name": "未知设备",
    "category": "other",
@@ -2160,27 +2160,6 @@
        "size": 1979124,
        "hash": "0b6102ee",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.v1-v1.1.59-e4cde0f8/mijia.watch.v1_v1.1.59_full_0b6102ee.bin"
-      }
-     ],
-     "incrementals": []
-    }
-   ]
-  },
-  {
-   "code": "mijia.watch.l61",
-   "name": "未知设备",
-   "category": "other",
-   "confirmed": false,
-   "note": "暂未查到公开对照",
-   "releases": [
-    {
-     "version": "v1.4.1",
-     "full": [
-      {
-       "file": "mijia.watch.l61_v1.4.1_full_4bec4b95.bin",
-       "size": 69633046,
-       "hash": "4bec4b95",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.l61-v1.4.1-0f49d8ce/mijia.watch.l61_v1.4.1_full_4bec4b95.bin"
       }
      ],
      "incrementals": []
@@ -2307,6 +2286,27 @@
        "size": 154022097,
        "hash": "daf05dc2",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-midr.watch.k62-v1.5.332-6633d96a/midr.watch.k62_v1.5.332_full_daf05dc2.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "lchz.watch.m65ac",
+   "name": "未知设备（推测 REDMI Watch 4 Active 一带）",
+   "category": "other",
+   "confirmed": false,
+   "note": "lchz 系列，与 m65s 同代（ac 疑为 Active）",
+   "releases": [
+    {
+     "version": "v1.0.82",
+     "full": [
+      {
+       "file": "lchz.watch.m65ac_v1.0.82_full_f041e417.bin",
+       "size": 2754664,
+       "hash": "f041e417",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m65ac-v1.0.82-6903bd98/lchz.watch.m65ac_v1.0.82_full_f041e417.bin"
       }
      ],
      "incrementals": []
