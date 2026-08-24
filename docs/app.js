@@ -390,7 +390,7 @@
     var rels = dev.releases.map(function (r) {
       var files = [];
       (r.full || []).forEach(function (f) { files.push({ file: f.file, size: f.size, url: f.url, kind: 'full', label: '全量包' }); });
-      (r.incrementals || []).forEach(function (f) { files.push({ file: f.file, size: f.size, url: f.url, kind: 'delta', label: '增量包 · from ' + f.from }); });
+      (r.incrementals || []).forEach(function (f) { files.push({ file: f.file, size: f.size, url: f.url, kind: 'delta', label: '增量包 · ' + f.from + ' → ' + r.version }); });
       return { version: r.version, files: files };
     });
 
