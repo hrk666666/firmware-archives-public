@@ -13,9 +13,9 @@
 
 | 项目 | 数值 |
 |---|---|
-| 固件设备数 | 46 款 |
+| 固件设备数 | 47 款 |
 | Release 总数 | 83 |
-| 固件资产总数 | 208（全量包 83 + 增量包 125） |
+| 固件资产总数 | 209（全量包 84 + 增量包 125） |
 | 总大小 | ~10.2 GB |
 | 同步策略 | 每日自动检测上游新 Release（cron: 每日 10:00 UTC+8）+ 手动触发 |
 
@@ -90,6 +90,7 @@
 | `mijia.watch.n62s` | 小米手表 S4 Sport |
 | `miwear.watch.p62` | 小米手表 S5（46mm） |
 | `miwear.watch.p62lte` | 小米手表 S5 eSIM（46mm） |
+| `mijia.watch.l61` | 小米手表 S1 Pro（OronBox 设备目录确认） |
 | `lchz.watch.n65` | REDMI Watch 4 |
 | `miwear.watch.o65` | REDMI Watch 5 |
 | `miwear.watch.o65m` | REDMI Watch 5 eSIM（XRING INSIDE） |
@@ -101,9 +102,8 @@
 | 设备代号 | 推测 / 说明 |
 |---|---|
 | `midr.watch.ds` | 小米手表 Color（官方更新说明标题：小米手表Color） |
-| `lchz.watch.m65s` | 未知，lchz 系列（Redmi Watch 4 Active 一带）* |
+| `lchz.watch.m65s` / `m65ac` | 未知，lchz 系列（推测 REDMI Watch 4 Active 一带）* |
 | `midr.watch.k62` / `k63` / `k65` / `m62a` / `m62s` / `sports` | midr 系列，暂未查到公开对照 * |
-| `mijia.watch.l61` | 未知 * |
 | `mijia.watch.v1` | 未知 * |
 | `mj1205.motion.ecg` | 推测为米家系心电/血压类设备 * |
 
@@ -153,6 +153,27 @@ curl -L -O https://github.com/hrk666666/firmware-archives-public/releases/downlo
 
 ---
 
+## 设备映射自动更新
+
+设备代号 → 市售名称的对照表由 **OronBox**（开源穿戴管理工具）的设备目录自动同步而来，无需人工维护：
+
+- **数据源**：OronBox 官方仓库 `zxor-org/OronBox` 源码中的 `xiaomi_wearable_catalog.dart`（AGPL-3.0），包含 18 个小米系设备代号及其全部别名（`miwear.watch.*` / `mijia.watch.*` / `lchz.watch.*`）。
+- **工作流**：`.github/workflows/update-devices.yml` 每日 UTC 03:00（北京时间 11:00）自动拉取 → 生成 `docs/devices-map.json` → 重建 `docs/data.json` → 有变化自动提交，固件选择器页面随之更新。也可在 Actions 页面手动触发。
+- **优先级**：人工核对的对照（欢迎语确认）> OronBox 自动映射 > 未知设备。OronBox 新增设备时，固件选择器会自动识别并展示（标记为“新设备”待确认）。
+- **脚本**：`tools/fetch_devices_map.py`（拉取解析）+ `tools/build_data.py`（合并重建数据）。
+
+对照表自动化流程：
+
+```
+OronBox 上游更新目录 → update-devices.yml 每日拉取
+        ↓
+docs/devices-map.json（代号→设备名/分类）
+        ↓
+build_data.py 合并重建 → docs/data.json → GitHub Pages 固件选择器自动更新
+```
+
+---
+
 ## 同步机制
 
 - 工作流文件：`.github/workflows/sync-releases.yml`
@@ -190,3 +211,4 @@ curl -L -O https://github.com/hrk666666/firmware-archives-public/releases/downlo
 
 - 上游归档项目：[AstralSightStudios/MiWearFirmwareArchives](https://github.com/AstralSightStudios/MiWearFirmwareArchives)
 - 开源刷机工具 AstroBox：[AstralSightStudios/AstroBox-NG](https://github.com/AstralSightStudios/AstroBox-NG)
+- 设备映射数据源 OronBox：[zxor-org/OronBox](https://github.com/zxor-org/OronBox)（开源穿戴管理工具，AGPL-3.0）

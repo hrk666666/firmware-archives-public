@@ -53,15 +53,16 @@ DEVICES = {
     "miwear.watch.o65m":  ("REDMI Watch 5 eSIM", "watch", True, "XRING INSIDE"),
     "miwear.watch.p65":   ("REDMI Watch 6", "watch", True, ""),
     "midr.watch.ds":      ("小米手表 Color", "watch", True, "官方更新说明标题：小米手表Color"),
+    "mijia.watch.l61":    ("小米手表 S1 Pro", "watch", True, "OronBox 设备目录确认：l61 = Xiaomi Watch S1 Pro"),
     # 其他 / 待确认
     "lchz.watch.m65s":    ("未知设备（推测 REDMI Watch 4 Active 一带）", "other", False, "lchz 系列"),
+    "lchz.watch.m65ac":   ("未知设备（推测 REDMI Watch 4 Active 一带）", "other", False, "lchz 系列，与 m65s 同代（ac 疑为 Active）"),
     "midr.watch.k62":     ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "midr.watch.k63":     ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "midr.watch.k65":     ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "midr.watch.m62a":    ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "midr.watch.m62s":    ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "midr.watch.sports":  ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
-    "mijia.watch.l61":    ("未知设备", "other", False, "暂未查到公开对照"),
     "mijia.watch.v1":     ("未知设备", "other", False, "暂未查到公开对照"),
     "mj1205.motion.ecg":  ("米家系心电/血压类设备（推测）", "other", False, "推测为米家系心电/血压类设备"),
 }
@@ -72,7 +73,15 @@ FULL_RE = re.compile(r"^(.+?)_(v[0-9][^_]*)_full_([0-9a-f]+)\.bin$")
 INC_RE = re.compile(r"^(.+?)_(v[0-9][^_]*)_from_(v[0-9][^_]*)_incremental_([0-9a-f]+)\.bin$")
 
 
-def api_get(url, token=None):
+def load_device_map(path="docs/devices-map.json"):
+    """加载 OronBox 自动生成的设备映射（tools/fetch_devices_map.py 产物）"""
+    if not os.path.exists(path):
+        return None
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def api_get(url, token=None, retries=3):
     req = urllib.request.Request(url, headers={
         "User-Agent": "firmware-archives-builder",
         "Accept": "application/vnd.github+json",
@@ -80,8 +89,15 @@ def api_get(url, token=None):
     })
     if token:
         req.add_header("Authorization", f"Bearer {token}")
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        return json.loads(resp.read().decode("utf-8"))
+    last_err = None
+    for i in range(retries):
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                return json.loads(resp.read().decode("utf-8"))
+        except Exception as e:  # 网络抖动/断流时重试
+            last_err = e
+            time.sleep(2 * (i + 1))
+    raise last_err
 
 
 def fetch_all_releases(repo, token):
@@ -144,9 +160,29 @@ def build(repo="hrk666666/firmware-archives-public", out="docs/data.json"):
                 continue
             print(f"[!] 未识别资产: {name}")
 
+    # 加载 OronBox 自动映射（三级优先：人工 DEVICES > OronBox 映射 > 未知）
+    device_map = load_device_map(
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "docs", "devices-map.json")
+    )
+    fam_cat = (device_map or {}).get("family_category", {})
+
+    def resolve_device(code):
+        if code in DEVICES:
+            return DEVICES[code]
+        if device_map and code in device_map.get("alias_index", {}):
+            cn = device_map["alias_index"][code]
+            info = device_map["xiaomi"][cn]
+            return (
+                info.get("displayName", code),
+                fam_cat.get(info.get("family", "unknown"), "other"),
+                False,
+                f"来源：OronBox 设备目录（codename {cn}）",
+            )
+        return (code, "other", False, "未知设备（未在对照表）")
+
     devices = []
     for code, versions in agg.items():
-        name, category, confirmed, note = DEVICES.get(code, (code, "other", False, "未知设备（未在对照表）"))
+        name, category, confirmed, note = resolve_device(code)
         rel_list = []
         for ver in sorted(versions.keys(), key=version_key, reverse=True):
             v = versions[ver]
