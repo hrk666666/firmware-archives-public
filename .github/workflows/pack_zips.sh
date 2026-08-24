@@ -9,8 +9,8 @@ DATE=$(date +%Y%m%d)
 TAG="firmware-zips-$DATE"
 NOTES="按系列分组的固件打包（共 10 个 zip，zip 内为中文分级目录：系列/设备/版本/全量包或增量包）。创建时间: $(date '+%F %T UTC')"
 
-# 系列分组：组名(中文) -> 设备代号列表
-declare -A GROUPS=(
+# 系列分组：组名(中文) -> 设备代号列表（避免与 Actions 环境变量 GROUPS 冲突，命名 PACK_GROUPS）
+declare -A PACK_GROUPS=(
   ["01_小米手环7与8系列"]="hqbd3.watch.l67 miwear.watch.m66 miwear.watch.m66nfc lchz.watch.m67 lchz.watch.m67ys"
   ["02_小米手环9系列"]="miwear.watch.n66cn miwear.watch.n66nfc miwear.watch.n66tc miwear.watch.n66gl miwear.watch.n67cn"
   ["03_小米手环10系列"]="miwear.watch.o66cn miwear.watch.o66nfc miwear.watch.o66tc miwear.watch.o66lj miwear.watch.p67cn miwear.watch.p67gln miwear.watch.p67tc"
@@ -56,13 +56,13 @@ EOF
 }
 
 mkdir -p tmp
-total=${#GROUPS[@]}
+total=${#PACK_GROUPS[@]}
 i=0
-for group in "${!GROUPS[@]}"; do
+for group in "${!PACK_GROUPS[@]}"; do
   i=$((i+1))
   echo "==> [$i/$total] 打包 $group"
   mkdir -p "tmp/$group"
-  for code in ${GROUPS[$group]}; do
+  for code in ${PACK_GROUPS[$group]}; do
     devname=$(python3 -c "import json; print(json.load(open('/tmp/devnames.json')).get('$code', '$code'))")
     devdir="tmp/$group/${devname}_${code}"
     mkdir -p "$devdir"
