@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-23T03:28:23+0000",
+ "generated_at": "2026-08-24T03:29:58+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 46,
- "release_count": 83,
- "asset_count": 208,
+ "device_count": 47,
+ "release_count": 84,
+ "asset_count": 209,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2118,6 +2118,27 @@
        "size": 589764,
        "hash": "ee71710b",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.band01-v2.8.2-77ebc046/mijia.watch.band01_v2.8.2_full_ee71710b.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "lchz.watch.m65ac",
+   "name": "lchz.watch.m65ac",
+   "category": "other",
+   "confirmed": false,
+   "note": "未知设备（未在对照表）",
+   "releases": [
+    {
+     "version": "v1.0.82",
+     "full": [
+      {
+       "file": "lchz.watch.m65ac_v1.0.82_full_f041e417.bin",
+       "size": 2754664,
+       "hash": "f041e417",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m65ac-v1.0.82-6903bd98/lchz.watch.m65ac_v1.0.82_full_f041e417.bin"
       }
      ],
      "incrementals": []
