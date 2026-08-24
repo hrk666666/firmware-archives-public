@@ -55,8 +55,8 @@ DEVICES = {
     "midr.watch.ds":      ("小米手表 Color", "watch", True, "官方更新说明标题：小米手表Color"),
     "mijia.watch.l61":    ("小米手表 S1 Pro", "watch", True, "OronBox 设备目录确认：l61 = Xiaomi Watch S1 Pro"),
     # 其他 / 待确认
-    "lchz.watch.m65s":    ("未知设备（推测 REDMI Watch 4 Active 一带）", "other", False, "lchz 系列"),
-    "lchz.watch.m65ac":   ("未知设备（推测 REDMI Watch 4 Active 一带）", "other", False, "lchz 系列，与 m65s 同代（ac 疑为 Active）"),
+    "lchz.watch.m65s":    ("未知设备（推测 REDMI Watch 4 Active 系列）", "other", False, "lchz 系列；海外市场已确认 Redmi Watch 4 Active 机型存在（2024 底/2025 发售的预算款）"),
+    "lchz.watch.m65ac":   ("未知设备（推测 REDMI Watch 4 Active 系列）", "other", False, "lchz 系列，与 m65s 同代（ac 疑为 Active）；固件 v1.0.82 版本低，疑为新上架设备"),
     "midr.watch.k62":     ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "midr.watch.k63":     ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "midr.watch.k65":     ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),

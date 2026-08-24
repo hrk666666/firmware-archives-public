@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-08-24T20:04:51+0800",
+ "generated_at": "2026-08-24T20:16:49+0800",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 47,
  "release_count": 84,
@@ -2294,10 +2294,10 @@
   },
   {
    "code": "lchz.watch.m65ac",
-   "name": "未知设备（推测 REDMI Watch 4 Active 一带）",
+   "name": "未知设备（推测 REDMI Watch 4 Active 系列）",
    "category": "other",
    "confirmed": false,
-   "note": "lchz 系列，与 m65s 同代（ac 疑为 Active）",
+   "note": "lchz 系列，与 m65s 同代（ac 疑为 Active）；固件 v1.0.82 版本低，疑为新上架设备",
    "releases": [
     {
      "version": "v1.0.82",
@@ -2315,10 +2315,10 @@
   },
   {
    "code": "lchz.watch.m65s",
-   "name": "未知设备（推测 REDMI Watch 4 Active 一带）",
+   "name": "未知设备（推测 REDMI Watch 4 Active 系列）",
    "category": "other",
    "confirmed": false,
-   "note": "lchz 系列",
+   "note": "lchz 系列；海外市场已确认 Redmi Watch 4 Active 机型存在（2024 底/2025 发售的预算款）",
    "releases": [
     {
      "version": "v1.2.73",
