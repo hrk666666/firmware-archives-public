@@ -7,6 +7,205 @@
   'use strict';
 
   var THEME_KEY = 'fw-archive-theme';
+  var QUARK_SHARE_URL = 'https://pan.quark.cn/s/71ba679b86c3';
+  var isChinaRegion = true; // 默认当作中国大陆
+  var geoChecked = false;
+
+  /* ---------- 地理位置检测 ---------- */
+  function detectRegion() {
+    // 先检查 sessionStorage 缓存
+    var cached = sessionStorage.getItem('fw-geo-region');
+    if (cached === 'CN' || cached === 'OVERSEAS') {
+      isChinaRegion = cached === 'CN';
+      geoChecked = true;
+      return;
+    }
+    // 使用 ip-api.com 免费接口检测
+    try {
+      var ctrl = new AbortController();
+      var timer = setTimeout(function () { ctrl.abort(); }, 3000);
+      fetch('http://ip-api.com/json/?fields=countryCode', {
+        signal: ctrl.signal,
+        cache: 'no-store'
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (d) {
+          clearTimeout(timer);
+          isChinaRegion = d.countryCode === 'CN';
+          sessionStorage.setItem('fw-geo-region', isChinaRegion ? 'CN' : 'OVERSEAS');
+          geoChecked = true;
+        })
+        .catch(function () {
+          clearTimeout(timer);
+          // 检测失败，默认当作中国大陆
+          isChinaRegion = true;
+          sessionStorage.setItem('fw-geo-region', 'CN');
+          geoChecked = true;
+        });
+    } catch (e) {
+      isChinaRegion = true;
+      geoChecked = true;
+    }
+  }
+
+  /* ---------- 下载拦截弹窗 ---------- */
+  function showDownloadModal(filename, githubUrl) {
+    // 移除已有弹窗
+    var old = document.getElementById('dlModal');
+    if (old) old.remove();
+
+    var overlay = document.createElement('div');
+    overlay.id = 'dlModal';
+    overlay.className = 'dl-modal-overlay';
+    overlay.innerHTML =
+      '<div class="dl-modal" role="dialog" aria-modal="true" aria-label="下载提示">' +
+        '<div class="dl-modal__head">' +
+          '<span class="dl-modal__icon">☁️</span>' +
+          '<h3 class="dl-modal__title">推荐使用夸克网盘下载</h3>' +
+        '</div>' +
+        '<p class="dl-modal__reason">国内下载速度更快、更稳定，支持夸克 APP 直接打开</p>' +
+        '<div class="dl-modal__filename">' +
+          '<span class="dl-modal__fname-label">文件名</span>' +
+          '<div class="dl-modal__fname-row">' +
+            '<code class="dl-modal__fname" id="dlModalFname">' + esc(filename) + '</code>' +
+            '<button class="dl-modal__copy-btn" id="dlModalCopy" type="button">复制</button>' +
+          '</div>' +
+        '</div>' +
+        '<div class="dl-modal__actions">' +
+          '<a class="dl-modal__btn dl-modal__btn--quark" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener">' +
+            '打开夸克网盘' +
+          '</a>' +
+          '<a class="dl-modal__btn dl-modal__btn--github" href="' + esc(githubUrl) + '" target="_blank" rel="noopener" id="dlModalGithub">' +
+            '继续使用 GitHub 下载' +
+          '</a>' +
+        '</div>' +
+        '<button class="dl-modal__close" id="dlModalClose" type="button" aria-label="关闭">×</button>' +
+      '</div>';
+
+    document.body.appendChild(overlay);
+    requestAnimationFrame(function () { overlay.classList.add('show'); });
+
+    // 自动复制文件名到剪贴板
+    copyToClipboard(filename);
+    updateCopyBtn('dlModalCopy', '已复制 ✓');
+
+    // 复制按钮
+    document.getElementById('dlModalCopy').addEventListener('click', function () {
+      copyToClipboard(filename);
+      updateCopyBtn('dlModalCopy', '已复制 ✓');
+    });
+
+    // 关闭
+    function closeModal() {
+      overlay.classList.remove('show');
+      setTimeout(function () { overlay.remove(); }, 300);
+    }
+    document.getElementById('dlModalClose').addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function handler(e) {
+      if (e.key === 'Escape') {
+        closeModal();
+        document.removeEventListener('keydown', handler);
+      }
+    });
+    // GitHub 下载链接也关闭弹窗
+    document.getElementById('dlModalGithub').addEventListener('click', function () {
+      setTimeout(closeModal, 200);
+    });
+  }
+
+  function copyToClipboard(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(function () {
+        fallbackCopy(text);
+      });
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0';
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand('copy'); } catch (e) { /* ignore */ }
+    ta.remove();
+  }
+
+  function updateCopyBtn(id, text) {
+    var btn = document.getElementById(id);
+    if (!btn) return;
+    var orig = btn.textContent;
+    btn.textContent = text;
+    btn.disabled = true;
+    setTimeout(function () {
+      btn.textContent = orig;
+      btn.disabled = false;
+    }, 2000);
+  }
+  /* ---------- 增量包版本摘要 ---------- */
+  function parseIncrSummary(filename, fromVersion, toVersion) {
+    // 从文件名或参数解析 from → to
+    if (fromVersion && toVersion) return fromVersion + ' → ' + toVersion;
+    var m = filename.match(/_from_(v[\d.]+)_/);
+    if (m) return m[1] + ' → ' + (toVersion || '?');
+    return '';
+  }
+
+  /* ---------- 发布说明缓存 ---------- */
+  var releaseNotesCache = {};
+  var REPO_API = 'https://api.github.com/repos/hrk666666/firmware-archives-public/releases';
+
+  function fetchReleaseNotes(deviceCode, version, callback) {
+    var cacheKey = deviceCode + '@' + version;
+    if (releaseNotesCache[cacheKey] !== undefined) {
+      callback(releaseNotesCache[cacheKey]);
+      return;
+    }
+    var tag = 'firmware-' + deviceCode + '-' + version;
+    // 尝试精确 tag，找不到则模糊搜索
+    var url = REPO_API + '/tags/' + tag;
+    try {
+      var ctrl = new AbortController();
+      var timer = setTimeout(function () { ctrl.abort(); }, 5000);
+      fetch(url, {
+        headers: { 'Accept': 'application/vnd.github+json' },
+        signal: ctrl.signal,
+        cache: 'force-cache'
+      })
+        .then(function (r) {
+          clearTimeout(timer);
+          if (!r.ok) return null;
+          return r.json();
+        })
+        .then(function (d) {
+          var body = d && d.body ? d.body.trim() : '';
+          releaseNotesCache[cacheKey] = body;
+          callback(body);
+        })
+        .catch(function () {
+          clearTimeout(timer);
+          releaseNotesCache[cacheKey] = '';
+          callback('');
+        });
+    } catch (e) {
+      releaseNotesCache[cacheKey] = '';
+      callback('');
+    }
+  }
+
+  /* ---------- 首次访问检测 ---------- */
+  function isFirstVisit() {
+    return !localStorage.getItem('fw-archive-visited');
+  }
+  function markVisited() {
+    localStorage.setItem('fw-archive-visited', '1');
+  }
+
   var CAT_LABEL = { band: '手环', watch: '手表', other: '其他' };
   var filters = { status: 'all', category: 'all', query: '' };
   var state = { data: null, status: 'loading', errorMsg: '' };
@@ -389,11 +588,15 @@
 
     var rels = dev.releases.map(function (r) {
       var files = [];
-      (r.full || []).forEach(function (f) { files.push({ file: f.file, size: f.size, url: f.url, kind: 'full', label: '全量包' }); });
-      (r.incrementals || []).forEach(function (f) { files.push({ file: f.file, size: f.size, url: f.url, kind: 'delta', label: '增量包 · ' + f.from + ' → ' + r.version }); });
+      (r.full || []).forEach(function (f) { files.push({ file: f.file, size: f.size, url: f.url, kind: 'full', label: '全量包', summary: '' }); });
+      (r.incrementals || []).forEach(function (f) {
+        var summary = parseIncrSummary(f.file, f.from, r.version);
+        files.push({ file: f.file, size: f.size, url: f.url, kind: 'delta', label: '增量包 · ' + summary, summary: summary });
+      });
       return { version: r.version, files: files };
     });
 
+    // 渲染基础内容
     $('drawerBody').innerHTML =
       '<div class="dw-hero">' +
       '<div class="dw-img">' + icon('devices') + imgMarkup(dev.code, dev.name) + '</div>' +
@@ -407,23 +610,40 @@
       (rels.length === 0
         ? '<p style="color:var(--md-on-surface-variant);font-size:13px">暂无固件记录</p>'
         : rels.map(function (r) {
+          // 增量包摘要行
+          var deltaFiles = r.files.filter(function (f) { return f.kind === 'delta'; });
+          var deltaSummaryHtml = '';
+          if (deltaFiles.length > 0) {
+            deltaSummaryHtml = '<div class="rel-deltas">' +
+              deltaFiles.map(function (f) {
+                return '<span class="rel-delta-tag">' + esc(f.summary) + '</span>';
+              }).join('') +
+              '</div>';
+          }
           return (
-            '<div class="rel">' +
+            '<div class="rel" data-ver="' + esc(r.version) + '">' +
             '<div class="rel-head">' +
             '<span class="rel-ver">' + esc(r.version) + '</span>' +
             '<span class="rel-count">' + r.files.length + ' 个文件 ' + icon('keyboard_arrow_down') + '</span>' +
             '</div>' +
+            '<div class="rel-notes" data-loaded="0"></div>' +
+            deltaSummaryHtml +
             '<div class="rel-files">' +
             r.files.map(function (f) {
+              var displayName = f.kind === 'delta' ? ('增量包 · ' + f.summary) : '全量包';
               return (
                 '<div class="file-row">' +
                 '<div class="file-meta">' +
                 '<span class="file-type ' + f.kind + '">' + (f.kind === 'full' ? 'FULL' : 'DELTA') + '</span>' +
-                '<span class="file-name" title="' + esc(f.file) + '">' + esc(f.file) + '</span>' +
+                '<span class="file-name" title="' + esc(f.file) + '">' + esc(displayName) + '</span>' +
                 '<span class="file-size">' + fmtSize(f.size) + '</span>' +
                 '</div>' +
                 '<div class="file-actions">' +
-                '<a class="mini-btn primary" href="' + esc(f.url) + '" target="_blank" rel="noopener">' + icon('download') + ' 下载</a>' +
+                '<a class="mini-btn quark-btn" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener" title="夸克网盘下载">' + icon('cloud_download') + ' 夸克</a>' +
+                (isChinaRegion
+                  ? '<button class="mini-btn primary dl-intercept" data-file="' + esc(f.file) + '" data-url="' + esc(f.url) + '" type="button">' + icon('download') + ' 下载</button>'
+                  : '<a class="mini-btn primary" href="' + esc(f.url) + '" target="_blank" rel="noopener">' + icon('download') + ' 下载</a>'
+                ) +
                 '</div>' +
                 '</div>'
               );
@@ -433,9 +653,39 @@
           );
         }).join(''));
 
+    // 展开/收起版本
     $('drawerBody').querySelectorAll('.rel-head').forEach(function (h) {
       h.addEventListener('click', function () {
-        h.closest('.rel').classList.toggle('open');
+        var rel = h.closest('.rel');
+        rel.classList.toggle('open');
+        // 懒加载发布说明
+        var notes = rel.querySelector('.rel-notes');
+        if (notes && notes.getAttribute('data-loaded') === '0') {
+          notes.setAttribute('data-loaded', '1');
+          notes.innerHTML = '<span class="rel-notes-loading">加载更新说明...</span>';
+          fetchReleaseNotes(dev.code, rel.getAttribute('data-ver'), function (body) {
+            if (body) {
+              // 简单 markdown 转 HTML（粗体、列表）
+              var html = body
+                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+                .replace(/^- (.+)$/gm, '<li>$1</li>')
+                .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+                .replace(/\n/g, '<br>');
+              notes.innerHTML = '<div class="rel-notes-body">' + html + '</div>';
+            } else {
+              notes.innerHTML = '';
+            }
+          });
+        }
+      });
+    });
+
+    // 拦截下载按钮（中国大陆用户）
+    $('drawerBody').querySelectorAll('.dl-intercept').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        showDownloadModal(btn.getAttribute('data-file'), btn.getAttribute('data-url'));
       });
     });
 
@@ -548,6 +798,7 @@
   /* ---------- 启动 ---------- */
 
   function boot() {
+    detectRegion();
     applyTheme(currentTheme());
     $('themeToggle').addEventListener('click', function () {
       var next = currentTheme() === 'dark' ? 'light' : 'dark';
@@ -559,6 +810,53 @@
     load().then(function () {
       renderAll();
       initReveal(document.body);
+      // 首次访问用户弹窗提示（无论位置）
+      if (isFirstVisit()) {
+        markVisited();
+        setTimeout(function () {
+          showWelcomeModal();
+        }, 800);
+      }
+    });
+  }
+
+  /* ---------- 首次访问欢迎弹窗 ---------- */
+  function showWelcomeModal() {
+    var old = document.getElementById('dlModal');
+    if (old) old.remove();
+
+    var overlay = document.createElement('div');
+    overlay.id = 'dlModal';
+    overlay.className = 'dl-modal-overlay';
+    overlay.innerHTML =
+      '<div class="dl-modal" role="dialog" aria-modal="true" aria-label="欢迎">' +
+        '<div class="dl-modal__head">' +
+          '<span class="dl-modal__icon">☁️</span>' +
+          '<h3 class="dl-modal__title">推荐使用夸克网盘下载固件</h3>' +
+        '</div>' +
+        '<p class="dl-modal__reason">国内下载速度更快、更稳定，支持夸克 APP 直接搜索和下载固件文件。</p>' +
+        '<div class="dl-modal__actions">' +
+          '<a class="dl-modal__btn dl-modal__btn--quark" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener">' +
+            '打开夸克网盘' +
+          '</a>' +
+          '<button class="dl-modal__btn dl-modal__btn--github" id="welcomeClose" type="button">' +
+            '我知道了，继续浏览' +
+          '</button>' +
+        '</div>' +
+        '<button class="dl-modal__close" id="dlModalClose" type="button" aria-label="关闭">×</button>' +
+      '</div>';
+
+    document.body.appendChild(overlay);
+    requestAnimationFrame(function () { overlay.classList.add('show'); });
+
+    function closeModal() {
+      overlay.classList.remove('show');
+      setTimeout(function () { overlay.remove(); }, 300);
+    }
+    document.getElementById('dlModalClose').addEventListener('click', closeModal);
+    document.getElementById('welcomeClose').addEventListener('click', closeModal);
+    overlay.addEventListener('click', function (e) {
+      if (e.target === overlay) closeModal();
     });
   }
 
