@@ -1428,3 +1428,216 @@ img, svg {
   /* 不透明背景：透明背景图不再透出下层 SVG；inherit 跟随容器色（is-new 时随 primary-container） */
   background: inherit;
 }
+
+/* ---------- 下载拦截弹窗 ---------- */
+.dl-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0);
+  transition: background .3s;
+  padding: 16px;
+}
+.dl-modal-overlay.show {
+  background: rgba(0,0,0,.45);
+}
+.dl-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--md-surface, #fff);
+  color: var(--md-on-surface, #1c1b1f);
+  border-radius: 20px;
+  padding: 28px 24px 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,.18);
+  transform: translateY(24px) scale(.96);
+  opacity: 0;
+  transition: transform .3s, opacity .3s;
+}
+.dl-modal-overlay.show .dl-modal {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+.dl-modal__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.dl-modal__icon {
+  font-size: 28px;
+  line-height: 1;
+}
+.dl-modal__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+.dl-modal__reason {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: var(--md-on-surface-variant, #49454f);
+  line-height: 1.5;
+}
+.dl-modal__filename {
+  margin-bottom: 18px;
+}
+.dl-modal__fname-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  color: var(--md-on-surface-variant, #79747e);
+  margin-bottom: 6px;
+}
+.dl-modal__fname-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--md-surface-variant, #f3f0f4);
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.dl-modal__fname {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  font-family: 'MiSans', monospace, sans-serif;
+  word-break: break-all;
+  line-height: 1.4;
+  color: var(--md-on-surface, #1c1b1f);
+}
+.dl-modal__copy-btn {
+  flex-shrink: 0;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 8px;
+  background: var(--md-primary, #b25000);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .2s;
+}
+.dl-modal__copy-btn:hover { opacity: .85; }
+.dl-modal__copy-btn:disabled { opacity: .6; cursor: default; }
+.dl-modal__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dl-modal__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity .2s, transform .15s;
+  cursor: pointer;
+}
+.dl-modal__btn:hover { opacity: .88; }
+.dl-modal__btn:active { transform: scale(.98); }
+.dl-modal__btn--quark {
+  background: linear-gradient(135deg, #6a5ae0, #9c6bff);
+  color: #fff;
+}
+.dl-modal__btn--github {
+  background: transparent;
+  color: var(--md-on-surface-variant, #49454f);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  text-align: center;
+  border: 1px solid var(--md-outline-variant, #cac4d0);
+  border-radius: 10px;
+}
+.dl-modal__btn--github:hover {
+  background: var(--md-surface-variant, #f3f0f4);
+}
+.dl-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--md-on-surface-variant, #79747e);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dl-modal__close:hover {
+  background: var(--md-surface-variant, #f3f0f4);
+}
+@media (max-width: 480px) {
+  .dl-modal {
+    padding: 20px 16px 16px;
+    border-radius: 16px;
+  }
+  .dl-modal__title { font-size: 16px; }
+}
+
+/* ---------- 发布说明 & 增量摘要 ---------- */
+.rel-notes {
+  padding: 0 16px;
+}
+.rel-notes-loading {
+  font-size: 12px;
+  color: var(--md-on-surface-variant, #79747e);
+  opacity: .7;
+}
+.rel-notes-body {
+  margin: 8px 0 12px;
+  padding: 10px 14px;
+  background: var(--md-surface-variant, #f3f0f4);
+  border-radius: 10px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--md-on-surface-variant, #49454f);
+}
+.rel-notes-body ul {
+  margin: 4px 0;
+  padding-left: 18px;
+}
+.rel-notes-body li {
+  margin: 2px 0;
+}
+.rel-deltas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px 16px 2px;
+}
+.rel-delta-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 6px;
+  background: var(--md-primary-container, #ffdbe0);
+  color: var(--md-on-primary-container, #3a0915);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+/* ---------- 夸克下载按钮 ---------- */
+.quark-btn {
+  background: linear-gradient(135deg, #6a5ae0, #9c6bff) !important;
+  color: #fff !important;
+  border: none !important;
+  font-size: 12px !important;
+  padding: 5px 10px !important;
+}
+.quark-btn:hover {
+  opacity: .85;
+}
