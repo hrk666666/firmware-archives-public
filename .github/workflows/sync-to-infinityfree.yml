@@ -1,0 +1,37 @@
+name: Sync to InfinityFree
+
+on:
+  schedule:
+    # 每天 UTC 03:30（北京时间 11:30），在 update-devices(03:00) 之后运行，确保数据最新
+    - cron: '30 3 * * *'
+  workflow_dispatch: # 手动触发：Actions 页面点 "Run workflow"
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install lftp
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq lftp
+
+      - name: Sync docs to InfinityFree
+        env:
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_DIR: ${{ secrets.FTP_DIR }}
+        run: |
+          set -e
+          echo "同步目标: ${FTP_HOST}:${FTP_DIR}"
+          lftp -c "set net:timeout 30; set net:max-retries 3; \
+            open -u ${FTP_USERNAME},${FTP_PASSWORD} ${FTP_HOST}; \
+            mirror -R -e --verbose --parallel=4 --exclude='.git*' --exclude='*.bak' \
+            docs/ ${FTP_DIR}"
+          echo "✅ 同步完成"
