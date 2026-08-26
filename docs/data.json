@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-25T03:41:32+0000",
+ "generated_at": "2026-08-26T03:31:29+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 47,
  "release_count": 85,
- "asset_count": 209,
+ "asset_count": 211,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -569,6 +569,26 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.1.28",
+     "full": [
+      {
+       "file": "miwear.watch.o66lj_v3.1.28_full_03ac3e2b.bin",
+       "size": 54396577,
+       "hash": "03ac3e2b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66lj-v3.1.28-92440350/miwear.watch.o66lj_v3.1.28_full_03ac3e2b.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.26",
+       "file": "miwear.watch.o66lj_v3.1.28_from_v3.1.26_incremental_8c27335b.bin",
+       "size": 4545278,
+       "hash": "8c27335b",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66lj-v3.1.28-92440350/miwear.watch.o66lj_v3.1.28_from_v3.1.26_incremental_8c27335b.bin"
+      }
+     ]
+    },
     {
      "version": "v3.1.26",
      "full": [
