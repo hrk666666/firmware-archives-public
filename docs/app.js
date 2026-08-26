@@ -2,128 +2,99 @@
  * app.js — 小米穿戴固件档案馆（MD3 + 玻璃拟态）
  * 数据源: data.json（GitHub Actions 每日自动同步）
  * 新登记/未确认设备自动置顶展示。
+ *
+ * v2 修复（2026-08-26）：
+ *  - 移除地理位置检测：无论用户在哪个地区，均展示下载引导弹窗与首次访问欢迎弹窗
+ *  - 发布说明改为构建期注入 data.json（release.notes），不再依赖运行时 GitHub API（避免限流）
+ *  - 复制按钮真实反馈：剪贴板写入失败时提示「复制失败」而非假成功
+ *  - Escape 监听不泄漏：关闭弹窗时统一移除 keydown 监听
+ *  - 增量包显示真实文件名 + 版本摘要标签
+ *  - 夸克按钮提示「打开后搜索文件名」定位具体固件
+ *  - 弹窗样式与站点 MD3 橙色主题统一（无渐变、无玻璃，使用设计令牌）
  */
 (function () {
   'use strict';
 
   var THEME_KEY = 'fw-archive-theme';
   var QUARK_SHARE_URL = 'https://pan.quark.cn/s/71ba679b86c3';
-  var isChinaRegion = true; // 默认当作中国大陆
-  var geoChecked = false;
 
-  /* ---------- 地理位置检测 ---------- */
-  function detectRegion() {
-    // 先检查 sessionStorage 缓存
-    var cached = sessionStorage.getItem('fw-geo-region');
-    if (cached === 'CN' || cached === 'OVERSEAS') {
-      isChinaRegion = cached === 'CN';
-      geoChecked = true;
-      return;
-    }
-    // 使用 ip-api.com 免费接口检测
-    try {
-      var ctrl = new AbortController();
-      var timer = setTimeout(function () { ctrl.abort(); }, 3000);
-      fetch('http://ip-api.com/json/?fields=countryCode', {
-        signal: ctrl.signal,
-        cache: 'no-store'
-      })
-        .then(function (r) { return r.json(); })
-        .then(function (d) {
-          clearTimeout(timer);
-          isChinaRegion = d.countryCode === 'CN';
-          sessionStorage.setItem('fw-geo-region', isChinaRegion ? 'CN' : 'OVERSEAS');
-          geoChecked = true;
-        })
-        .catch(function () {
-          clearTimeout(timer);
-          // 检测失败，默认当作中国大陆
-          isChinaRegion = true;
-          sessionStorage.setItem('fw-geo-region', 'CN');
-          geoChecked = true;
-        });
-    } catch (e) {
-      isChinaRegion = true;
-      geoChecked = true;
-    }
-  }
-
-  /* ---------- 下载拦截弹窗 ---------- */
+  /* ---------- 下载引导弹窗 ---------- */
   function showDownloadModal(filename, githubUrl) {
     // 移除已有弹窗
-    var old = document.getElementById('dlModal');
+    var old = document.getElementById('fwModal');
     if (old) old.remove();
 
     var overlay = document.createElement('div');
-    overlay.id = 'dlModal';
-    overlay.className = 'dl-modal-overlay';
+    overlay.id = 'fwModal';
+    overlay.className = 'modal-overlay';
     overlay.innerHTML =
-      '<div class="dl-modal" role="dialog" aria-modal="true" aria-label="下载提示">' +
-        '<div class="dl-modal__head">' +
-          '<span class="dl-modal__icon">☁️</span>' +
-          '<h3 class="dl-modal__title">推荐使用夸克网盘下载</h3>' +
+      '<div class="modal" role="dialog" aria-modal="true" aria-label="下载提示">' +
+        '<div class="modal__head">' +
+          '<span class="modal__icon">' + icon('cloud') + '</span>' +
+          '<h3 class="modal__title">推荐使用夸克网盘下载</h3>' +
         '</div>' +
-        '<p class="dl-modal__reason">国内下载速度更快、更稳定，支持夸克 APP 直接打开</p>' +
-        '<div class="dl-modal__filename">' +
-          '<span class="dl-modal__fname-label">文件名</span>' +
-          '<div class="dl-modal__fname-row">' +
-            '<code class="dl-modal__fname" id="dlModalFname">' + esc(filename) + '</code>' +
-            '<button class="dl-modal__copy-btn" id="dlModalCopy" type="button">复制</button>' +
+        '<p class="modal__reason">国内下载速度更快、更稳定。打开夸克网盘后，搜索下方文件名即可定位对应固件。</p>' +
+        '<div class="modal__filename">' +
+          '<span class="modal__fname-label">文件名</span>' +
+          '<div class="modal__fname-row">' +
+            '<code class="modal__fname" id="fwModalFname">' + esc(filename) + '</code>' +
+            '<button class="modal__copy-btn" id="fwModalCopy" type="button">' + icon('content_copy') + '<span>复制</span></button>' +
           '</div>' +
         '</div>' +
-        '<div class="dl-modal__actions">' +
-          '<a class="dl-modal__btn dl-modal__btn--quark" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener">' +
-            '打开夸克网盘' +
+        '<div class="modal__actions">' +
+          '<a class="btn btn--primary" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener">' +
+            icon('cloud') + ' 打开夸克网盘' +
           '</a>' +
-          '<a class="dl-modal__btn dl-modal__btn--github" href="' + esc(githubUrl) + '" target="_blank" rel="noopener" id="dlModalGithub">' +
-            '继续使用 GitHub 下载' +
+          '<a class="btn btn--outline" href="' + esc(githubUrl) + '" target="_blank" rel="noopener" id="fwModalGithub">' +
+            icon('download') + ' 继续使用 GitHub 下载' +
           '</a>' +
         '</div>' +
-        '<button class="dl-modal__close" id="dlModalClose" type="button" aria-label="关闭">×</button>' +
+        '<button class="modal__close" id="fwModalClose" type="button" aria-label="关闭">' + icon('close') + '</button>' +
       '</div>';
 
     document.body.appendChild(overlay);
     requestAnimationFrame(function () { overlay.classList.add('show'); });
 
-    // 自动复制文件名到剪贴板
-    copyToClipboard(filename);
-    updateCopyBtn('dlModalCopy', '已复制 ✓');
+    function closeModal() {
+      overlay.classList.remove('show');
+      document.removeEventListener('keydown', onKeydown);
+      setTimeout(function () { overlay.remove(); }, 300);
+    }
+    function onKeydown(e) {
+      if (e.key === 'Escape') closeModal();
+    }
+    document.addEventListener('keydown', onKeydown);
+
+    // 自动复制文件名：成功才显示「已复制」，失败提示「复制失败」
+    copyToClipboard(filename).then(function (ok) {
+      updateCopyBtn('fwModalCopy', ok ? '已复制' : '复制失败');
+    });
 
     // 复制按钮
-    document.getElementById('dlModalCopy').addEventListener('click', function () {
-      copyToClipboard(filename);
-      updateCopyBtn('dlModalCopy', '已复制 ✓');
+    document.getElementById('fwModalCopy').addEventListener('click', function () {
+      copyToClipboard(filename).then(function (ok) {
+        updateCopyBtn('fwModalCopy', ok ? '已复制' : '复制失败');
+      });
     });
 
     // 关闭
-    function closeModal() {
-      overlay.classList.remove('show');
-      setTimeout(function () { overlay.remove(); }, 300);
-    }
-    document.getElementById('dlModalClose').addEventListener('click', closeModal);
+    document.getElementById('fwModalClose').addEventListener('click', closeModal);
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) closeModal();
     });
-    document.addEventListener('keydown', function handler(e) {
-      if (e.key === 'Escape') {
-        closeModal();
-        document.removeEventListener('keydown', handler);
-      }
-    });
     // GitHub 下载链接也关闭弹窗
-    document.getElementById('dlModalGithub').addEventListener('click', function () {
+    document.getElementById('fwModalGithub').addEventListener('click', function () {
       setTimeout(closeModal, 200);
     });
   }
 
   function copyToClipboard(text) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(text).catch(function () {
-        fallbackCopy(text);
-      });
-    } else {
-      fallbackCopy(text);
+      return navigator.clipboard.writeText(text)
+        .then(function () { return true; })
+        .catch(function () { return fallbackCopy(text); });
     }
+    return Promise.resolve(fallbackCopy(text));
   }
 
   function fallbackCopy(text) {
@@ -132,21 +103,26 @@
     ta.style.cssText = 'position:fixed;left:-9999px;top:-9999px;opacity:0';
     document.body.appendChild(ta);
     ta.select();
-    try { document.execCommand('copy'); } catch (e) { /* ignore */ }
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
     ta.remove();
+    return ok;
   }
 
   function updateCopyBtn(id, text) {
     var btn = document.getElementById(id);
     if (!btn) return;
-    var orig = btn.textContent;
-    btn.textContent = text;
-    btn.disabled = true;
+    var span = btn.querySelector('span');
+    if (!span) return;
+    var orig = span.textContent;
+    span.textContent = text;
+    btn.classList.add('is-busy');
     setTimeout(function () {
-      btn.textContent = orig;
-      btn.disabled = false;
+      span.textContent = orig;
+      btn.classList.remove('is-busy');
     }, 2000);
   }
+
   /* ---------- 增量包版本摘要 ---------- */
   function parseIncrSummary(filename, fromVersion, toVersion) {
     // 从文件名或参数解析 from → to
@@ -156,46 +132,15 @@
     return '';
   }
 
-  /* ---------- 发布说明缓存 ---------- */
-  var releaseNotesCache = {};
-  var REPO_API = 'https://api.github.com/repos/hrk666666/firmware-archives-public/releases';
-
-  function fetchReleaseNotes(deviceCode, version, callback) {
-    var cacheKey = deviceCode + '@' + version;
-    if (releaseNotesCache[cacheKey] !== undefined) {
-      callback(releaseNotesCache[cacheKey]);
-      return;
-    }
-    var tag = 'firmware-' + deviceCode + '-' + version;
-    // 尝试精确 tag，找不到则模糊搜索
-    var url = REPO_API + '/tags/' + tag;
-    try {
-      var ctrl = new AbortController();
-      var timer = setTimeout(function () { ctrl.abort(); }, 5000);
-      fetch(url, {
-        headers: { 'Accept': 'application/vnd.github+json' },
-        signal: ctrl.signal,
-        cache: 'force-cache'
-      })
-        .then(function (r) {
-          clearTimeout(timer);
-          if (!r.ok) return null;
-          return r.json();
-        })
-        .then(function (d) {
-          var body = d && d.body ? d.body.trim() : '';
-          releaseNotesCache[cacheKey] = body;
-          callback(body);
-        })
-        .catch(function () {
-          clearTimeout(timer);
-          releaseNotesCache[cacheKey] = '';
-          callback('');
-        });
-    } catch (e) {
-      releaseNotesCache[cacheKey] = '';
-      callback('');
-    }
+  /* ---------- 发布说明（构建期注入 data.json，无需运行时 API） ---------- */
+  function mdToHtml(body) {
+    if (!body) return '';
+    return body
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/^- (.+)$/gm, '<li>$1</li>')
+      .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
+      .replace(/\n/g, '<br>');
   }
 
   /* ---------- 首次访问检测 ---------- */
@@ -593,7 +538,7 @@
         var summary = parseIncrSummary(f.file, f.from, r.version);
         files.push({ file: f.file, size: f.size, url: f.url, kind: 'delta', label: '增量包 · ' + summary, summary: summary });
       });
-      return { version: r.version, files: files };
+      return { version: r.version, notes: r.notes || '', files: files };
     });
 
     // 渲染基础内容
@@ -620,30 +565,34 @@
               }).join('') +
               '</div>';
           }
+          // 发布说明：构建期注入，直接展示
+          var notesHtml = r.notes
+            ? '<div class="rel-notes"><div class="rel-notes-body">' + mdToHtml(r.notes) + '</div></div>'
+            : '';
           return (
             '<div class="rel" data-ver="' + esc(r.version) + '">' +
             '<div class="rel-head">' +
             '<span class="rel-ver">' + esc(r.version) + '</span>' +
             '<span class="rel-count">' + r.files.length + ' 个文件 ' + icon('keyboard_arrow_down') + '</span>' +
             '</div>' +
-            '<div class="rel-notes" data-loaded="0"></div>' +
+            notesHtml +
             deltaSummaryHtml +
             '<div class="rel-files">' +
             r.files.map(function (f) {
-              var displayName = f.kind === 'delta' ? ('增量包 · ' + f.summary) : '全量包';
+              // 显示真实文件名 + 版本摘要标签
+              var summaryTag = f.kind === 'delta' && f.summary
+                ? '<span class="file-summary">' + esc(f.summary) + '</span>'
+                : '';
               return (
                 '<div class="file-row">' +
                 '<div class="file-meta">' +
                 '<span class="file-type ' + f.kind + '">' + (f.kind === 'full' ? 'FULL' : 'DELTA') + '</span>' +
-                '<span class="file-name" title="' + esc(f.file) + '">' + esc(displayName) + '</span>' +
+                '<span class="file-name" title="' + esc(f.file) + '">' + esc(f.file) + summaryTag + '</span>' +
                 '<span class="file-size">' + fmtSize(f.size) + '</span>' +
                 '</div>' +
                 '<div class="file-actions">' +
-                '<a class="mini-btn quark-btn" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener" title="夸克网盘下载">' + icon('cloud_download') + ' 夸克</a>' +
-                (isChinaRegion
-                  ? '<button class="mini-btn primary dl-intercept" data-file="' + esc(f.file) + '" data-url="' + esc(f.url) + '" type="button">' + icon('download') + ' 下载</button>'
-                  : '<a class="mini-btn primary" href="' + esc(f.url) + '" target="_blank" rel="noopener">' + icon('download') + ' 下载</a>'
-                ) +
+                '<a class="mini-btn quark-btn" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener" title="打开夸克网盘后搜索：' + esc(f.file) + '">' + icon('cloud') + ' 夸克</a>' +
+                '<button class="mini-btn primary dl-intercept" data-file="' + esc(f.file) + '" data-url="' + esc(f.url) + '" type="button">' + icon('download') + ' 下载</button>' +
                 '</div>' +
                 '</div>'
               );
@@ -658,30 +607,10 @@
       h.addEventListener('click', function () {
         var rel = h.closest('.rel');
         rel.classList.toggle('open');
-        // 懒加载发布说明
-        var notes = rel.querySelector('.rel-notes');
-        if (notes && notes.getAttribute('data-loaded') === '0') {
-          notes.setAttribute('data-loaded', '1');
-          notes.innerHTML = '<span class="rel-notes-loading">加载更新说明...</span>';
-          fetchReleaseNotes(dev.code, rel.getAttribute('data-ver'), function (body) {
-            if (body) {
-              // 简单 markdown 转 HTML（粗体、列表）
-              var html = body
-                .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-                .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-                .replace(/^- (.+)$/gm, '<li>$1</li>')
-                .replace(/(<li>.*<\/li>)/gs, '<ul>$1</ul>')
-                .replace(/\n/g, '<br>');
-              notes.innerHTML = '<div class="rel-notes-body">' + html + '</div>';
-            } else {
-              notes.innerHTML = '';
-            }
-          });
-        }
       });
     });
 
-    // 拦截下载按钮（中国大陆用户）
+    // 下载按钮：无论地理位置，一律弹出下载引导
     $('drawerBody').querySelectorAll('.dl-intercept').forEach(function (btn) {
       btn.addEventListener('click', function (e) {
         e.preventDefault();
@@ -798,7 +727,6 @@
   /* ---------- 启动 ---------- */
 
   function boot() {
-    detectRegion();
     applyTheme(currentTheme());
     $('themeToggle').addEventListener('click', function () {
       var next = currentTheme() === 'dark' ? 'light' : 'dark';
@@ -810,7 +738,7 @@
     load().then(function () {
       renderAll();
       initReveal(document.body);
-      // 首次访问用户弹窗提示（无论位置）
+      // 首次访问欢迎弹窗：无论地理位置，首次访问一律展示
       if (isFirstVisit()) {
         markVisited();
         setTimeout(function () {
@@ -822,28 +750,28 @@
 
   /* ---------- 首次访问欢迎弹窗 ---------- */
   function showWelcomeModal() {
-    var old = document.getElementById('dlModal');
+    var old = document.getElementById('fwModal');
     if (old) old.remove();
 
     var overlay = document.createElement('div');
-    overlay.id = 'dlModal';
-    overlay.className = 'dl-modal-overlay';
+    overlay.id = 'fwModal';
+    overlay.className = 'modal-overlay';
     overlay.innerHTML =
-      '<div class="dl-modal" role="dialog" aria-modal="true" aria-label="欢迎">' +
-        '<div class="dl-modal__head">' +
-          '<span class="dl-modal__icon">☁️</span>' +
-          '<h3 class="dl-modal__title">推荐使用夸克网盘下载固件</h3>' +
+      '<div class="modal" role="dialog" aria-modal="true" aria-label="欢迎">' +
+        '<div class="modal__head">' +
+          '<span class="modal__icon">' + icon('cloud') + '</span>' +
+          '<h3 class="modal__title">推荐使用夸克网盘下载固件</h3>' +
         '</div>' +
-        '<p class="dl-modal__reason">国内下载速度更快、更稳定，支持夸克 APP 直接搜索和下载固件文件。</p>' +
-        '<div class="dl-modal__actions">' +
-          '<a class="dl-modal__btn dl-modal__btn--quark" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener">' +
-            '打开夸克网盘' +
+        '<p class="modal__reason">国内下载速度更快、更稳定，支持夸克 APP 直接搜索和下载固件文件。打开夸克网盘后，搜索文件名即可定位对应固件。</p>' +
+        '<div class="modal__actions">' +
+          '<a class="btn btn--primary" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener">' +
+            icon('cloud') + ' 打开夸克网盘' +
           '</a>' +
-          '<button class="dl-modal__btn dl-modal__btn--github" id="welcomeClose" type="button">' +
-            '我知道了，继续浏览' +
+          '<button class="btn btn--outline" id="welcomeClose" type="button">' +
+            icon('check') + ' 我知道了，继续浏览' +
           '</button>' +
         '</div>' +
-        '<button class="dl-modal__close" id="dlModalClose" type="button" aria-label="关闭">×</button>' +
+        '<button class="modal__close" id="fwModalClose" type="button" aria-label="关闭">' + icon('close') + '</button>' +
       '</div>';
 
     document.body.appendChild(overlay);
@@ -851,9 +779,15 @@
 
     function closeModal() {
       overlay.classList.remove('show');
+      document.removeEventListener('keydown', onKeydown);
       setTimeout(function () { overlay.remove(); }, 300);
     }
-    document.getElementById('dlModalClose').addEventListener('click', closeModal);
+    function onKeydown(e) {
+      if (e.key === 'Escape') closeModal();
+    }
+    document.addEventListener('keydown', onKeydown);
+
+    document.getElementById('fwModalClose').addEventListener('click', closeModal);
     document.getElementById('welcomeClose').addEventListener('click', closeModal);
     overlay.addEventListener('click', function (e) {
       if (e.target === overlay) closeModal();

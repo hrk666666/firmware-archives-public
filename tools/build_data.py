@@ -132,9 +132,11 @@ def build(repo="hrk666666/firmware-archives-public", out="docs/data.json"):
     releases = fetch_all_releases(repo, token)
     print(f"[*] 共 {len(releases)} 个 release")
 
-    # code -> { version -> {full: [], inc: []} }
+    # code -> { version -> {full: [], inc: [], notes: str} }
     agg = {}
     asset_count = 0
+    # tag -> release body（发布说明），供前端直接展示
+    notes_by_tag = {r.get("tag_name", ""): (r.get("body") or "").strip() for r in releases}
     for r in releases:
         tag = r.get("tag_name", "")
         # tag 形如 firmware-{code}-{version}-{hash}，但以资产文件名为准
@@ -146,7 +148,7 @@ def build(repo="hrk666666/firmware-archives-public", out="docs/data.json"):
             if m:
                 code, ver, hsh = m.group(1), m.group(2), m.group(3)
                 d = agg.setdefault(code, {})
-                rel = d.setdefault(ver, {"full": [], "incrementals": []})
+                rel = d.setdefault(ver, {"full": [], "incrementals": [], "notes": notes_by_tag.get(tag, "")})
                 rel["full"].append({"file": name, "size": size, "hash": hsh, "url": url})
                 asset_count += 1
                 continue
@@ -154,7 +156,7 @@ def build(repo="hrk666666/firmware-archives-public", out="docs/data.json"):
             if m:
                 code, ver, old, hsh = m.group(1), m.group(2), m.group(3), m.group(4)
                 d = agg.setdefault(code, {})
-                rel = d.setdefault(ver, {"full": [], "incrementals": []})
+                rel = d.setdefault(ver, {"full": [], "incrementals": [], "notes": notes_by_tag.get(tag, "")})
                 rel["incrementals"].append({"from": old, "file": name, "size": size, "hash": hsh, "url": url})
                 asset_count += 1
                 continue
@@ -188,6 +190,7 @@ def build(repo="hrk666666/firmware-archives-public", out="docs/data.json"):
             v = versions[ver]
             rel_list.append({
                 "version": ver,
+                "notes": v.get("notes", ""),
                 "full": sorted(v["full"], key=lambda x: x["size"]),
                 "incrementals": sorted(v["incrementals"], key=lambda x: version_key(x["from"]), reverse=True),
             })
