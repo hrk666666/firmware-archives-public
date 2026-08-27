@@ -1495,6 +1495,45 @@ img, svg {
   color: var(--md-on-surface-variant, #53443c);
   line-height: 1.6;
 }
+.modal__speed {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin: -4px 0 16px;
+  padding: 10px 12px;
+  background: var(--md-surface-container-low, #fff1eb);
+  border: 1px dashed var(--md-outline-variant, #d8c2b8);
+  border-radius: var(--shape-medium, 12px);
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--md-on-surface-variant, #53443c);
+}
+.modal__speed strong {
+  color: var(--md-primary, #8f4c00);
+  font-weight: 700;
+}
+.modal__speed .spd-ratio {
+  display: block;
+  margin-top: 2px;
+}
+.spd-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border-radius: 50%;
+  background: var(--md-primary, #8f4c00);
+}
+.spd-dot.is-busy {
+  animation: spdPulse 1s ease-in-out infinite;
+}
+.spd-dot.is-fail {
+  background: var(--md-error, #ba1a1a);
+}
+@keyframes spdPulse {
+  0%, 100% { opacity: .3; }
+  50% { opacity: 1; }
+}
 .modal__filename {
   margin-bottom: 18px;
 }

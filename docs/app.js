@@ -18,6 +18,119 @@
   var THEME_KEY = 'fw-archive-theme';
   var QUARK_SHARE_URL = 'https://pan.quark.cn/s/71ba679b86c3';
 
+  /* ---------- GitHub 后台测速（打开页面自动测，弹窗内展示结果与夸克对比） ---------- */
+  // 夸克网盘非会员参考速度：约 1MB/s
+  var QUARK_NONMEMBER_MBPS = 1;
+  var SPEED_CACHE_KEY = 'fw-archive-gh-speed-v1';
+  var SPEED_CACHE_TTL = 5 * 60 * 1000; // 测速结果缓存 5 分钟，避免每次打开页面重复测
+  // 样本文件：仓库内真实存在的文件（raw.githubusercontent.com 支持跨域读取，可被浏览器 fetch）
+  var SPEED_SAMPLE_URL = 'https://raw.githubusercontent.com/hrk666666/firmware-archives-public/main/docs/data.json';
+  var SPEED_TIMEOUT_MS = 15000;
+  var speedState = { status: 'idle', kbPerSec: 0, at: 0 }; // idle|testing|done|error
+
+  function loadSpeedCache() {
+    try {
+      var raw = localStorage.getItem(SPEED_CACHE_KEY);
+      if (!raw) return;
+      var o = JSON.parse(raw);
+      if (o && o.kbPerSec > 0 && Date.now() - o.at < SPEED_CACHE_TTL) {
+        speedState.status = 'done';
+        speedState.kbPerSec = o.kbPerSec;
+        speedState.at = o.at;
+      }
+    } catch (e) { /* 缓存异常忽略 */ }
+  }
+
+  function saveSpeedCache() {
+    try {
+      localStorage.setItem(SPEED_CACHE_KEY, JSON.stringify({ kbPerSec: speedState.kbPerSec, at: Date.now() }));
+    } catch (e) { /* 忽略 */ }
+  }
+
+  function fmtSpeed(kb) {
+    if (kb >= 1024) return (kb / 1024).toFixed(2) + ' MB/s';
+    return Math.round(kb) + ' KB/s';
+  }
+
+  // 后台测速：下载样本文件（上限 512KB）计时，得出 GitHub 实测下载速度
+  function testGithubSpeed() {
+    if (speedState.status === 'testing') return;
+    speedState.status = 'testing';
+    refreshSpeedPanels();
+
+    var started = Date.now();
+    var received = 0;
+    var finished = false;
+    var controller = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timer = setTimeout(function () { if (controller) controller.abort(); }, SPEED_TIMEOUT_MS);
+
+    var opts = {
+      cache: 'no-store',
+      redirect: 'follow',
+      headers: { Range: 'bytes=0-524287' }
+    };
+    if (controller) opts.signal = controller.signal;
+
+    fetch(SPEED_SAMPLE_URL, opts).then(function (res) {
+      if (!res.ok && res.status !== 206) throw new Error('HTTP ' + res.status);
+      var reader = res.body && res.body.getReader ? res.body.getReader() : null;
+      if (!reader) throw new Error('no-stream');
+      function finish() {
+        if (finished) return;
+        finished = true;
+        var ms = Date.now() - started;
+        if (ms < 300) ms = 300;
+        speedState.kbPerSec = (received / 1024) / (ms / 1000);
+        speedState.status = 'done';
+        speedState.at = Date.now();
+        saveSpeedCache();
+        refreshSpeedPanels();
+      }
+      function pump() {
+        return reader.read().then(function (chunk) {
+          if (chunk.done) { finish(); return; }
+          received += chunk.value ? chunk.value.length : 0;
+          if (received >= 524288) { if (controller) controller.abort(); finish(); return; }
+          return pump();
+        });
+      }
+      return pump();
+    }).catch(function () {
+      // 达到采样量主动 abort 触发的失败忽略，其余按测速失败处理
+      if (finished) return;
+      speedState.status = 'error';
+      refreshSpeedPanels();
+    }).then(function () { clearTimeout(timer); }, function () { clearTimeout(timer); });
+  }
+
+  // 夸克网盘非会员（约 1MB/s）相对 GitHub 实测速度的倍数文案
+  function speedRatioText() {
+    var ghMBps = speedState.kbPerSec / 1024;
+    if (ghMBps <= 0) return '';
+    var ratio = QUARK_NONMEMBER_MBPS / ghMBps; // 夸克 ÷ GitHub
+    var fmtN = function (n) { return n >= 10 ? String(Math.round(n)) : n.toFixed(1); };
+    if (ratio >= 1) {
+      return '夸克网盘非会员（约 1MB/s）约为 GitHub 的 <strong>' + fmtN(ratio) + ' 倍</strong>';
+    }
+    return 'GitHub 当前约为夸克网盘非会员（约 1MB/s）的 <strong>' + fmtN(1 / ratio) + ' 倍</strong>';
+  }
+
+  function speedPanelHtml() {
+    if (speedState.status === 'idle' || speedState.status === 'testing') {
+      return '<span class="spd-dot is-busy"></span><span>正在后台测速 GitHub 下载速度…</span>';
+    }
+    if (speedState.status === 'error') {
+      return '<span class="spd-dot is-fail"></span><span>GitHub 测速失败，暂无法对比下载速度</span>';
+    }
+    return '<span class="spd-dot"></span><span>GitHub 实测下载速度：<strong>' + fmtSpeed(speedState.kbPerSec) + '</strong>' +
+      '<span class="spd-ratio">' + speedRatioText() + '</span></span>';
+  }
+
+  function refreshSpeedPanels() {
+    var els = document.querySelectorAll('.js-speed-panel');
+    for (var i = 0; i < els.length; i++) els[i].innerHTML = speedPanelHtml();
+  }
+
   /* ---------- 下载引导弹窗 ---------- */
   function showDownloadModal(filename, githubUrl) {
     // 移除已有弹窗
@@ -34,6 +147,7 @@
           '<h3 class="modal__title">推荐使用夸克网盘下载</h3>' +
         '</div>' +
         '<p class="modal__reason">国内下载速度更快、更稳定。打开夸克网盘后，搜索下方文件名即可定位对应固件。</p>' +
+        '<div class="modal__speed js-speed-panel">' + speedPanelHtml() + '</div>' +
         '<div class="modal__filename">' +
           '<span class="modal__fname-label">文件名</span>' +
           '<div class="modal__fname-row">' +
@@ -727,6 +841,7 @@
   /* ---------- 启动 ---------- */
 
   function boot() {
+    loadSpeedCache();
     applyTheme(currentTheme());
     $('themeToggle').addEventListener('click', function () {
       var next = currentTheme() === 'dark' ? 'light' : 'dark';
@@ -738,6 +853,8 @@
     load().then(function () {
       renderAll();
       initReveal(document.body);
+      // 打开页面即后台测速 GitHub 下载速度（结果用于下载弹窗内对比展示）
+      testGithubSpeed();
       // 首次访问欢迎弹窗：无论地理位置，首次访问一律展示
       if (isFirstVisit()) {
         markVisited();
@@ -763,6 +880,7 @@
           '<h3 class="modal__title">推荐使用夸克网盘下载固件</h3>' +
         '</div>' +
         '<p class="modal__reason">国内下载速度更快、更稳定，支持夸克 APP 直接搜索和下载固件文件。打开夸克网盘后，搜索文件名即可定位对应固件。</p>' +
+        '<div class="modal__speed js-speed-panel">' + speedPanelHtml() + '</div>' +
         '<div class="modal__actions">' +
           '<a class="btn btn--primary" href="' + esc(QUARK_SHARE_URL) + '" target="_blank" rel="noopener">' +
             icon('cloud') + ' 打开夸克网盘' +
