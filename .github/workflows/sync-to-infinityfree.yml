@@ -30,8 +30,8 @@ jobs:
         run: |
           set -e
           echo "同步目标: ${FTP_HOST}:${FTP_DIR}"
-          lftp -c "set net:timeout 30; set net:max-retries 3; \
+          lftp -c "set net:timeout 60; set net:max-retries 5; set ftp:max-connections 1; \
             open -u ${FTP_USERNAME},${FTP_PASSWORD} ${FTP_HOST}; \
-            mirror -R -e --no-perms --verbose --parallel=4 --exclude-glob='.git*' --exclude-glob='*.bak' \
+            mirror -R -e --no-perms --verbose --parallel=1 --exclude-glob='.git*' --exclude-glob='*.bak' \
             docs/ ${FTP_DIR}"
           echo "✅ 同步完成"
