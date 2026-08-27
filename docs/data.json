@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-26T19:52:15+0800",
+ "generated_at": "2026-08-27T12:57:06+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 47,
- "release_count": 85,
- "asset_count": 211,
+ "device_count": 48,
+ "release_count": 86,
+ "asset_count": 212,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2234,6 +2234,28 @@
        "size": 589764,
        "hash": "ee71710b",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.band01-v2.8.2-77ebc046/mijia.watch.band01_v2.8.2_full_ee71710b.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.n60e",
+   "name": "mijia.watch.n60e",
+   "category": "other",
+   "confirmed": false,
+   "note": "未知设备（未在对照表）",
+   "releases": [
+    {
+     "version": "v2.1.24",
+     "notes": "1. 血压创新研究功能更新",
+     "full": [
+      {
+       "file": "mijia.watch.n60e_v2.1.24_full_a5fec9b6.bin",
+       "size": 65844246,
+       "hash": "a5fec9b6",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n60e-v2.1.24-2d1f3a8d/mijia.watch.n60e_v2.1.24_full_a5fec9b6.bin"
       }
      ],
      "incrementals": []
