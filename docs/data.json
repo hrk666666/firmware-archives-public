@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-27T13:27:01+0000",
+ "generated_at": "2026-08-28T14:27:36+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 48,
- "release_count": 86,
- "asset_count": 212,
+ "release_count": 87,
+ "asset_count": 215,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -1425,6 +1425,34 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.100.105",
+     "notes": "• 欢迎使用 REDMI Watch 5，感谢您的支持。本次更新带来了小米澎湃OS 3.0 新的体验，我们强烈推荐您升级至此版本。\n• 更新日志：\n• 微信新版本上线，新增语音转文字发送消息、会话标记等功能；\n• 增强消息隐私保护，提升消息通知的隐私性；\n• 铁三运动体验优化，运动过程中屏蔽自动排水；\n• 其他体验优化和修复已知问题。",
+     "full": [
+      {
+       "file": "miwear.watch.o65_v3.100.105_full_987d7afe.bin",
+       "size": 104371893,
+       "hash": "987d7afe",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.105-03b57329/miwear.watch.o65_v3.100.105_full_987d7afe.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.100.102",
+       "file": "miwear.watch.o65_v3.100.105_from_v3.100.102_incremental_307cc739.bin",
+       "size": 10274813,
+       "hash": "307cc739",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.105-03b57329/miwear.watch.o65_v3.100.105_from_v3.100.102_incremental_307cc739.bin"
+      },
+      {
+       "from": "v3.100.038",
+       "file": "miwear.watch.o65_v3.100.105_from_v3.100.038_incremental_33d3a6b2.bin",
+       "size": 18764749,
+       "hash": "33d3a6b2",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o65-v3.100.105-03b57329/miwear.watch.o65_v3.100.105_from_v3.100.038_incremental_33d3a6b2.bin"
+      }
+     ]
+    },
     {
      "version": "v3.100.102",
      "notes": "• 欢迎使用 REDMI Watch 5，感谢您的支持。本次更新带来了小米澎湃OS 3.0 新的体验，我们强烈推荐您升级至此版本。\n• 更新日志：\n• 微信新版本上线，新增语音转文字发送消息、会话标记等功能；\n• 增强消息隐私保护，提升消息通知的隐私性；\n• 铁三运动体验优化，运动过程中屏蔽自动排水；\n• 其他体验优化和修复已知问题。",
