@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-08-29T09:37:22+0000",
+ "generated_at": "2026-08-30T08:26:35+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 48,
- "release_count": 87,
- "asset_count": 215,
+ "device_count": 49,
+ "release_count": 88,
+ "asset_count": 216,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2284,6 +2284,28 @@
        "size": 65844246,
        "hash": "a5fec9b6",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n60e-v2.1.24-2d1f3a8d/mijia.watch.n60e_v2.1.24_full_a5fec9b6.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.q65acn",
+   "name": "miwear.watch.q65acn",
+   "category": "other",
+   "confirmed": false,
+   "note": "未知设备（未在对照表）",
+   "releases": [
+    {
+     "version": "v3.100.023",
+     "notes": "• 欢迎使用REDMI Watch 6 活力版，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 运动结束提醒忽略逻辑优化。\n• 修复了部分界面的显示错误问题。",
+     "full": [
+      {
+       "file": "miwear.watch.q65acn_v3.100.023_full_892a50d0.bin",
+       "size": 7881728,
+       "hash": "892a50d0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q65acn-v3.100.023-e1d97e42/miwear.watch.q65acn_v3.100.023_full_892a50d0.bin"
       }
      ],
      "incrementals": []
