@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-03T07:35:10+0000",
+ "generated_at": "2026-09-04T07:19:59+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 49,
- "release_count": 88,
- "asset_count": 216,
+ "device_count": 50,
+ "release_count": 89,
+ "asset_count": 218,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2309,6 +2309,36 @@
       }
      ],
      "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.q66tc",
+   "name": "miwear.watch.q66tc",
+   "category": "other",
+   "confirmed": false,
+   "note": "未知设备（未在对照表）",
+   "releases": [
+    {
+     "version": "v4.100.139",
+     "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66tc_v4.100.139_full_a02b7af5.bin",
+       "size": 66701577,
+       "hash": "a02b7af5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.139-019c636e/miwear.watch.q66tc_v4.100.139_full_a02b7af5.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v4.100.105",
+       "file": "miwear.watch.q66tc_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin",
+       "size": 15249759,
+       "hash": "0d3ccee6",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.139-019c636e/miwear.watch.q66tc_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin"
+      }
+     ]
     }
    ]
   },
