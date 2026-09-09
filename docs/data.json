@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-08T07:39:08+0000",
+ "generated_at": "2026-09-09T07:29:01+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 52,
- "release_count": 91,
- "asset_count": 221,
+ "release_count": 92,
+ "asset_count": 223,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -1636,6 +1636,27 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.100.039",
+     "notes": "• 欢迎使用 REDMI Watch 6，感谢您的支持。为了让您享受更卓越的体验，我们推荐您升级至此版本。\n• 更新日志：\n• 1. 支持在表盘市场下载游戏表盘，点击可快速进入游戏；\n• 2. 设置图标迎来视觉换新；\n• 3. 优化睡眠算法，提升准确性；\n• 4. 优化亮度调节策略，提升调节速度；\n• 5. 微信新版本上线，新增语音转文字发送消息、会话标记等功能；\n• 6. 支持远程查找手表功能；\n• 7. 适配更多型号的车钥匙；\n• 8. 修复已知问题。",
+     "full": [
+      {
+       "file": "miwear.watch.p65_v3.100.039_full_3036eae1.bin",
+       "size": 120041001,
+       "hash": "3036eae1",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.100.039-6e40f1ad/miwear.watch.p65_v3.100.039_full_3036eae1.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.100.031",
+       "file": "miwear.watch.p65_v3.100.039_from_v3.100.031_incremental_d0235fcf.bin",
+       "size": 1276291,
+       "hash": "d0235fcf",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p65-v3.100.039-6e40f1ad/miwear.watch.p65_v3.100.039_from_v3.100.031_incremental_d0235fcf.bin"
+      }
+     ]
+    },
     {
      "version": "v3.100.031",
      "notes": "• 欢迎使用 REDMI Watch 6，感谢您的支持。为了让您享受更卓越的体验，我们推荐您升级至此版本。\n• 更新日志：\n• 1. 支持在表盘市场下载游戏表盘，点击可快速进入游戏；\n• 2. 设置图标迎来视觉换新；\n• 3. 优化睡眠算法，提升准确性；\n• 4. 优化亮度调节策略，提升调节速度；\n• 5. 微信新版本上线，新增语音转文字发送消息、会话标记等功能；\n• 6. 支持远程查找手表功能；\n• 7. 适配更多型号的车钥匙；\n• 8. 修复已知问题。",
