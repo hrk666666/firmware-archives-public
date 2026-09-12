@@ -11,7 +11,7 @@ REPO_SRC="${REPO_SRC:-hrk666666/firmware-archives-public}"
 REPO_DST="${REPO_DST:-hrk666666/firmware-archives-public}"
 DATE=$(date +%Y%m%d)
 TAG="firmware-zips-$DATE"
-NOTES="按系列分组的固件打包（共 10 个 zip，zip 内为中文分级目录：系列/设备/版本/全量包或增量包）。创建时间: $(date '+%F %T UTC')"
+NOTES="按系列分组的固件打包（共 11 个 zip，zip 内为中文分级目录：系列/设备/版本/全量包或增量包）。创建时间: $(date '+%F %T UTC')"
 
 # 分组：key(ASCII 文件名) -> 中文目录名
 declare -A PACK_LABELS=(
@@ -25,6 +25,7 @@ declare -A PACK_LABELS=(
   ["08_redmi_watch"]="08_Redmi手表系列"
   ["09_midr_misc"]="09_待确认设备_midr系列"
   ["10_other"]="10_待确认设备_其他"
+  ["11_band11"]="11_小米手环11系列"
 )
 
 # 分组：key -> 设备代号列表（每组合计源大小 <2GB）
@@ -36,9 +37,10 @@ declare -A PACK_GROUPS=(
   ["05_watch_s1s3color"]="mijia.watch.l61 mijia.watch.n62 mijia.watch.n62cg mijia.watch.n62car mijia.watch.n62lte mijia.watch.n62s midr.watch.ds"
   ["06_watch_s4"]="mijia.watch.o62 mijia.watch.o62m mijia.watch.o62lte miwear.watch.o63"
   ["07_watch_s5"]="miwear.watch.p62 miwear.watch.p62lte"
-  ["08_redmi_watch"]="lchz.watch.n65 miwear.watch.o65 miwear.watch.o65m miwear.watch.p65"
+  ["08_redmi_watch"]="lchz.watch.n65 miwear.watch.o65 miwear.watch.o65m miwear.watch.p65 miwear.watch.q65acn"
   ["09_midr_misc"]="midr.watch.sports midr.watch.m62s midr.watch.m62a midr.watch.k62 midr.watch.k63 midr.watch.k65"
-  ["10_other"]="mijia.watch.v1 lchz.watch.m65ac lchz.watch.m65s mj1205.motion.ecg"
+  ["10_other"]="mijia.watch.v1 mijia.watch.n60e lchz.watch.m65ac lchz.watch.m65s mj1205.motion.ecg"
+  ["11_band11"]="miwear.watch.q66cn miwear.watch.q66nfc miwear.watch.q66tc"
 )
 
 echo "==> 确保分发 release 存在: $TAG"

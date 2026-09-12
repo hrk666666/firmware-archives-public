@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-09-12T07:31:55+0000",
+ "generated_at": "2026-09-12T15:57:53+0800",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 52,
  "release_count": 93,
@@ -780,6 +780,101 @@
        "size": 29229876,
        "hash": "967f200a",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.16-e995569f/miwear.watch.o66tc_v3.1.16_from_v1.0.115_incremental_967f200a.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.q66cn",
+   "name": "小米手环 11",
+   "category": "band",
+   "confirmed": true,
+   "note": "官方欢迎语：Xiaomi Smart Band 11",
+   "releases": [
+    {
+     "version": "v4.100.139",
+     "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66cn_v4.100.139_full_a02b7af5.bin",
+       "size": 66701577,
+       "hash": "a02b7af5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66cn-v4.100.139-f4d62585/miwear.watch.q66cn_v4.100.139_full_a02b7af5.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v4.100.105",
+       "file": "miwear.watch.q66cn_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin",
+       "size": 15249759,
+       "hash": "0d3ccee6",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66cn-v4.100.139-f4d62585/miwear.watch.q66cn_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.q66nfc",
+   "name": "小米手环 11 NFC",
+   "category": "band",
+   "confirmed": true,
+   "note": "官方欢迎语：Xiaomi Smart Band 11",
+   "releases": [
+    {
+     "version": "v4.100.139",
+     "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66nfc_v4.100.139_full_a02b7af5.bin",
+       "size": 66701577,
+       "hash": "a02b7af5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66nfc-v4.100.139-ec75ed22/miwear.watch.q66nfc_v4.100.139_full_a02b7af5.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.q66tc",
+   "name": "小米手环 11 陶瓷版",
+   "category": "band",
+   "confirmed": true,
+   "note": "官方欢迎语：Xiaomi Smart Band 11",
+   "releases": [
+    {
+     "version": "v4.100.155",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66tc_v4.100.155_full_f1c824fe.bin",
+       "size": 66712457,
+       "hash": "f1c824fe",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.155-a874a06d/miwear.watch.q66tc_v4.100.155_full_f1c824fe.bin"
+      }
+     ],
+     "incrementals": []
+    },
+    {
+     "version": "v4.100.139",
+     "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66tc_v4.100.139_full_a02b7af5.bin",
+       "size": 66701577,
+       "hash": "a02b7af5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.139-019c636e/miwear.watch.q66tc_v4.100.139_full_a02b7af5.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v4.100.105",
+       "file": "miwear.watch.q66tc_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin",
+       "size": 15249759,
+       "hash": "0d3ccee6",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.139-019c636e/miwear.watch.q66tc_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin"
       }
      ]
     }
@@ -1784,6 +1879,28 @@
    ]
   },
   {
+   "code": "miwear.watch.q65acn",
+   "name": "REDMI Watch 6 活力版",
+   "category": "watch",
+   "confirmed": true,
+   "note": "官方欢迎语：REDMI Watch 6 活力版",
+   "releases": [
+    {
+     "version": "v3.100.023",
+     "notes": "• 欢迎使用REDMI Watch 6 活力版，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 运动结束提醒忽略逻辑优化。\n• 修复了部分界面的显示错误问题。",
+     "full": [
+      {
+       "file": "miwear.watch.q65acn_v3.100.023_full_892a50d0.bin",
+       "size": 7881728,
+       "hash": "892a50d0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q65acn-v3.100.023-e1d97e42/miwear.watch.q65acn_v3.100.023_full_892a50d0.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
    "code": "midr.watch.ds",
    "name": "小米手表 Color",
    "category": "watch",
@@ -2290,145 +2407,6 @@
    ]
   },
   {
-   "code": "mijia.watch.n60e",
-   "name": "mijia.watch.n60e",
-   "category": "other",
-   "confirmed": false,
-   "note": "未知设备（未在对照表）",
-   "releases": [
-    {
-     "version": "v2.1.24",
-     "notes": "1. 血压创新研究功能更新",
-     "full": [
-      {
-       "file": "mijia.watch.n60e_v2.1.24_full_a5fec9b6.bin",
-       "size": 65844246,
-       "hash": "a5fec9b6",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n60e-v2.1.24-2d1f3a8d/mijia.watch.n60e_v2.1.24_full_a5fec9b6.bin"
-      }
-     ],
-     "incrementals": []
-    }
-   ]
-  },
-  {
-   "code": "miwear.watch.q65acn",
-   "name": "miwear.watch.q65acn",
-   "category": "other",
-   "confirmed": false,
-   "note": "未知设备（未在对照表）",
-   "releases": [
-    {
-     "version": "v3.100.023",
-     "notes": "• 欢迎使用REDMI Watch 6 活力版，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 运动结束提醒忽略逻辑优化。\n• 修复了部分界面的显示错误问题。",
-     "full": [
-      {
-       "file": "miwear.watch.q65acn_v3.100.023_full_892a50d0.bin",
-       "size": 7881728,
-       "hash": "892a50d0",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q65acn-v3.100.023-e1d97e42/miwear.watch.q65acn_v3.100.023_full_892a50d0.bin"
-      }
-     ],
-     "incrementals": []
-    }
-   ]
-  },
-  {
-   "code": "miwear.watch.q66cn",
-   "name": "miwear.watch.q66cn",
-   "category": "other",
-   "confirmed": false,
-   "note": "未知设备（未在对照表）",
-   "releases": [
-    {
-     "version": "v4.100.139",
-     "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
-     "full": [
-      {
-       "file": "miwear.watch.q66cn_v4.100.139_full_a02b7af5.bin",
-       "size": 66701577,
-       "hash": "a02b7af5",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66cn-v4.100.139-f4d62585/miwear.watch.q66cn_v4.100.139_full_a02b7af5.bin"
-      }
-     ],
-     "incrementals": [
-      {
-       "from": "v4.100.105",
-       "file": "miwear.watch.q66cn_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin",
-       "size": 15249759,
-       "hash": "0d3ccee6",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66cn-v4.100.139-f4d62585/miwear.watch.q66cn_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin"
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "code": "miwear.watch.q66nfc",
-   "name": "miwear.watch.q66nfc",
-   "category": "other",
-   "confirmed": false,
-   "note": "未知设备（未在对照表）",
-   "releases": [
-    {
-     "version": "v4.100.139",
-     "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
-     "full": [
-      {
-       "file": "miwear.watch.q66nfc_v4.100.139_full_a02b7af5.bin",
-       "size": 66701577,
-       "hash": "a02b7af5",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66nfc-v4.100.139-ec75ed22/miwear.watch.q66nfc_v4.100.139_full_a02b7af5.bin"
-      }
-     ],
-     "incrementals": []
-    }
-   ]
-  },
-  {
-   "code": "miwear.watch.q66tc",
-   "name": "miwear.watch.q66tc",
-   "category": "other",
-   "confirmed": false,
-   "note": "未知设备（未在对照表）",
-   "releases": [
-    {
-     "version": "v4.100.155",
-     "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
-     "full": [
-      {
-       "file": "miwear.watch.q66tc_v4.100.155_full_f1c824fe.bin",
-       "size": 66712457,
-       "hash": "f1c824fe",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.155-a874a06d/miwear.watch.q66tc_v4.100.155_full_f1c824fe.bin"
-      }
-     ],
-     "incrementals": []
-    },
-    {
-     "version": "v4.100.139",
-     "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
-     "full": [
-      {
-       "file": "miwear.watch.q66tc_v4.100.139_full_a02b7af5.bin",
-       "size": 66701577,
-       "hash": "a02b7af5",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.139-019c636e/miwear.watch.q66tc_v4.100.139_full_a02b7af5.bin"
-      }
-     ],
-     "incrementals": [
-      {
-       "from": "v4.100.105",
-       "file": "miwear.watch.q66tc_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin",
-       "size": 15249759,
-       "hash": "0d3ccee6",
-       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.139-019c636e/miwear.watch.q66tc_v4.100.139_from_v4.100.105_incremental_0d3ccee6.bin"
-      }
-     ]
-    }
-   ]
-  },
-  {
    "code": "mijia.watch.v1",
    "name": "未知设备",
    "category": "other",
@@ -2620,6 +2598,28 @@
        "size": 24751304,
        "hash": "5e7dafe0",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-lchz.watch.m65s-v1.2.73-77214baf/lchz.watch.m65s_v1.2.73_full_5e7dafe0.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.n60e",
+   "name": "未知设备（血压类）",
+   "category": "other",
+   "confirmed": false,
+   "note": "更新说明仅含「血压创新研究功能更新」，疑为米家系血压/健康监测设备",
+   "releases": [
+    {
+     "version": "v2.1.24",
+     "notes": "1. 血压创新研究功能更新",
+     "full": [
+      {
+       "file": "mijia.watch.n60e_v2.1.24_full_a5fec9b6.bin",
+       "size": 65844246,
+       "hash": "a5fec9b6",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n60e-v2.1.24-2d1f3a8d/mijia.watch.n60e_v2.1.24_full_a5fec9b6.bin"
       }
      ],
      "incrementals": []

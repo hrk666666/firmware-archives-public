@@ -13,10 +13,10 @@
 
 | 项目 | 数值 |
 |---|---|
-| 固件设备数 | 47 款 |
-| Release 总数 | 83 |
-| 固件资产总数 | 209（全量包 84 + 增量包 125） |
-| 总大小 | ~10.2 GB |
+| 固件设备数 | 52 款 |
+| Release 总数 | 93 |
+| 固件资产总数 | 224（全量包 93 + 增量包 131） |
+| 总大小 | ~10.6 GB |
 | 同步策略 | 每日自动检测上游新 Release（cron: 每日 10:00 UTC+8）+ 手动触发 |
 
 所有固件以 **GitHub Release** 形式分发（固件体积大，不适合放入 Git 仓库本体）。
@@ -69,6 +69,9 @@
 | `miwear.watch.p67cn` | 小米手环 10 Pro |
 | `miwear.watch.p67tc` | 小米手环 10 Pro 陶瓷版（官方欢迎语：小米手环10 Pro 陶瓷版） |
 | `miwear.watch.p67gln` | 小米手环 10 Pro NFC 版（官方欢迎语：小米手环10 Pro NFC版） |
+| `miwear.watch.q66cn` | 小米手环 11（官方欢迎语：Xiaomi Smart Band 11） |
+| `miwear.watch.q66nfc` | 小米手环 11 NFC（官方欢迎语：Xiaomi Smart Band 11） |
+| `miwear.watch.q66tc` | 小米手环 11 陶瓷版（官方欢迎语：Xiaomi Smart Band 11） |
 | `miwear.watch.n69cn` | Redmi 手环 3 |
 | `mijia.watch.m69` | Redmi 手环 2 |
 | `mijia.watch.band01` | Redmi 手环（初代） * |
@@ -95,6 +98,7 @@
 | `miwear.watch.o65` | REDMI Watch 5 |
 | `miwear.watch.o65m` | REDMI Watch 5 eSIM（XRING INSIDE） |
 | `miwear.watch.p65` | REDMI Watch 6 |
+| `miwear.watch.q65acn` | REDMI Watch 6 活力版（官方欢迎语：REDMI Watch 6 活力版） |
 | `hqbd3.watch.l67` | 小米手环 7 Pro（类手表形态） |
 
 ### 其他 / 待确认
@@ -105,6 +109,7 @@
 | `lchz.watch.m65s` / `m65ac` | 未知，lchz 系列（推测 REDMI Watch 4 Active 一带）* |
 | `midr.watch.k62` / `k63` / `k65` / `m62a` / `m62s` / `sports` | midr 系列，暂未查到公开对照 * |
 | `mijia.watch.v1` | 未知 * |
+| `mijia.watch.n60e` | 未知（血压类，更新说明仅含「血压创新研究功能更新」）* |
 | `mj1205.motion.ecg` | 推测为米家系心电/血压类设备 * |
 
 > `*` 标注为推测或未证实；其余已确认项均与上游官方固件 Release 版本介绍中的开机欢迎语（「欢迎使用 XXX」）交叉核对，欢迎提交 PR 补充准确对照。

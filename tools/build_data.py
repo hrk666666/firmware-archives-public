@@ -30,6 +30,10 @@ DEVICES = {
     "miwear.watch.p67cn": ("小米手环 10 Pro", "band", True, ""),
     "miwear.watch.p67tc": ("小米手环 10 Pro 陶瓷版", "band", True, "官方欢迎语：小米手环10 Pro 陶瓷版"),
     "miwear.watch.p67gln":("小米手环 10 Pro NFC 版", "band", True, "官方欢迎语：小米手环10 Pro NFC版"),
+    # 小米手环 11（2026-09-07 首销；官方欢迎语交叉核对：Xiaomi Smart Band 11）
+    "miwear.watch.q66cn": ("小米手环 11", "band", True, "官方欢迎语：Xiaomi Smart Band 11"),
+    "miwear.watch.q66nfc":("小米手环 11 NFC", "band", True, "官方欢迎语：Xiaomi Smart Band 11"),
+    "miwear.watch.q66tc": ("小米手环 11 陶瓷版", "band", True, "官方欢迎语：Xiaomi Smart Band 11"),
     "miwear.watch.n69cn": ("Redmi 手环 3", "band", True, ""),
     "mijia.watch.m69":    ("Redmi 手环 2", "band", True, ""),
     "mijia.watch.band01": ("Redmi 手环（初代）", "band", False, "待确认"),
@@ -52,6 +56,7 @@ DEVICES = {
     "miwear.watch.o65":   ("REDMI Watch 5", "watch", True, ""),
     "miwear.watch.o65m":  ("REDMI Watch 5 eSIM", "watch", True, "XRING INSIDE"),
     "miwear.watch.p65":   ("REDMI Watch 6", "watch", True, ""),
+    "miwear.watch.q65acn":("REDMI Watch 6 活力版", "watch", True, "官方欢迎语：REDMI Watch 6 活力版"),
     "midr.watch.ds":      ("小米手表 Color", "watch", True, "官方更新说明标题：小米手表Color"),
     "mijia.watch.l61":    ("小米手表 S1 Pro", "watch", True, "OronBox 设备目录确认：l61 = Xiaomi Watch S1 Pro"),
     # 其他 / 待确认
@@ -64,6 +69,7 @@ DEVICES = {
     "midr.watch.m62s":    ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "midr.watch.sports":  ("未知设备（midr 系列）", "other", False, "暂未查到公开对照"),
     "mijia.watch.v1":     ("未知设备", "other", False, "暂未查到公开对照"),
+    "mijia.watch.n60e":   ("未知设备（血压类）", "other", False, "更新说明仅含「血压创新研究功能更新」，疑为米家系血压/健康监测设备"),
     "mj1205.motion.ecg":  ("米家系心电/血压类设备（推测）", "other", False, "推测为米家系心电/血压类设备"),
 }
 
