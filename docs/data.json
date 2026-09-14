@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-13T07:52:27+0000",
+ "generated_at": "2026-09-14T08:00:21+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 52,
- "release_count": 93,
- "asset_count": 224,
+ "device_count": 53,
+ "release_count": 94,
+ "asset_count": 226,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2403,6 +2403,36 @@
       }
      ],
      "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.m66dsn",
+   "name": "Xiaomi Smart Band 8",
+   "category": "band",
+   "confirmed": false,
+   "note": "来源：OronBox 设备目录（codename m66）",
+   "releases": [
+    {
+     "version": "v6.4.18",
+     "notes": "欢迎使用Xiaomi Smart Band 8，感谢您的支持。为了提升体验，我们推荐您升级至此版本。\n更新日志：\n•新增桌搭模式，搭配小米手环多功能桌搭使用。",
+     "full": [
+      {
+       "file": "miwear.watch.m66dsn_v6.4.18_full_28b54eed.bin",
+       "size": 35065967,
+       "hash": "28b54eed",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66dsn-v6.4.18-27651199/miwear.watch.m66dsn_v6.4.18_full_28b54eed.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v6.3.6",
+       "file": "miwear.watch.m66dsn_v6.4.18_from_v6.3.6_incremental_0505bbdc.bin",
+       "size": 22092634,
+       "hash": "0505bbdc",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66dsn-v6.4.18-27651199/miwear.watch.m66dsn_v6.4.18_from_v6.3.6_incremental_0505bbdc.bin"
+      }
+     ]
     }
    ]
   },
