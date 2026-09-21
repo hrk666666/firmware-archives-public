@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-20T08:09:57+0000",
+ "generated_at": "2026-09-21T08:05:47+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 53,
- "release_count": 95,
- "asset_count": 229,
+ "release_count": 96,
+ "asset_count": 234,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -1278,6 +1278,48 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.1.190",
+     "notes": "• 欢迎使用小米手环9 Pro，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 新增支持垂腕通知显示设置，灵活管控垂腕时消息展示，更好保护隐私。\n• 升级表盘相关能力，支持删除预装表盘。\n• 优化睡眠数据同步效率，数据同步速度更快。\n• 提升手环解锁 HyperOS 手机的安全性。\n• 增加运动结束提醒，运动使用体验优化。",
+     "full": [
+      {
+       "file": "miwear.watch.n67cn_v3.1.190_full_77174e6a.bin",
+       "size": 50330500,
+       "hash": "77174e6a",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.190-5a75fc0d/miwear.watch.n67cn_v3.1.190_full_77174e6a.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.187",
+       "file": "miwear.watch.n67cn_v3.1.190_from_v3.1.187_incremental_2d4753a0.bin",
+       "size": 7033036,
+       "hash": "2d4753a0",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.190-5a75fc0d/miwear.watch.n67cn_v3.1.190_from_v3.1.187_incremental_2d4753a0.bin"
+      },
+      {
+       "from": "v3.1.175",
+       "file": "miwear.watch.n67cn_v3.1.190_from_v3.1.175_incremental_360cb9c4.bin",
+       "size": 8255867,
+       "hash": "360cb9c4",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.190-5a75fc0d/miwear.watch.n67cn_v3.1.190_from_v3.1.175_incremental_360cb9c4.bin"
+      },
+      {
+       "from": "v3.1.171",
+       "file": "miwear.watch.n67cn_v3.1.190_from_v3.1.171_incremental_b3dc527f.bin",
+       "size": 8255867,
+       "hash": "b3dc527f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.190-5a75fc0d/miwear.watch.n67cn_v3.1.190_from_v3.1.171_incremental_b3dc527f.bin"
+      },
+      {
+       "from": "v1.3.153",
+       "file": "miwear.watch.n67cn_v3.1.190_from_v1.3.153_incremental_32ea2006.bin",
+       "size": 12912476,
+       "hash": "32ea2006",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n67cn-v3.1.190-5a75fc0d/miwear.watch.n67cn_v3.1.190_from_v1.3.153_incremental_32ea2006.bin"
+      }
+     ]
+    },
     {
      "version": "v3.1.187",
      "notes": "• 欢迎使用小米手环9 Pro，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 新增支持垂腕通知显示设置，灵活管控垂腕时消息展示，更好保护隐私。\n• 升级表盘相关能力，支持删除预装表盘。\n• 优化睡眠数据同步效率，数据同步速度更快。\n• 提升手环解锁 HyperOS 手机的安全性。\n• 增加运动结束提醒，运动使用体验优化。",
