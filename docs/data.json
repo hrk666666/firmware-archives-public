@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-21T08:26:33+0000",
+ "generated_at": "2026-09-22T07:50:19+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 53,
- "release_count": 96,
- "asset_count": 234,
+ "release_count": 97,
+ "asset_count": 235,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -1955,6 +1955,19 @@
    "confirmed": true,
    "note": "官方欢迎语：REDMI Watch 6 活力版",
    "releases": [
+    {
+     "version": "v3.100.035",
+     "notes": "• 欢迎使用REDMI Watch 6 活力版，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 新增微信支付和支付宝支付功能。",
+     "full": [
+      {
+       "file": "miwear.watch.q65acn_v3.100.035_full_7743db42.bin",
+       "size": 2467328,
+       "hash": "7743db42",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q65acn-v3.100.035-e3a28eeb/miwear.watch.q65acn_v3.100.035_full_7743db42.bin"
+      }
+     ],
+     "incrementals": []
+    },
     {
      "version": "v3.100.023",
      "notes": "• 欢迎使用REDMI Watch 6 活力版，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 运动结束提醒忽略逻辑优化。\n• 修复了部分界面的显示错误问题。",
