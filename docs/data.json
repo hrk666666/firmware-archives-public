@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-09-23T08:09:48+0000",
+ "generated_at": "2026-09-24T07:42:50+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 53,
- "release_count": 97,
- "asset_count": 235,
+ "device_count": 55,
+ "release_count": 99,
+ "asset_count": 238,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2514,6 +2514,58 @@
        "size": 22092634,
        "hash": "0505bbdc",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66dsn-v6.4.18-27651199/miwear.watch.m66dsn_v6.4.18_from_v6.3.6_incremental_0505bbdc.bin"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.q63",
+   "name": "miwear.watch.q63",
+   "category": "other",
+   "confirmed": false,
+   "note": "未知设备（未在对照表）",
+   "releases": [
+    {
+     "version": "v4.101.020",
+     "notes": "• 欢迎使用 Xiaomi Watch S5，感谢您的支持与信赖。为了让您享受更卓越的体验，我们诚挚推荐您升级至最新版本。升级可能需要较长时间，请您耐心等待。\n• 新增压力萌宠表盘，支持表盘快传：萌宠表盘随心切换，表盘传输更高效；\n• 新增小爱同学运动健康问答功能：支持部分运动模式及健康相关问题咨询，小爱同学智能交互能力进一步提升；\n• 小部件新增天气 UVAB 指数，健康摘要：在小部件快速查看紫外线信息与健康数据，信息获取更快捷；\n• 新增 App 自定义提醒振动效果：自由设置各类提醒的振动样式，手表提醒更具个性化；\n• 新增运动结束提醒功能：运动结束后贴心提醒，每次表现都能更好记录；\n• 更新“小米汽车”适配：新增支持澎程新车型。",
+     "full": [
+      {
+       "file": "miwear.watch.q63_v4.101.020_full_4eabac72.bin",
+       "size": 381398826,
+       "hash": "4eabac72",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q63-v4.101.020-8b0f3f08/miwear.watch.q63_v4.101.020_full_4eabac72.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.q66u",
+   "name": "miwear.watch.q66u",
+   "category": "other",
+   "confirmed": false,
+   "note": "未知设备（未在对照表）",
+   "releases": [
+    {
+     "version": "v4.100.139",
+     "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66u_v4.100.139_full_a02b7af5.bin",
+       "size": 66701577,
+       "hash": "a02b7af5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66u-v4.100.139-87ee40ed/miwear.watch.q66u_v4.100.139_full_a02b7af5.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v4.100.108",
+       "file": "miwear.watch.q66u_v4.100.139_from_v4.100.108_incremental_cd3cca09.bin",
+       "size": 15243200,
+       "hash": "cd3cca09",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66u-v4.100.139-87ee40ed/miwear.watch.q66u_v4.100.139_from_v4.100.108_incremental_cd3cca09.bin"
       }
      ]
     }
