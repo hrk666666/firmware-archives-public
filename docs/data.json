@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-03T08:45:44+0000",
+ "generated_at": "2026-10-04T08:37:27+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 55,
- "release_count": 99,
- "asset_count": 238,
+ "device_count": 56,
+ "release_count": 101,
+ "asset_count": 240,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -822,6 +822,19 @@
    "confirmed": true,
    "note": "官方欢迎语：Xiaomi Smart Band 11",
    "releases": [
+    {
+     "version": "v4.100.177",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66nfc_v4.100.177_full_6fc21448.bin",
+       "size": 66683957,
+       "hash": "6fc21448",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66nfc-v4.100.177-7ff2a170/miwear.watch.q66nfc_v4.100.177_full_6fc21448.bin"
+      }
+     ],
+     "incrementals": []
+    },
     {
      "version": "v4.100.139",
      "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
@@ -2516,6 +2529,28 @@
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66dsn-v6.4.18-27651199/miwear.watch.m66dsn_v6.4.18_from_v6.3.6_incremental_0505bbdc.bin"
       }
      ]
+    }
+   ]
+  },
+  {
+   "code": "mijia.watch.n60",
+   "name": "mijia.watch.n60",
+   "category": "other",
+   "confirmed": false,
+   "note": "未知设备（未在对照表）",
+   "releases": [
+    {
+     "version": "v1.3.0",
+     "notes": "1. 优化血压应用UI展示。\n2. 优化血压表盘展示。",
+     "full": [
+      {
+       "file": "mijia.watch.n60_v1.3.0_full_33dd95a5.bin",
+       "size": 65852438,
+       "hash": "33dd95a5",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.n60-v1.3.0-018dd6f5/mijia.watch.n60_v1.3.0_full_33dd95a5.bin"
+      }
+     ],
+     "incrementals": []
     }
    ]
   },
