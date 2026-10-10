@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-09T09:51:52+0000",
+ "generated_at": "2026-10-10T08:44:45+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 56,
- "release_count": 101,
- "asset_count": 240,
+ "release_count": 102,
+ "asset_count": 242,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2353,6 +2353,27 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.112.036",
+     "notes": "• 欢迎使用Xiaomi Watch S5 eSIM 46mm，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 修复使用 WLAN 功能低概率出现自动重启问题。",
+     "full": [
+      {
+       "file": "miwear.watch.p62lte_v3.112.036_full_598173e8.bin",
+       "size": 288441451,
+       "hash": "598173e8",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62lte-v3.112.036-6db8c360/miwear.watch.p62lte_v3.112.036_full_598173e8.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.112.035",
+       "file": "miwear.watch.p62lte_v3.112.036_from_v3.112.035_incremental_276d3914.bin",
+       "size": 16551615,
+       "hash": "276d3914",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.p62lte-v3.112.036-6db8c360/miwear.watch.p62lte_v3.112.036_from_v3.112.035_incremental_276d3914.bin"
+      }
+     ]
+    },
     {
      "version": "v3.112.035",
      "notes": "• 欢迎使用Xiaomi Watch S5 eSIM 46mm，感谢您的支持！为了一些必要的设备体验优化，我们强烈推荐您升级此版本。\n• 更新日志：\n• 新增游戏模式，记录您的游戏时刻。\n• 新增操场跑步，精准记录操场跑步各项数据。\n• 新增睡眠HRV，实时记录睡眠期间 HRV 数据。\n• 微信新版本上线，新增语音转文字发送消息、会话标记等功能。\n• 优化天气交互体验，操作更流畅，信息展示更直观。\n• 优化泳池游泳数据项展示，数据呈现更清晰，便于查看运动详情。\n• 铁三运动体验优化，运动过程中屏蔽自动排水。\n• 优化运动导航偏航提醒，及时反馈路线偏差，保障导航准确性。\n• 优化血压健康研究相关文案，表述更通俗易懂，贴合日常使用认知。\n• 运动结束提醒现已支持所有运动类型，结束后及时通知，方便查看运动成果。\n• 优化星历更新逻辑，提升运动定位稳定性。\n• 优化百度地图使用体验，辅助导航与独立导航二合一，简化操作入口，提升整体使用体验。",
