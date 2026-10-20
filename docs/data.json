@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-19T08:20:38+0000",
+ "generated_at": "2026-10-20T07:48:24+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 56,
- "release_count": 105,
- "asset_count": 247,
+ "release_count": 109,
+ "asset_count": 257,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -793,6 +793,34 @@
    "note": "官方欢迎语：Xiaomi Smart Band 11",
    "releases": [
     {
+     "version": "v4.100.179",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66cn_v4.100.179_full_a93678a9.bin",
+       "size": 66683899,
+       "hash": "a93678a9",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66cn-v4.100.179-06b04b64/miwear.watch.q66cn_v4.100.179_full_a93678a9.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v4.100.156",
+       "file": "miwear.watch.q66cn_v4.100.179_from_v4.100.156_incremental_586b795c.bin",
+       "size": 7767393,
+       "hash": "586b795c",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66cn-v4.100.179-06b04b64/miwear.watch.q66cn_v4.100.179_from_v4.100.156_incremental_586b795c.bin"
+      },
+      {
+       "from": "v4.100.139",
+       "file": "miwear.watch.q66cn_v4.100.179_from_v4.100.139_incremental_4e9a91a7.bin",
+       "size": 7774339,
+       "hash": "4e9a91a7",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66cn-v4.100.179-06b04b64/miwear.watch.q66cn_v4.100.179_from_v4.100.139_incremental_4e9a91a7.bin"
+      }
+     ]
+    },
+    {
      "version": "v4.100.139",
      "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
      "full": [
@@ -822,6 +850,27 @@
    "confirmed": true,
    "note": "官方欢迎语：Xiaomi Smart Band 11",
    "releases": [
+    {
+     "version": "v4.100.179",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66nfc_v4.100.179_full_a93678a9.bin",
+       "size": 66683899,
+       "hash": "a93678a9",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66nfc-v4.100.179-db9a8873/miwear.watch.q66nfc_v4.100.179_full_a93678a9.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v4.100.139",
+       "file": "miwear.watch.q66nfc_v4.100.179_from_v4.100.139_incremental_4e9a91a7.bin",
+       "size": 7774339,
+       "hash": "4e9a91a7",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66nfc-v4.100.179-db9a8873/miwear.watch.q66nfc_v4.100.179_from_v4.100.139_incremental_4e9a91a7.bin"
+      }
+     ]
+    },
     {
      "version": "v4.100.177",
      "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
@@ -857,6 +906,34 @@
    "confirmed": true,
    "note": "官方欢迎语：Xiaomi Smart Band 11",
    "releases": [
+    {
+     "version": "v4.100.179",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66tc_v4.100.179_full_a93678a9.bin",
+       "size": 66683899,
+       "hash": "a93678a9",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.179-a2c989c3/miwear.watch.q66tc_v4.100.179_full_a93678a9.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v4.100.156",
+       "file": "miwear.watch.q66tc_v4.100.179_from_v4.100.156_incremental_586b795c.bin",
+       "size": 7767393,
+       "hash": "586b795c",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.179-a2c989c3/miwear.watch.q66tc_v4.100.179_from_v4.100.156_incremental_586b795c.bin"
+      },
+      {
+       "from": "v4.100.139",
+       "file": "miwear.watch.q66tc_v4.100.179_from_v4.100.139_incremental_4e9a91a7.bin",
+       "size": 7774339,
+       "hash": "4e9a91a7",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.179-a2c989c3/miwear.watch.q66tc_v4.100.179_from_v4.100.139_incremental_4e9a91a7.bin"
+      }
+     ]
+    },
     {
      "version": "v4.100.155",
      "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
@@ -2659,6 +2736,27 @@
    "confirmed": false,
    "note": "未知设备（未在对照表）",
    "releases": [
+    {
+     "version": "v4.100.179",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66u_v4.100.179_full_a93678a9.bin",
+       "size": 66683899,
+       "hash": "a93678a9",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66u-v4.100.179-a88f0ed5/miwear.watch.q66u_v4.100.179_full_a93678a9.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v4.100.139",
+       "file": "miwear.watch.q66u_v4.100.179_from_v4.100.139_incremental_4e9a91a7.bin",
+       "size": 7774339,
+       "hash": "4e9a91a7",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66u-v4.100.179-a88f0ed5/miwear.watch.q66u_v4.100.179_from_v4.100.139_incremental_4e9a91a7.bin"
+      }
+     ]
+    },
     {
      "version": "v4.100.139",
      "notes": "• 欢迎使用Xiaomi SmartBand 11,感谢您的支持。为了提升体验,我们推荐您升级至此版本。本次版本升级新增多个功能,升级资源较大,整体升级时间较长,请耐心等待。\n• 更新日志:\n• 修复已知问题,增强系统稳定性,改善用户体验。",
