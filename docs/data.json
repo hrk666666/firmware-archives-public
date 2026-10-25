@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-24T07:47:38+0000",
+ "generated_at": "2026-10-25T07:42:46+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 56,
- "release_count": 109,
- "asset_count": 257,
+ "device_count": 57,
+ "release_count": 110,
+ "asset_count": 258,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2777,6 +2777,28 @@
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66u-v4.100.139-87ee40ed/miwear.watch.q66u_v4.100.139_from_v4.100.108_incremental_cd3cca09.bin"
       }
      ]
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.q69cn",
+   "name": "miwear.watch.q69cn",
+   "category": "other",
+   "confirmed": false,
+   "note": "未知设备（未在对照表）",
+   "releases": [
+    {
+     "version": "v4.100.011",
+     "notes": "• 欢迎使用REDMI 手环 4",
+     "full": [
+      {
+       "file": "miwear.watch.q69cn_v4.100.011_full_7cf498df.bin",
+       "size": 8680586,
+       "hash": "7cf498df",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q69cn-v4.100.011-cd293d08/miwear.watch.q69cn_v4.100.011_full_7cf498df.bin"
+      }
+     ],
+     "incrementals": []
     }
    ]
   },
