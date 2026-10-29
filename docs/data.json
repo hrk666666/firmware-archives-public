@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-10-28T09:11:08+0000",
+ "generated_at": "2026-10-29T08:43:02+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 57,
- "release_count": 110,
- "asset_count": 258,
+ "release_count": 111,
+ "asset_count": 259,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -906,6 +906,19 @@
    "confirmed": true,
    "note": "官方欢迎语：Xiaomi Smart Band 11",
    "releases": [
+    {
+     "version": "v4.100.188",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• “焦点通知”支持更多接入场景，优化通知红点显示逻辑；\n• 优化游戏模式，提升使用体验；\n• 优化卡路里计算算法，监测更精准；\n• 更新 OS 4.0 应用图标；\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.q66tc_v4.100.188_full_a763dd72.bin",
+       "size": 66914732,
+       "hash": "a763dd72",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.q66tc-v4.100.188-09eb8437/miwear.watch.q66tc_v4.100.188_full_a763dd72.bin"
+      }
+     ],
+     "incrementals": []
+    },
     {
      "version": "v4.100.179",
      "notes": "• 欢迎使用 Xiaomi Smart Band 11，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 更新日志：\n• 修复已知问题，增强系统稳定性，改善用户体验。",
