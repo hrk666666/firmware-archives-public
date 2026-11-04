@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-03T10:21:37+0000",
+ "generated_at": "2026-11-04T09:34:34+0000",
  "source_repo": "hrk666666/firmware-archives-public",
- "device_count": 57,
- "release_count": 111,
- "asset_count": 259,
+ "device_count": 58,
+ "release_count": 112,
+ "asset_count": 260,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -2641,6 +2641,28 @@
        "size": 589764,
        "hash": "ee71710b",
        "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-mijia.watch.band01-v2.8.2-77ebc046/mijia.watch.band01_v2.8.2_full_ee71710b.bin"
+      }
+     ],
+     "incrementals": []
+    }
+   ]
+  },
+  {
+   "code": "miwear.watch.m66gl",
+   "name": "Xiaomi Smart Band 8",
+   "category": "band",
+   "confirmed": false,
+   "note": "来源：OronBox 设备目录（codename m66）",
+   "releases": [
+    {
+     "version": "v2.1.8",
+     "notes": "Welcome to experience Xiaomi Smart Band 8! \nWe strongly recommend that you upgrade to the latest version as soon as possible, it will bring you a better experience, a more stable system and longer battery life. The following is the optimized content of this update:\n1. Added alarm and schedule widgets.\n2. Optimized weather update process and display.\n3. Enhanced vibration mode for improved haptic feedback.\n4. Improved stability.\n5. Fixed other known issues.\nThank you for your support and trust all the time, we will continue to work hard to provide you with better products and services.",
+     "full": [
+      {
+       "file": "miwear.watch.m66gl_v2.1.8_full_510b2c57.bin",
+       "size": 48360332,
+       "hash": "510b2c57",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.m66gl-v2.1.8-1caff571/miwear.watch.m66gl_v2.1.8_full_510b2c57.bin"
       }
      ],
      "incrementals": []
