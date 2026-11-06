@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-05T10:08:46+0000",
+ "generated_at": "2026-11-06T10:12:51+0000",
  "source": "zxor-org/OronBox (AGPL-3.0) xiaomi_wearable_catalog.dart",
  "source_url": "https://raw.githubusercontent.com/zxor-org/OronBox/main/lib/src/device/core/xiaomi_wearable_catalog.dart",
- "xiaomi_count": 18,
- "alias_count": 134,
+ "xiaomi_count": 21,
+ "alias_count": 153,
  "family_category": {
   "band": "band",
   "bandPro": "band",
@@ -35,13 +35,16 @@
   "m67": {
    "codename": "m67",
    "displayName": "Xiaomi Smart Band 8 Pro",
-   "abV2Id": "m67",
+   "abV2Id": "xmb8p",
    "family": "bandPro",
    "chip": "bes",
    "protocol": "sppV1",
    "aliases": [
     "小米手环8 Pro",
     "Xiaomi Smart Band 8 Pro",
+    "xmb8p",
+    "M2303B1",
+    "M2333B1",
     "lchz.watch.m67",
     "lchz.watch.m67ys",
     "lchz.watch.m67gl"
@@ -151,16 +154,56 @@
     "M2553B1"
    ]
   },
+  "q66cn": {
+   "codename": "q66cn",
+   "displayName": "Xiaomi Smart Band 11",
+   "abV2Id": "xmb11",
+   "family": "band",
+   "chip": "bes",
+   "protocol": "unsupported",
+   "aliases": [
+    "小米手环11",
+    "M2616B1"
+   ]
+  },
+  "q66nfc": {
+   "codename": "q66nfc",
+   "displayName": "Xiaomi Smart Band 11 NFC",
+   "abV2Id": "xmb11nfc",
+   "family": "band",
+   "chip": "bes",
+   "protocol": "unsupported",
+   "aliases": [
+    "小米手环11 NFC",
+    "M2617B1"
+   ]
+  },
+  "q63": {
+   "codename": "q63",
+   "displayName": "Xiaomi Watch S5 41mm",
+   "abV2Id": "xmws541",
+   "family": "xiaomiWatch",
+   "chip": "bes",
+   "protocol": "unsupported",
+   "aliases": [
+    "小米手表S5 41mm",
+    "M2606W1",
+    "M2607W1"
+   ]
+  },
   "l61": {
    "codename": "l61",
    "displayName": "Xiaomi Watch S1 Pro",
-   "abV2Id": "l61",
+   "abV2Id": "xmws1p",
    "family": "xiaomiWatch",
    "chip": "bes",
    "protocol": "sppV1",
    "aliases": [
     "小米手表S1 Pro",
     "Xiaomi Watch S1 Pro",
+    "xmws1p",
+    "M2134W1",
+    "M2135W1",
     "mijia.watch.l61",
     "l61"
    ]
@@ -260,6 +303,9 @@
     "红米手表4",
     "Redmi Watch 4",
     "REDMI Watch 4",
+    "xmrw4",
+    "M2314W1",
+    "M2315W1",
     "lchz.watch.n65",
     "lchz.watch.n65gl"
    ]
@@ -325,6 +371,9 @@
   "m67": "m67",
   "小米手环8 Pro": "m67",
   "Xiaomi Smart Band 8 Pro": "m67",
+  "xmb8p": "m67",
+  "M2303B1": "m67",
+  "M2333B1": "m67",
   "lchz.watch.m67": "m67",
   "lchz.watch.m67ys": "m67",
   "lchz.watch.m67gl": "m67",
@@ -378,9 +427,22 @@
   "miwear.watch.p67cn": "p67",
   "miwear.watch.p67tc": "p67",
   "M2553B1": "p67",
+  "q66cn": "q66cn",
+  "小米手环11": "q66cn",
+  "M2616B1": "q66cn",
+  "q66nfc": "q66nfc",
+  "小米手环11 NFC": "q66nfc",
+  "M2617B1": "q66nfc",
+  "q63": "q63",
+  "小米手表S5 41mm": "q63",
+  "M2606W1": "q63",
+  "M2607W1": "q63",
   "l61": "l61",
   "小米手表S1 Pro": "l61",
   "Xiaomi Watch S1 Pro": "l61",
+  "xmws1p": "l61",
+  "M2134W1": "l61",
+  "M2135W1": "l61",
   "mijia.watch.l61": "l61",
   "n62": "n62",
   "小米手表S3": "n62",
@@ -425,6 +487,9 @@
   "红米手表4": "n65",
   "Redmi Watch 4": "n65",
   "REDMI Watch 4": "n65",
+  "xmrw4": "n65",
+  "M2314W1": "n65",
+  "M2315W1": "n65",
   "lchz.watch.n65": "n65",
   "lchz.watch.n65gl": "n65",
   "o65": "o65",
