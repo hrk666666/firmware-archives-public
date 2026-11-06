@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-05T10:08:48+0000",
+ "generated_at": "2026-11-06T09:36:20+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 58,
- "release_count": 112,
- "asset_count": 260,
+ "release_count": 113,
+ "asset_count": 261,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -1167,6 +1167,20 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.1.35",
+     "notes": "• 更新说明：\n• 1. 优化支付宝碰一下支付流程，支付更稳定\n• 2. 修复已知问题，提升系统稳定性",
+     "full": [],
+     "incrementals": [
+      {
+       "from": "v3.1.17",
+       "file": "miwear.watch.n66cn_v3.1.35_from_v3.1.17_incremental_a468fc75.bin",
+       "size": 13363749,
+       "hash": "a468fc75",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66cn-v3.1.35-0ea5b374/miwear.watch.n66cn_v3.1.35_from_v3.1.17_incremental_a468fc75.bin"
+      }
+     ]
+    },
     {
      "version": "v3.1.32",
      "notes": "• 欢迎使用Xiaomi Smart Band 9，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 优化功耗策略，设备更省电，续航更持久。\n• 升级睡眠算法并优化数据上报策略，监测更准确同步更及时。\n• 增强消息隐私保护，避免敏感信息泄露。\n• 修复已知问题，增强系统稳定性，改善用户体验。",
