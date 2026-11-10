@@ -1,9 +1,9 @@
 {
- "generated_at": "2026-11-09T10:44:08+0000",
+ "generated_at": "2026-11-10T10:10:15+0000",
  "source_repo": "hrk666666/firmware-archives-public",
  "device_count": 58,
- "release_count": 114,
- "asset_count": 263,
+ "release_count": 117,
+ "asset_count": 269,
  "devices": [
   {
    "code": "mijia.watch.m69",
@@ -56,6 +56,34 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.1.33",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 10，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 优化功耗策略，设备更省电，续航更持久。\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.o66cn_v3.1.33_full_1426746f.bin",
+       "size": 54396985,
+       "hash": "1426746f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.33-838d70cc/miwear.watch.o66cn_v3.1.33_full_1426746f.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.28",
+       "file": "miwear.watch.o66cn_v3.1.33_from_v3.1.28_incremental_ff46d1ec.bin",
+       "size": 6403074,
+       "hash": "ff46d1ec",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.33-838d70cc/miwear.watch.o66cn_v3.1.33_from_v3.1.28_incremental_ff46d1ec.bin"
+      },
+      {
+       "from": "v3.1.16",
+       "file": "miwear.watch.o66cn_v3.1.33_from_v3.1.16_incremental_00f9a6e3.bin",
+       "size": 21332023,
+       "hash": "00f9a6e3",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66cn-v3.1.33-838d70cc/miwear.watch.o66cn_v3.1.33_from_v3.1.16_incremental_00f9a6e3.bin"
+      }
+     ]
+    },
     {
      "version": "v3.1.28",
      "notes": "• 欢迎使用 Xiaomi Smart Band 10，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 优化蓝牙连接体验\n• 修复已知问题，增强系统稳定性，改善用户体验。",
@@ -665,6 +693,27 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.1.33",
+     "notes": "• 欢迎使用 Xiaomi Smart Band 10，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 优化功耗策略，设备更省电，续航更持久。\n• 修复已知问题，增强系统稳定性，改善用户体验。",
+     "full": [
+      {
+       "file": "miwear.watch.o66tc_v3.1.33_full_1426746f.bin",
+       "size": 54396985,
+       "hash": "1426746f",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.33-bd49d159/miwear.watch.o66tc_v3.1.33_full_1426746f.bin"
+      }
+     ],
+     "incrementals": [
+      {
+       "from": "v3.1.28",
+       "file": "miwear.watch.o66tc_v3.1.33_from_v3.1.28_incremental_ff46d1ec.bin",
+       "size": 6403074,
+       "hash": "ff46d1ec",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.o66tc-v3.1.33-bd49d159/miwear.watch.o66tc_v3.1.33_from_v3.1.28_incremental_ff46d1ec.bin"
+      }
+     ]
+    },
     {
      "version": "v3.1.28",
      "notes": "• 欢迎使用 Xiaomi Smart Band 10，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 优化蓝牙连接体验\n• 修复已知问题，增强系统稳定性，改善用户体验。",
@@ -1295,6 +1344,19 @@
    "confirmed": true,
    "note": "",
    "releases": [
+    {
+     "version": "v3.1.35",
+     "notes": "• 更新说明：\n• 1. 优化支付宝碰一下支付流程，支付更稳定\n• 2. 修复已知问题，提升系统稳定性",
+     "full": [
+      {
+       "file": "miwear.watch.n66nfc_v3.1.35_full_7e4e76d4.bin",
+       "size": 44020365,
+       "hash": "7e4e76d4",
+       "url": "https://github.com/hrk666666/firmware-archives-public/releases/download/firmware-miwear.watch.n66nfc-v3.1.35-ae4d18d6/miwear.watch.n66nfc_v3.1.35_full_7e4e76d4.bin"
+      }
+     ],
+     "incrementals": []
+    },
     {
      "version": "v3.1.32",
      "notes": "• 欢迎使用Xiaomi Smart Band 9，感谢您的支持。为了提升体验，我们推荐您升级至此版本。本次版本升级新增多个功能，升级资源较大，整体升级时间较长，请耐心等待。\n• 优化功耗策略，设备更省电，续航更持久。\n• 升级睡眠算法并优化数据上报策略，监测更准确同步更及时。\n• 增强消息隐私保护，避免敏感信息泄露。\n• 修复已知问题，增强系统稳定性，改善用户体验。",
